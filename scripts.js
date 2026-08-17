@@ -11,18 +11,18 @@
                 });
             });
  }
-function skip(whereto){
- const target = document.findElementById(whereto);
- if (target){
-    target.scrollIntoView({
-        behavior: 'smooth'
-        block: 'center'
-    });
- }
-}
+//function skip(whereto){
+ //const target = document.findElementById(whereto);
+ //if (target){
+    //target.scrollIntoView({
+        //behavior: 'smooth'
+        //block: 'center'
+    //});
+ //}
+//}
 function stickyNav(selector, className, logoId, logoClassName, threshold = 50){
-    const navbar = document.getElementById(selector);
-    const logo = document.getElementById(logoId);
+    const navbar = document.querySelector(selector);
+    const logo = document.querySelector(logoId);
             if (!navbar) return;
 
             const handleScroll = () => {
@@ -37,3 +37,4 @@ function stickyNav(selector, className, logoId, logoClassName, threshold = 50){
             handleScroll(); 
             window.addEventListener('scroll', handleScroll, { passive: true });
         }
+        stickyNav('Nav', 'stickNav', 'logo-img', 'logo', 1000)

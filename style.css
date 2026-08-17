@@ -1,0 +1,52 @@
+body {
+    color:black;
+    margin:0;
+
+
+}
+.logo-img{
+    width:auto;
+    height:300px;
+}
+.Nav{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center; 
+     background-color: rgba(0, 0, 0, 0.411);
+        width: auto;
+        height: 200px;
+        position: fixed;
+        top: 0; left: 0; width: 100%; z-index: 1000;
+
+
+
+}
+.stickyNav{
+    height: 100px;
+    width: auto;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.logo{
+    height: 100px;
+}
+.partial-background {
+    /* Set dimensions for the background area */
+    width: 100%;
+    height: 800px; 
+    
+    /* Apply the image */
+    background-image: url('Images/services-img.jpg');
+    
+    /* Prevent the image from looping */
+    background-repeat: no-repeat;
+    
+    /* Scale the image to fit the container perfectly */
+    background-size: cover; 
+    background-position: center;
+}
+.links{
+    display: flex;
+    gap: 20px;
+}
