@@ -23,18 +23,15 @@ function skip(whereto, offset=100){
         behavior: 'smooth'
     });
 }
-function stickyNav(selector, className, logoId, logoClassName, threshold = 100){
+function stickyNav(selector, className, threshold = 100){
     const navbar = document.querySelector(selector);
-    const logo = document.querySelector(logoId);
             if (!navbar) return;
 
             const handleScroll = () => {
                 if (window.scrollY > threshold) {
                     navbar.classList.add(className);
-                    logo.classList.add(logoClassName);
                 } else {
                     navbar.classList.remove(className);
-                    logo.classList.remove(logoClassName);
                 }
             };
             handleScroll(); 
@@ -47,8 +44,7 @@ function sideScrollGallery(selector, waitTime = 4000) {
     if (!gallery) return;
 
     const track = gallery.querySelector('.gallery-track');
-    const images = track.querySelectorAll('img');
-
+    const slides = track.querySelectorAll('.slide');
     const nextButton = gallery.querySelector('.gallery-next');
     const prevButton = gallery.querySelector('.gallery-prev');
 
@@ -57,11 +53,11 @@ function sideScrollGallery(selector, waitTime = 4000) {
 
     function showImage(index) {
 
-        if (index >= images.length) {
+        if (index >= slides.length) {
             current = 0;
         }
         else if (index < 0) {
-            current = images.length - 1;
+            current = slides.length - 1;
         }
         else {
             current = index;
@@ -103,4 +99,5 @@ function sideScrollGallery(selector, waitTime = 4000) {
     resetTimer();
 }
 sideScrollGallery('.gallery', 4000);
-stickyNav('.Nav', 'stickyNav', '.logo-img', 'logo', 180);
+stickyNav('.nav-logo', 'logo', 400);
+stickyNav('.logo-img', 'logo-gone', 400);
