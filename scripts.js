@@ -1,5 +1,5 @@
- function Highlight(selector, highlightClass){
-    const targets = document.getElementById(selector);
+ function highlight(selector, highlightClass){
+    const targets = document.querySelectorAll(selector);
 
             targets.forEach(element => {
                 element.addEventListener('mouseenter', () => {
@@ -98,6 +98,9 @@ function sideScrollGallery(selector, waitTime = 4000) {
 
     resetTimer();
 }
-sideScrollGallery('.gallery', 4000);
+sideScrollGallery('.gallery', 10000);
 stickyNav('.nav-logo', 'logo', 400);
 stickyNav('.logo-img', 'logo-gone', 400);
+highlight('#contacts', 'highlight');
+highlight('#manubtn', 'highlight');
+highlight('#productbtn', 'highlight');

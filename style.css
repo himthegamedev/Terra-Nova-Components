@@ -301,3 +301,24 @@ span{
     flex-shrink: 0;
     margin-left: auto;
 }
+.nav-logo
+{
+    height: 90px;
+    width: auto;
+}
+.slide-caption {
+ position: absolute;
+    bottom: 30px;
+    left: 40px;
+    padding: 10px 16px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 4px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+.highlight {
+    font-size: xx-large;
+    color: rgb(254, 225, 53);
+}
