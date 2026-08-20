@@ -333,3 +333,52 @@ span{
 .contact-page{
     background-color: rgb(134, 5, 5);
 }
+
+.logo-button {
+    visibility: visible;
+}
+
+.nav-logo {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+.logo-img {
+    opacity: 1;
+    transition: opacity 0.1s linear;
+}
+
+@media (max-width: 768px) {
+    .manufacturing {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .manufacturing-text {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .manufacturing-text > div {
+        width: 100%;
+    }
+
+    .services-img {
+        width: calc(100% + 40px);
+        height: auto;
+        margin-left: -20px;
+        transform: scale(1.06);
+        transform-origin: center;
+    }
+
+    .manu-image {
+        width: 100%;
+        max-width: none;
+        transform: scale(1.06);
+        transform-origin: center;
+    }
+
+    .gallery-track img {
+        transform: scale(1.04);
+    }
+}

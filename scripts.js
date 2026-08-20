@@ -99,8 +99,26 @@ function sideScrollGallery(selector, waitTime = 4000) {
     resetTimer();
 }
 sideScrollGallery('.gallery', 10000);
-stickyNav('.nav-logo', 'logo', 400);
-stickyNav('.logo-img', 'logo-gone', 400);
+
+const largeLogo = document.querySelector('.logo-img');
+const navLogo = document.querySelector('.nav-logo');
+
+function updateLogoFade() {
+    const fadeDistance = 400;
+    const progress = Math.min(window.scrollY / fadeDistance, 1);
+
+    if (largeLogo) {
+        largeLogo.style.opacity = 1 - progress;
+    }
+
+    if (navLogo) {
+        navLogo.style.opacity = progress;
+    }
+}
+
+updateLogoFade();
+window.addEventListener('scroll', updateLogoFade, { passive: true });
+
 highlight('#contacts', 'highlight');
 highlight('#manubtn', 'highlight');
 highlight('#productbtn', 'highlight');
