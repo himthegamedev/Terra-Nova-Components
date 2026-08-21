@@ -59,14 +59,20 @@ span{
     transform: translateY(100px);
 }
 
+.links .sum-button {
+    width: 200px;
+    box-sizing: border-box;
+}
+
 .links span {
     margin: 0;
     padding: 0 2px;
-    text-shadow:
-        -1px -1px 0 #000,
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;
+    display: inline-block;
+    transition: transform 0.15s ease;
+}
+
+.links .highlight {
+    transform: scale(1.15);
 }
 
 /* Navbar after scrolling */
@@ -156,6 +162,7 @@ span{
     height: 70px;
 
     border: none;
+    border-radius: 12px;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
 
@@ -236,9 +243,13 @@ span{
     visibility: hidden;
 }
 .sum-button{
-    background: transparent;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
     border: none;
     cursor: pointer;
+}
+.sum-button:hover{
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .manufacturing{
     width: 100%;
@@ -327,7 +338,6 @@ span{
     margin-top: 8px;
 }
 .highlight {
-    font-size: xx-large;
     color: rgb(254, 225, 53);
 }
 .contact-page{
@@ -372,13 +382,22 @@ span{
     }
 
     .manu-image {
-        width: 100%;
+        width: calc(100% + 40px);
         max-width: none;
+        margin-left: -20px;
         transform: scale(1.06);
         transform-origin: center;
     }
 
     .gallery-track img {
         transform: scale(1.04);
+    }
+
+    .links .sum-button {
+        width: calc((100vw - 50px) / 2);
+    }
+
+    .links span {
+        font-size: 1rem;
     }
 }
