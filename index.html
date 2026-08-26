@@ -3,30 +3,35 @@
     <head>
     <meta charset="UTF-8">
     <title>Terra Nova Components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
 <div>
-    <div class="indent"></div>
-    <div class="partial-background" id="home">
+    <div class="indent"></div>    <div class="partial-background" id="home">
+        <video class="hero-video" autoplay muted loop playsinline poster="Images/image.png">
+            <source src="videos/TNCDrone2.mp4" type="video/mp4">
+        </video>
         <div>
         <div class="Nav">
                             <button onclick="skip('home', 200)" class="logo-button">
-                    <img src="Images/logo-white.png" class="nav-logo">
+                    <img src="Images/tnc-logo-white.png" class="nav-logo">
                 </button>
             <button onclick="skip('contact-page', 200)" class="button">
                     <span id="contacts">Contact</span>
                     </button>
 
-            </div>
-                <img src="Images/logo-red-black.png" class="logo-img">
+        </div>
+                <img src="Images/tnc-red-logo3.png" class="logo-img">
                 </div>
                 <div class="links">
                     <button onclick="skip('manufacturing',50)" class="sum-button">
-                    <span id="manubtn">Manufacturing</span>
+                    <span id="manubtn">Products</span>
                     </button>
                     <button onclick="skip('gallery')" class="sum-button">
-                    <span id="productbtn">Products</span>
+                    <span id="productbtn">Why Choose Us?</span>
                     </button>
                 </div>
     </div> 
@@ -43,46 +48,81 @@
         <br>
         <br>
         <br>
+<div class="manufacturing partial-background" id="manufacturing">
+    <div class="manufacturing-text">
+        <h2>Products</h2>
+    </div>
+    <div class='prod-info'>
+        <div class="prod-box">
+            <div class="product-header">
+                <h2>Wall systems</h2>
+            </div>
+            <div class="product-text">
+                <p>
+                    Pre-engineered wall systems that reduce framing time, improve job-site efficiency, and deliver consistent structural performance. Designed for streamlined installation and reliable results, these systems help contractors save valuable time while maintaining the quality and durability required for today’s construction projects.
+
+                </p>
+            </div>
+        </div>
+        <div class="prod-box">
+            <div class="product-header">
+                <h2>Truss Systems</h2>
+            </div>
+            <div class="product-text">
+                <p>
+                    Custom-engineered roof truss systems designed to meet your building’s plans and requirements, providing reliable structural performance and efficient construction for residential, agricultural, and commercial applications.
+                </p>
+            </div>
+        </div>
+        <div class="prod-box">
+            <div class="product-header">
+                <h2>Floor Systems</h2>
+            </div>
+            <div class="product-text">
+                <p>
+                    Engineered floor systems designed for strength, flexibility, and precise installation, including floor trusses and floor cassettes that help improve consistency and accelerate construction.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="gallery-header">
+            <h2>Why Choose us?</h2>
+            <p>Industry-leading precision, state-of-the-art engineering, and unparalleled customer support.</p>
+        </div>
         <div class="gallery" id="gallery">
     <div class="gallery-track">
 <div class="slide">
-    <img src="Images/truss-systems.jpg" alt="Truss systems">
+    <img src="Images/truss-systems.jpg" alt="built by great people">
     <div class="slide-caption">
-        <h2>Truss systems</h2>
-        <p>Pre-engineered roof truss systems designed for strength, efficiency, and a precise fit.</p>
+        <h2>Built by Great People</h2>
+        <p>Our experienced team brings skill, care, and practical know-how to every project, with responsive support from planning through delivery.</p>
     </div>
 </div>
 <div class="slide">
-    <img src="Images/floor-systems.jpg" alt="Floor systems">
+    <img src="Images/floor-systems.jpg" alt="Quality You can Count on">
     <div class="slide-caption">
-        <h2>Floor systems</h2>
-        <p>Engineered floor systems designed for structural performance, flexibility, and faster installation.</p>
+        <h2>Quality You can Count on</h2>
+        <p>Built with premium Canadian lumber and carefully inspected materials, every component is manufactured for strength, durability, and consistent quality.</p>
     </div>
 </div>
 <div class="slide">
-    <img src="Images/wall-systems.jpg" alt="Wall systems">
+    <img src="Images/wall-systems.jpg" alt="Advanced Technology">
     <div class="slide-caption">
-        <h2>Wall systems</h2>
-        <p>Pre-engineered wall systems that reduce framing time, improve job-site efficiency, and deliver consistent structural performance.</p>
+        <h2>Advanced Technology</h2>
+        <p>Industry-leading design software and modern manufacturing equipment help us deliver accurate, consistent components built to your specifications.</p>
+        </div>
+</div>
+<div class="slide">
+    <img src="Images/image.png" alt="Superior Components">
+    <div class="slide-caption">
+        <h2>Superior Components</h2>
+            <p>Our wall panels, roof trusses, and floor systems are engineered for faster installation, dependable performance, and a more efficient build.</p>
         </div>
 </div>
     </div>
 
 
-    <button class="gallery-prev">←</button>
-    <button class="gallery-next">→</button>
-</div>
-    <br>
-    <br>
-<div class="manufacturing" id="manufacturing">
-    <div class="manufacturing-text">
-        <div>
-            <h2>Our Manufacturing Process</h2>
-            <p>Manufactured in Smiths Falls, Ontario, we proudly build high-quality floor and wall truss systems to your exact specifications. From design and manufacturing to the finished product, we are committed to precision, durability, and quality craftsmanship in every component we produce. Our custom-built systems are designed to meet the unique needs of each project while providing reliable performance and efficient installation. With a focus on quality materials, attention to detail, and customer satisfaction, you can count on us to deliver truss components built to the highest standards.</p>
-        </div>
-        <img src="Images/insidetncomponents.jpg" class="manu-image">
-    </div>
-    <img src="Images/services-img.jpg" class="services-img">
 </div>
     <br>
     <br>
@@ -91,10 +131,19 @@
     <div id="contact-page">
     <div class="redbox">
         <div class="contact">
-        <div class="margin">Contact Ashley Marren <br> Ashley@terranovtruss.com<br>705-928-1152</div>
-    </div>
+        <form class="email-form" action="mailto:Ashley@terranovtruss.com" method="post" enctype="text/plain">
+            <h2>Contact Us</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
     <div class="cr">Website developed by son of kent & son innovations</div>
+    </div>
     </div>
     <div class="videos">
         
