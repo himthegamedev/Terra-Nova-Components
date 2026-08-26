@@ -11,6 +11,7 @@
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -43,6 +44,11 @@ button {
     font: inherit;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 span {
     visibility: visible;
     color: var(--text-light);
@@ -58,6 +64,18 @@ span {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+}
+
+.section-spacer {
+    width: 100%;
+}
+
+.hero-to-products {
+    height: 192px;
+}
+
+.gallery-to-contact {
+    height: 64px;
 }
 
 #home {
@@ -236,6 +254,7 @@ span {
 .gallery-header {
     margin: 0;
     padding: 36px 20px 24px;
+    scroll-margin-top: 20px;
     color: var(--text-light);
     font-size: 1.75rem;
     text-align: center;
@@ -748,12 +767,6 @@ span {
         font-size: 1.35rem;
     }
 
-    body > br {
-        display: block;
-        height: 8px;
-        line-height: 8px;
-    }
-
     .prod-info,
     .gallery-track {
         display: grid;
@@ -779,6 +792,14 @@ span {
 
     .gallery-header p {
         font-size: 1.25rem;
+    }
+
+    .hero-to-products {
+        height: 96px;
+    }
+
+    .gallery-to-contact {
+        height: 32px;
     }
 
     .contact {

@@ -13,19 +13,6 @@
         });
     }
 
-    function skip(whereTo, offset = 100) {
-        const target = document.getElementById(whereTo);
-
-        if (!target) return;
-
-        const position = target.getBoundingClientRect().top + window.scrollY;
-
-        window.scrollTo({
-            top: position - offset,
-            behavior: 'smooth',
-        });
-    }
-
     function stickyNav(selector, className, threshold = 100) {
         const navbar = document.querySelector(selector);
 
@@ -112,7 +99,6 @@
     updateLogoFade();
 
     window.addEventListener('scroll', updateLogoFade, { passive: true });
-    window.skip = skip;
 
     highlight('#contacts', 'highlight');
     highlight('#manubtn', 'highlight');
