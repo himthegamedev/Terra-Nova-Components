@@ -7,6 +7,8 @@
     --gold: rgb(254, 225, 53);
     --button-overlay: rgba(0, 0, 0, 0.4);
     --button-hover: rgba(0, 0, 0, 0.7);
+    --title-size: 1.75rem;
+    --body-size: 1.15rem;
 }
 
 * {
@@ -92,9 +94,10 @@ span {
 }
 
 #home > div,
-#home > .links {
+#home > .links,
+#home > .product-preview {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 #home > div {
@@ -102,9 +105,17 @@ span {
     text-align: center;
 }
 
+#home::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.16);
+    content: '';
+    pointer-events: none;
+}
+
 #home .logo-img {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
 }
 
 .Nav {
@@ -146,12 +157,19 @@ span {
     transition: opacity 0.1s linear;
 }
 
+.hero-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 150px;
+    text-align: center;
+}
+
 .logo-img {
     display: block;
     width: auto;
     height: 450px;
-    margin: 0 auto;
-    transform: translateY(150px);
+    margin: 0;
     visibility: visible;
     opacity: 1;
     transition: opacity 0.1s linear;
@@ -165,6 +183,51 @@ span {
     width: 100%;
     gap: 30px;
     transform: translateY(100px);
+}
+
+.product-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    max-width: calc(100% - 40px);
+    margin: 34px auto 0;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background: var(--button-overlay);
+    text-align: center;
+}
+
+.quick-product-headings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.quick-product-heading {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: font-weight 0.2s ease, color 0.2s ease;
+}
+
+.quick-product-summary {
+    width: fit-content;
+    max-width: calc(100vw - 40px);
+    min-height: 2.8em;
+    margin: 8px auto 0;
+    padding: 0;
+    background: transparent;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.quick-product-heading.is-active {
+    color: var(--gold);
+    font-weight: 800;
 }
 
 .links .sum-button {
@@ -194,7 +257,7 @@ span {
     justify-content: center;
     width: 100px;
     height: 44px;
-    margin-right: 20px;
+    margin-right: 0;
     border: none;
     background: none;
     cursor: pointer;
@@ -205,6 +268,29 @@ span {
 .button #contacts {
     font-size: x-large;
     line-height: 1;
+}
+
+.nav-choice-button {
+    width: auto;
+}
+
+.contact-button {
+    width: 130px;
+    border-radius: 10px;
+    background-color: rgb(205, 20, 20);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: rgb(240, 30, 30);
+    transform: scale(1.08);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 20px;
 }
 
 .sum-button {
@@ -235,6 +321,10 @@ span {
     font-size: x-large;
 }
 
+.stickyNav .nav-actions span {
+    visibility: visible;
+}
+
 .stickyNav span {
     visibility: hidden;
 }
@@ -256,7 +346,7 @@ span {
     padding: 36px 20px 24px;
     scroll-margin-top: 20px;
     color: var(--text-light);
-    font-size: 1.75rem;
+    font-size: var(--title-size);
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -267,6 +357,7 @@ span {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
     gap: 36px;
+    justify-items: center;
 }
 
 .gallery-track .slide {
@@ -317,6 +408,11 @@ span {
     background-color: transparent;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.slide-caption h2 {
+    font-size: var(--title-size);
+    font-weight: 700;
 }
 
 .slide-caption h2,
@@ -372,11 +468,28 @@ span {
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
     width: 100%;
     padding: 80px 5% 60px 0;
     box-sizing: border-box;
     text-align: right;
+}
+
+.contact-details {
+    flex: 1 1 0;
+    color: var(--text-light);
+    text-align: left;
+}
+
+.contact-details h2 {
+    margin: 0 0 8px;
+}
+
+.contact-details a {
+    color: var(--text-light);
+    font-size: var(--body-size);
 }
 
 .email-form {
@@ -384,7 +497,7 @@ span {
     flex-direction: column;
     width: min(600px, 100%);
     gap: 12px;
-    padding: 34px;
+    padding: 40px;
     color: var(--text-light);
     background: rgba(0, 0, 0, 0.55);
     border: 1px solid rgba(255, 255, 255, 0.35);
@@ -534,371 +647,367 @@ span {
     background-color: var(--panel-red);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1025px) {
+    .product-preview {
+        width: min(480px, calc(100vw - 40px));
+        max-width: 480px;
+        padding: 6px 10px;
+    }
+
+    .quick-product-headings {
+        gap: 8px;
+    }
+
+    .quick-product-heading {
+        font-size: 1rem;
+    }
+
+    .quick-product-summary {
+        max-width: 440px;
+        font-size: 1.1rem;
+    }
+
+    #home .links {
+        transform: translateY(40px);
+    }
+
+    .gallery-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 520px;
+        justify-content: center;
+        gap: 36px;
+    }
+
+    .gallery-track .slide {
+        width: 100%;
+        min-height: 0;
+        height: 100%;
+    }
+
+    .gallery-track img {
+        height: 280px;
+    }
+}
+
+/* Responsive section layout */
+@media (max-width: 1024px) {
+    body {
+        font-size: 1.2rem;
+        line-height: 1.55;
+        overflow-x: hidden;
+    }
+
     .partial-background {
-        height: 1400px;
-        min-height: 1400px;
+        min-height: 90svh;
+        height: auto;
+    }
+
+    #home {
+        min-height: 100svh;
+        height: 100svh;
     }
 
     .hero-video {
-        transform: scale(1.12);
+        transform: scale(1.08);
     }
 
-    .manufacturing.partial-background {
+    #home .hero-logo {
+        margin-top: 300px;
+    }
+
+    #home .logo-img {
+        width: min(100vw, 720px);
         height: auto;
-        min-height: auto;
+        margin: 0 auto;
     }
 
     .manufacturing {
-        padding-left: 20px;
-        padding-right: 20px;
+        min-height: 92svh;
+        padding: 8svh 6vw 10svh;
     }
 
     .manufacturing-text {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .manufacturing-text > div {
-        width: 100%;
-    }
-
-    .manufacturing {
-        min-height: auto;
-        padding: 40px 20px 60px;
+        margin-bottom: 3svh;
     }
 
     .prod-info {
         display: grid;
-        flex-direction: column;
         grid-template-columns: 1fr;
+        justify-items: center;
         gap: 24px;
     }
 
     .prod-box {
+        min-height: 0;
         width: 100%;
-        max-width: none;
-        min-height: 340px;
+        max-width: 700px;
+        padding: 28px 24px;
     }
 
-    .services-img,
-    .manu-image {
-        width: calc(100% + 40px);
-        max-width: none;
-        height: auto;
-        margin-left: -20px;
-        transform: scale(1.06);
-        transform-origin: center;
+    .product-header h2,
+    .gallery-header h2,
+    .email-form h2 {
+        font-size: 1.6rem;
     }
 
-    .gallery {
-        padding: 0 20px 40px;
-    }
-
-    .gallery-track {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .gallery-track .slide {
-        min-height: 360px;
-    }
-
-    .gallery-track img {
-        height: 200px;
-    }
-
-    .links .sum-button {
-        width: calc((100vw - 50px) / 2);
-    }
-
-    .links span {
+    .product-text,
+    .gallery-header p,
+    .slide-caption,
+    .email-form {
         font-size: 1.15rem;
-    }
-}
-
-/* Device-sized mobile sections */
-@media (max-width: 1024px) {
-    #home {
-        height: 100svh;
-        min-height: 100svh;
-    }
-
-    #home > div {
-        position: static;
-    }
-
-    #home .logo-img {
-        position: absolute;
-        top: 43%;
-        left: 50%;
-        margin: 0;
-        transform: translate(-50%, -50%);
-    }
-
-    #home .links {
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        margin: 0;
-        transform: translateX(-50%);
-    }
-
-    .manufacturing.partial-background {
-        min-height: 100svh;
-        padding: 8svh 5vw 8svh;
     }
 
     .gallery-header {
-        padding: 6svh 5vw 3svh;
+        min-height: 24svh;
+        padding: 8svh 6vw 4svh;
     }
 
     .gallery {
-        min-height: 100svh;
-        padding: 0 5vw 6svh;
+        min-height: 76svh;
+        padding: 0 6vw 8svh;
     }
 
-    .redbox {
-        min-height: 100svh;
-        height: 100svh;
-    }
-}
-
-/* iPhone portrait and landscape */
-@media (max-width: 767px) {
-    .logo-img {
-        max-width: 92vw;
-        height: auto;
-    }
-
-    .links {
-        gap: 4vw;
-    }
-
-    .links .sum-button {
-        width: 42vw;
-        max-width: 200px;
-    }
-
-    #home .links .sum-button {
-        width: 98vw;
-        max-width: 700px;
-        height: 300px;
-    }
-
-    #home .links span {
-        font-size: 4.8rem;
-    }
-
-    #home .links {
-        flex-direction: column;
-        gap: 16px;
-        width: 100%;
-        padding: 0 2vw;
-    }
-
-    .product-header h2 {
-        font-size: 1.25rem;
-    }
-
-    .prod-box {
-        min-height: 34svh;
-    }
-
-    .slide-caption {
-        min-height: 160px;
-        padding: 20px;
-        font-size: 1.15rem;
-    }
-
-    .gallery-track img {
-        height: 28svh;
-    }
-}
-
-/* iPad portrait and landscape */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .logo-img {
-        max-width: 72vw;
-        height: auto;
-    }
-
-    .prod-box {
-        min-height: 38svh;
-    }
-
-    .slide-caption {
-        font-size: 1.25rem;
-    }
-}
-
-/* Extra width in landscape orientations */
-@media (max-width: 1024px) and (orientation: landscape) {
-    .manufacturing.partial-background {
-        padding-top: 8vh;
-        padding-bottom: 8vh;
-    }
-
-    .prod-info,
     .gallery-track {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .prod-info {
-        display: grid;
-    }
-
-    .prod-box {
-        min-height: 62svh;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        justify-items: center;
     }
 
     .gallery-track .slide {
-        min-height: 70svh;
+        width: 100%;
+        max-width: 700px;
+        min-height: 440px;
     }
 
     .gallery-track img {
-        height: 38svh;
-    }
-}
-
-/* Compact spacing and vertical cards on all mobile devices */
-@media (max-width: 1024px) {
-    body {
-        font-size: 1.35rem;
-    }
-
-    .prod-info,
-    .gallery-track {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .product-text {
-        font-size: 1.6rem;
-        line-height: 1.7;
-    }
-
-    .prod-box {
-        width: 100%;
-        max-width: none;
-        min-height: 220px;
-        padding: 24px;
-    }
-
-    .slide-caption {
-        font-size: 1.45rem;
-    }
-
-    .gallery-header p {
-        font-size: 1.25rem;
-    }
-
-    .hero-to-products {
-        height: 96px;
-    }
-
-    .gallery-to-contact {
-        height: 32px;
-    }
-
-    .contact {
-        padding: 170px 5% 0 0;
+        height: 240px;
     }
 
     .redbox {
-        height: auto;
-        min-height: 650px;
-        clip-path: none;
-    }
-
-    .margin {
-        font-size: 1.3rem;
+        min-height: 68svh;
     }
 
     .contact {
         justify-content: center;
-        padding: 70px 5% 50px;
+        flex-direction: column;
+        padding: 7svh 6vw 5svh;
+    }
+
+    .contact-details {
+        flex: 0 1 auto;
+        width: min(520px, 100%);
+        text-align: center;
     }
 
     .email-form {
-        width: min(600px, 100%);
-        padding: 28px;
+        width: min(520px, 100%);
+        padding: 32px;
     }
 
-    .links span {
-        font-size: 1.35rem;
+    .quick-product-heading {
+        font-size: 1.9rem;
     }
 
-    #home .links .sum-button {
-        width: min(270px, 45vw);
-        height: 84px;
-        padding: 14px 20px;
+    .quick-product-headings {
+        gap: 22px;
     }
 
-    #home .links span {
-        font-size: 1.5rem;
+    .quick-product-summary {
+        width: fit-content;
+        max-width: calc(100vw - 40px);
+        font-size: 1.15rem;
+        line-height: 1.5;
     }
 
-    .product-header h2 {
-        font-size: 1.8rem;
+    .links .sum-button {
+        width: 280px;
+        height: 90px;
     }
 }
 
-/* Final phone button layout */
 @media (max-width: 767px) {
+    .Nav {
+        height: 64px;
+    }
+
+    .nav-logo {
+        height: 68px;
+    }
+
+    .logo-button {
+        margin-left: 12px;
+    }
+
+    .nav-actions {
+        gap: 4px;
+        margin-right: 8px;
+    }
+
+    .button {
+        height: 38px;
+        margin: 0;
+        padding: 0 6px;
+    }
+
+    .button span {
+        font-size: 0.76rem;
+    }
+
+    .contact-button {
+        width: 92px;
+    }
+
+    #home .hero-logo {
+        position: static;
+        width: 100%;
+        margin-top: 330px;
+    }
+
+    #home .logo-img {
+        width: min(100vw, 680px);
+        height: auto;
+        margin: 0 auto;
+        transform: none;
+    }
+
+    #home > .product-preview {
+        position: static !important;
+        width: calc(100% - 16px);
+        max-width: 560px;
+        margin: 20px auto 0;
+        transform: none !important;
+    }
+
+    .quick-product-headings {
+        gap: 10px;
+    }
+
+    .quick-product-heading {
+        font-size: 1.3rem;
+        white-space: nowrap;
+    }
+
+    .quick-product-summary {
+        width: fit-content;
+        max-width: calc(100vw - 32px);
+        min-height: 2.8em;
+        margin-top: 8px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
     #home .links {
-        width: 100vw;
+        position: static;
+        width: auto;
+        margin: 22px auto 0;
+        transform: none;
+    }
+
+    #home .links .sum-button {
+        width: 260px;
+        height: 82px;
+        padding: 16px 24px;
+    }
+
+    #home .links span {
+        font-size: 1.45rem;
+    }
+
+    .manufacturing {
+        min-height: 100svh;
+        padding: 9svh 20px 10svh;
+    }
+
+    .prod-info {
+        grid-template-columns: 1fr;
+        justify-items: center;
         gap: 20px;
     }
 
-    #home .links .sum-button {
-        width: calc(100vw - 24px);
-        max-width: none;
-        height: 720px;
-        padding: 32px 24px;
-        border: 3px solid rgba(255, 255, 255, 0.5);
-        border-radius: 24px;
+    .gallery-track {
+        grid-template-columns: 1fr;
+        overflow-x: visible;
+        justify-items: center;
     }
 
-    #home .links span {
-        font-size: 10rem;
-        line-height: 1.1;
-    }
-}
-
-/* Landscape phones */
-@media (max-width: 767px) and (orientation: landscape) {
-    #home .logo-img {
-        top: 20%;
+    .prod-box {
+        min-height: 0;
+        width: 100%;
+        max-width: 700px;
+        padding: 26px 20px;
     }
 
-    #home .links {
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        width: 100vw;
-        margin: 0;
-        padding: 0 2vw;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 4vw;
-
-        /* Remove the original translateY(100px) */
-        transform: translateX(-50%);
+    .product-header h2,
+    .gallery-header h2,
+    .email-form h2 {
+        font-size: 1.45rem;
     }
 
-    #home .links .sum-button {
-        width: 46vw;
-        max-width: 320px;
-        height: 110px;
+    .product-text,
+    .gallery-header p,
+    .slide-caption,
+    .email-form {
+        font-size: 1.1rem;
+    }
+
+    .gallery-header {
+        min-height: 28svh;
+        padding: 9svh 20px 4svh;
+    }
+
+    .gallery {
+        min-height: 82svh;
+        padding: 0 16px 8svh;
+    }
+
+    .gallery-track .slide {
+        min-height: 0;
+    }
+
+    .gallery-track img {
+        height: 220px;
+    }
+
+    .slide-caption {
+        min-height: 0;
         padding: 20px;
     }
 
-    #home .links span {
-        font-size: 2.6rem;
-        line-height: 1.1;
+    .redbox {
+        min-height: 68svh;
+    }
+
+    .contact {
+        padding: 6svh 16px 5svh;
+    }
+
+    .email-form {
+        padding: 32px 24px;
     }
 }
+
+@media (max-width: 767px) and (orientation: landscape) {
+    #home {
+        min-height: 640px;
+        height: auto;
+        padding-bottom: 48px;
+    }
+
+    #home .hero-logo {
+        margin-top: 210px;
+    }
+
+    #home .logo-img {
+        width: min(94vw, 620px);
+    }
+
+    #home > .product-preview {
+        margin-top: 12px;
+    }
+
+    #home .links {
+        margin-top: 16px;
+    }
+}
+
+

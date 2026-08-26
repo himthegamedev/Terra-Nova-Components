@@ -94,8 +94,25 @@
         }
     }
 
+    function cycleProductPreview(selector, interval = 3500) {
+        const headings = document.querySelectorAll(`${selector} .quick-product-heading`);
+        const summary = document.querySelector(`${selector} .quick-product-summary`);
+
+        if (headings.length < 2 || !summary) return;
+
+        let activeIndex = 0;
+
+        setInterval(() => {
+            headings[activeIndex].classList.remove('is-active');
+            activeIndex = (activeIndex + 1) % headings.length;
+            headings[activeIndex].classList.add('is-active');
+            summary.textContent = headings[activeIndex].dataset.summary;
+        }, interval);
+    }
+
     stickyNav('.Nav', 'stickyNav');
     sideScrollGallery('.gallery', 10000);
+    cycleProductPreview('.product-preview');
     updateLogoFade();
 
     window.addEventListener('scroll', updateLogoFade, { passive: true });

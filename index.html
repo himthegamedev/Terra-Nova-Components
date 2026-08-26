@@ -12,26 +12,38 @@
 <div>
     <div class="indent"></div>    <div class="partial-background" id="home">
         <video class="hero-video" autoplay muted loop playsinline poster="Images/image.png">
-            <source src="videos/TNCDrone2.mp4" type="video/mp4">
+            <source src="videos/tncdrone3.mp4" type="video/mp4">
         </video>
         <div>
         <div class="Nav">
                                 <a href="#home" class="logo-button">
                     <img src="Images/tnc-logo-white.png" class="nav-logo" alt="Terra Nova Components">
                         </a>
-                        <a href="#contact-page" class="button">
-                    <span id="contacts">Contact</span>
+                                <div class="nav-actions">
+                        <a href="#gallery-header" class="button nav-choice-button">
+                    <span id="productbtn">Why Choose Us?</span>
                             </a>
+                        <a href="#contact-page" class="button contact-button">
+                    <span id="contacts">Contact Us</span>
+                            </a>
+                                </div>
 
         </div>
-                <img src="Images/tnc-red-logo3.png" class="logo-img" alt="Terra Nova Components">
+                <div class="hero-logo">
+                    <img src="Images/tnc-red-logo3.png" class="logo-img" alt="Terra Nova Components">
+                </div>
+                </div>
+                <div class="product-preview" aria-live="polite">
+                    <div class="quick-product-headings">
+                        <h3 class="quick-product-heading is-active" data-summary="Fast, dependable wall framing built for efficient installation.">Wall Systems</h3>
+                        <h3 class="quick-product-heading" data-summary="Custom roof trusses engineered to match your building plans.">Truss Systems</h3>
+                        <h3 class="quick-product-heading" data-summary="Strong, precise floor systems that help move construction forward.">Floor Systems</h3>
+                    </div>
+                    <p class="quick-product-summary">Fast, dependable wall framing built for efficient installation.</p>
                 </div>
                 <div class="links">
                     <a href="#manufacturing" class="sum-button">
-                    <span id="manubtn">Products</span>
-                    </a>
-                    <a href="#gallery-header" class="sum-button">
-                    <span id="productbtn">Why Choose Us?</span>
+                    <span id="manubtn">Learn More</span>
                     </a>
                 </div>
     </div> 
@@ -117,18 +129,23 @@
     <div id="contact-page">
     <div class="redbox">
         <div class="contact">
+        <div class="contact-details">
+            <h2>Ashley</h2>
+            <a href="mailto:Ashley@terranovtruss.com">Ashley@terranovtruss.com</a>
+        </div>
         <form class="email-form" action="mailto:Ashley@terranovtruss.com" method="post" enctype="text/plain">
             <h2>Contact Us</h2>
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required>
+            <label for="phone">Contact Number</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="best-time">Best Time to Call</label>
+            <input type="datetime-local" id="best-time" name="best-time" required>
             <button type="submit">Send Message</button>
         </form>
     </div>
-    <div class="cr">Website developed by son of kent & son innovations</div>
     </div>
     </div>
     <div class="videos">
