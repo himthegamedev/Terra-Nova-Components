@@ -101,13 +101,31 @@
         if (headings.length < 2 || !summary) return;
 
         let activeIndex = 0;
+        let timer;
 
-        setInterval(() => {
+        function showProduct(index) {
             headings[activeIndex].classList.remove('is-active');
-            activeIndex = (activeIndex + 1) % headings.length;
+            activeIndex = index;
             headings[activeIndex].classList.add('is-active');
             summary.textContent = headings[activeIndex].dataset.summary;
-        }, interval);
+        }
+
+        function resetTimer() {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                showProduct((activeIndex + 1) % headings.length);
+                resetTimer();
+            }, interval);
+        }
+
+        headings.forEach((heading, index) => {
+            heading.addEventListener('click', () => {
+                showProduct(index);
+                resetTimer();
+            });
+        });
+
+        resetTimer();
     }
 
     stickyNav('.Nav', 'stickyNav');

@@ -61,7 +61,7 @@ span {
     position: relative;
     width: 100%;
     height: 900px;
-    background-image: url('Images/image.png');
+    background-image: url('Images/overheadview.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -208,9 +208,20 @@ span {
 
 .quick-product-heading {
     margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text-light);
+    cursor: pointer;
     font-size: 1.2rem;
     font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
     transition: font-weight 0.2s ease, color 0.2s ease;
+}
+
+.quick-product-heading:hover,
+.quick-product-heading:focus-visible {
+    color: var(--gold);
 }
 
 .quick-product-summary {
