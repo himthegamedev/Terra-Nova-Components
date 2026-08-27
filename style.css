@@ -7,9 +7,15 @@
     --gold: rgb(254, 225, 53);
     --button-overlay: rgba(0, 0, 0, 0.4);
     --button-hover: rgba(0, 0, 0, 0.7);
+
     --title-size: 1.75rem;
     --body-size: 1.15rem;
 }
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
 
 * {
     box-sizing: border-box;
@@ -18,8 +24,10 @@
 
 body {
     margin: 0;
+
     background-color: var(--bg-dark);
     color: var(--text-light);
+
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.1rem;
 }
@@ -45,11 +53,6 @@ span {
 button {
     font: inherit;
 }
-.phone-icon{
-    width:75px;
-    height:auto;
-    display: none;
-}
 
 a {
     color: inherit;
@@ -62,14 +65,34 @@ span {
     font-size: x-large;
 }
 
+.phone-icon {
+    width: 75px;
+    height: auto;
+
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE TOP NAVIGATION
+   ========================================================= */
+
+.mobile-top-nav,
+.mobile-menu {
+    display: none;
+}
+
+
 /* =========================================================
    HERO
    ========================================================= */
 
 .partial-background {
-position: relative;
+    position: relative;
+
     width: 100%;
     height: 1100px;
+
     overflow: hidden;
 
     background-image: url('Images/overheadview.webp');
@@ -79,9 +102,11 @@ position: relative;
 }
 
 #home {
-position: relative;
+    position: relative;
+
     width: 100%;
     height: 1100px;
+
     overflow: hidden;
 }
 
@@ -115,8 +140,11 @@ position: relative;
 #home::after {
     position: absolute;
     inset: 0;
+
     z-index: 1;
+
     background: rgba(0, 0, 0, 0.16);
+
     content: '';
     pointer-events: none;
 }
@@ -137,14 +165,17 @@ position: relative;
     height: 64px;
 }
 
+
 /* =========================================================
-   NAVIGATION
+   DESKTOP NAVIGATION
    ========================================================= */
 
 .Nav {
     position: fixed;
+
     top: 0;
     left: 0;
+
     z-index: 10000;
 
     display: flex;
@@ -166,11 +197,13 @@ position: relative;
     align-items: center;
 
     width: auto;
+
     margin: 0 0 0 20px;
     padding: 0;
 
     border: none;
     background: transparent;
+
     cursor: pointer;
     visibility: visible;
 }
@@ -182,16 +215,21 @@ position: relative;
 .nav-logo {
     width: auto;
     height: 65px;
+
     opacity: 0;
+
     transition: opacity 0.1s linear;
 }
 
 .nav-actions {
     display: flex;
     align-items: center;
+
     gap: 12px;
+
     margin-right: 20px;
 }
+
 
 /* =========================================================
    HERO LOGO
@@ -202,6 +240,7 @@ position: relative;
     justify-content: center;
 
     width: 100%;
+
     margin-top: 150px;
 
     text-align: center;
@@ -221,6 +260,7 @@ position: relative;
     transition: opacity 0.1s linear;
 }
 
+
 /* =========================================================
    HERO PRODUCT SUMMARY
    ========================================================= */
@@ -237,6 +277,7 @@ position: relative;
     padding: 8px 14px;
 
     border-radius: 12px;
+
     background: var(--button-overlay);
 
     text-align: center;
@@ -248,6 +289,7 @@ position: relative;
     justify-content: center;
 
     gap: 12px;
+
     width: 100%;
 }
 
@@ -259,10 +301,12 @@ position: relative;
     background: transparent;
 
     color: var(--text-light);
+
     cursor: pointer;
 
     font-size: 1.2rem;
     font-weight: 500;
+
     font-family: 'Montserrat', sans-serif;
 
     transition:
@@ -282,6 +326,7 @@ position: relative;
 
 .quick-product-summary {
     width: fit-content;
+
     max-width: calc(100vw - 40px);
 
     min-height: 2.8em;
@@ -297,8 +342,9 @@ position: relative;
     text-align: center;
 }
 
+
 /* =========================================================
-   HERO LEARN MORE
+   LEARN MORE
    ========================================================= */
 
 .links {
@@ -309,6 +355,7 @@ position: relative;
     flex-direction: row;
 
     width: 100%;
+
     gap: 30px;
 
     transform: translateY(100px);
@@ -323,6 +370,7 @@ position: relative;
     height: 60px;
 
     padding: 10px 16px;
+
     box-sizing: border-box;
 }
 
@@ -338,6 +386,7 @@ position: relative;
 .links .highlight {
     transform: scale(1.15);
 }
+
 
 /* =========================================================
    BUTTONS
@@ -357,6 +406,7 @@ position: relative;
     background: none;
 
     cursor: pointer;
+
     flex-direction: row;
 }
 
@@ -368,50 +418,27 @@ position: relative;
 .nav-choice-button {
     width: auto;
     margin-right: 20px;
-
-}
-.contact-intro {
-    position: relative;
-    z-index: 2;
-
-    width: 100%;
-    padding: 115px 5% 0;
-
-    color: var(--text-light);
-    text-align: center;
 }
 
-.contact-intro h2 {
-    margin: 0 0 10px;
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.contact-intro p {
-    max-width: 850px;
-
-    margin: 0 auto;
-
-    font-size: var(--body-size);
-    line-height: 1.6;
-}
 .contact-button {
     width: 145px;
+
     overflow: hidden;
+
     white-space: nowrap;
 
     border-radius: 10px;
+
     background-color: rgb(205, 20, 20);
 
     transition:
         background-color 0.2s ease,
         transform 0.2s ease;
 }
+
 .contact-button #contacts {
     display: block;
+
     white-space: nowrap;
 }
 
@@ -422,8 +449,10 @@ position: relative;
 
 .sum-button {
     background-color: var(--button-overlay);
+
     border-radius: 12px;
     border: none;
+
     cursor: pointer;
 }
 
@@ -431,6 +460,7 @@ position: relative;
 .gallery button:hover {
     background-color: var(--button-hover);
 }
+
 
 /* =========================================================
    STICKY NAV
@@ -472,6 +502,7 @@ position: relative;
     visibility: visible;
 }
 
+
 /* =========================================================
    SHARED HEADINGS
    ========================================================= */
@@ -482,15 +513,19 @@ position: relative;
     color: var(--text-light);
 
     font-family: 'Montserrat', sans-serif;
+
     font-size: var(--title-size);
     font-weight: 700;
 
     line-height: 1.2;
+
     text-align: center;
 
     text-transform: uppercase;
+
     letter-spacing: 0.08em;
 }
+
 
 /* =========================================================
    MANUFACTURING / CAPABILITIES
@@ -525,6 +560,7 @@ position: relative;
 
 .manufacturing-text {
     margin: 0 0 20px;
+
     text-align: center;
 }
 
@@ -536,6 +572,7 @@ position: relative;
     gap: 35px;
 
     width: 100%;
+
     margin: 0;
     padding: 0;
 
@@ -577,6 +614,7 @@ position: relative;
     text-align: center;
 }
 
+
 /* =========================================================
    PRODUCT SYSTEM BOXES
    ========================================================= */
@@ -587,6 +625,7 @@ position: relative;
     justify-content: center;
 
     width: 100%;
+
     gap: 36px;
 
     flex: 1;
@@ -611,6 +650,7 @@ position: relative;
     padding: 36px 28px;
 
     border: 1px solid rgba(255, 255, 255, 0.25);
+
     border-radius: 18px;
 
     background: rgba(0, 0, 0, 0.55);
@@ -626,6 +666,7 @@ position: relative;
 
 .prod-box:hover {
     transform: translateY(-6px);
+
     box-shadow: 0 24px 45px rgba(0, 0, 0, 0.6);
 }
 
@@ -641,6 +682,7 @@ position: relative;
 
 .product-header h2 {
     margin: 0;
+
     font-size: 1.5rem;
 }
 
@@ -653,6 +695,7 @@ position: relative;
     margin: 18px 0;
 
     overflow: hidden;
+
     border-radius: 10px;
 }
 
@@ -684,6 +727,7 @@ position: relative;
     text-align: center;
 }
 
+
 /* =========================================================
    WHY CHOOSE US
    ========================================================= */
@@ -702,6 +746,7 @@ position: relative;
 
 .gallery {
     width: 100%;
+
     padding: 0 30px 50px;
 }
 
@@ -711,6 +756,7 @@ position: relative;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     width: 100%;
+
     gap: 36px;
 
     justify-items: center;
@@ -724,6 +770,7 @@ position: relative;
     overflow: hidden;
 
     border: 2px solid rgba(255, 255, 255, 0.35);
+
     border-radius: 18px;
 
     background: rgba(0, 0, 0, 0.55);
@@ -737,6 +784,7 @@ position: relative;
 
 .gallery-track .slide:hover {
     transform: translateY(-8px);
+
     box-shadow: 0 24px 45px rgba(0, 0, 0, 0.6);
 }
 
@@ -747,6 +795,7 @@ position: relative;
     height: 230px;
 
     object-fit: cover;
+
     user-select: none;
 }
 
@@ -832,6 +881,7 @@ position: relative;
     right: 20px;
 }
 
+
 /* =========================================================
    CONTACT
    ========================================================= */
@@ -846,6 +896,7 @@ position: relative;
     color: var(--text-light);
 
     font-family: 'Montserrat', sans-serif;
+
     font-size: 1.25rem;
     font-weight: 600;
 
@@ -868,6 +919,7 @@ position: relative;
     position: absolute;
 
     inset: 0;
+
     z-index: -1;
 
     background-color: var(--panel-red);
@@ -882,8 +934,43 @@ position: relative;
     content: '';
 }
 
+.contact-intro {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    padding: 115px 5% 0;
+
+    color: var(--text-light);
+
+    text-align: center;
+}
+
+.contact-intro h2 {
+    margin: 0 0 10px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.contact-intro p {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    font-size: var(--body-size);
+    line-height: 1.6;
+}
+
 .contact {
     position: relative;
+
     z-index: 1;
 
     display: flex;
@@ -918,6 +1005,7 @@ position: relative;
 
 .contact-details a {
     color: var(--text-light);
+
     font-size: var(--body-size);
 }
 
@@ -936,6 +1024,7 @@ position: relative;
     background: rgba(0, 0, 0, 0.55);
 
     border: 1px solid rgba(255, 255, 255, 0.35);
+
     border-radius: 12px;
 
     text-align: left;
@@ -952,6 +1041,7 @@ position: relative;
     padding: 10px;
 
     border: 1px solid rgba(255, 255, 255, 0.45);
+
     border-radius: 6px;
 
     background: rgba(255, 255, 255, 0.95);
@@ -967,9 +1057,11 @@ position: relative;
     align-self: flex-start;
 
     margin-top: 8px;
+
     padding: 10px 18px;
 
     border: none;
+
     border-radius: 6px;
 
     background: var(--button-overlay);
@@ -982,6 +1074,7 @@ position: relative;
 .email-form button:hover {
     background: var(--button-hover);
 }
+
 
 /* =========================================================
    OTHER
@@ -1023,6 +1116,7 @@ position: relative;
 
 .cr {
     position: relative;
+
     z-index: 1;
 
     padding: 12px 5% 8px;
@@ -1032,19 +1126,22 @@ position: relative;
     text-align: right;
 
     font-size: x-small;
+
     color: crimson;
 }
 
 .contacts {
     color: var(--text-light);
+
     font-size: larger;
 }
 
+
 /* =========================================================
-   DESKTOP
+   WIDE DESKTOP
    ========================================================= */
 
-   @media (min-width: 1025px) and (min-aspect-ratio: 2/1) {
+@media (min-width: 1025px) and (min-aspect-ratio: 2/1) {
 
     .hero-video {
         width: 180%;
@@ -1060,30 +1157,87 @@ position: relative;
     }
 }
 
-@media (min-width: 1025px) { /* ---------------- NAVIGATION LOGO ---------------- */ 
-    .nav-logo { 
-        width: auto; height: 65px; 
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1025px) {
+
+    .nav-logo {
+        width: auto;
+        height: 65px;
     }
-    /* ---------------- HERO PRODUCT PREVIEW ---------------- */ 
-    .product-preview { 
-        width: min(480px, calc(100vw - 40px)); 
-        max-width: 480px; 
-        padding: 6px 10px; 
-    } 
-    .quick-product-headings { 
-        gap: 18px; 
-    } 
-    .quick-product-heading { 
-        font-size: 1rem; 
-    } 
-    .quick-product-summary 
-    { 
-        max-width: 440px; font-size: 1.1rem;
-     }
-      /* ---------------- HERO LEARN MORE ---------------- */ 
-      #home .links { transform: translateY(40px); } 
-      /* ---------------- WHY CHOOSE US ---------------- */ 
-      .gallery-track { display: grid; grid-template-columns: repeat(2, 550px); grid-auto-rows: 520px; justify-content: center; gap: 30px; width: 100%; } .gallery-track .slide { width: 550px; height: 520px; min-height: 0; } .gallery-track img { width: 100%; height: 280px; object-fit: cover; } /* ---------------- PRODUCT IMAGES ---------------- */ .product-img { height: 180px; } }
+
+
+    .product-preview {
+        width: min(480px, calc(100vw - 40px));
+
+        max-width: 480px;
+
+        padding: 6px 10px;
+    }
+
+
+    .quick-product-headings {
+        gap: 18px;
+    }
+
+
+    .quick-product-heading {
+        font-size: 1rem;
+    }
+
+
+    .quick-product-summary {
+        max-width: 440px;
+
+        font-size: 1.1rem;
+    }
+
+
+    #home .links {
+        transform: translateY(40px);
+    }
+
+
+    .gallery-track {
+        display: grid;
+
+        grid-template-columns: repeat(2, 550px);
+
+        grid-auto-rows: 520px;
+
+        justify-content: center;
+
+        gap: 30px;
+
+        width: 100%;
+    }
+
+
+    .gallery-track .slide {
+        width: 550px;
+        height: 520px;
+
+        min-height: 0;
+    }
+
+
+    .gallery-track img {
+        width: 100%;
+        height: 280px;
+
+        object-fit: cover;
+    }
+
+
+    .product-img {
+        height: 180px;
+    }
+
+}
+
 
 /* =========================================================
    TABLET
@@ -1093,20 +1247,25 @@ position: relative;
 
     body {
         font-size: 1.2rem;
+
         line-height: 1.55;
 
         overflow-x: hidden;
     }
 
+
     .partial-background {
         min-height: 90svh;
+
         height: auto;
     }
+
 
     #home {
         min-height: 100svh;
         height: 100svh;
     }
+
 
     .hero-video {
         width: 108%;
@@ -1125,12 +1284,15 @@ position: relative;
         margin-top: 300px;
     }
 
+
     #home .logo-img {
         width: min(100vw, 720px);
+
         height: auto;
 
         margin: 0 auto;
     }
+
 
     .manufacturing {
         min-height: 92svh;
@@ -1138,9 +1300,11 @@ position: relative;
         padding: 8svh 6vw 10svh;
     }
 
+
     .manufacturing-text {
         margin-bottom: 20px;
     }
+
 
     .capabilities-content {
         width: min(700px, 100%);
@@ -1148,18 +1312,23 @@ position: relative;
         padding: 28px 30px;
     }
 
+
     .capabilities-img {
         gap: 25px;
     }
+
 
     .capabilities-img > div {
         width: 150px;
     }
 
+
     .capabilities-img img {
         height: 48px;
+
         width: auto;
     }
+
 
     .prod-info {
         display: grid;
@@ -1171,6 +1340,7 @@ position: relative;
         gap: 24px;
     }
 
+
     .prod-box {
         min-height: 0;
 
@@ -1180,14 +1350,17 @@ position: relative;
         padding: 28px 24px;
     }
 
+
     .product-header h2,
     .email-form h2 {
         font-size: 1.6rem;
     }
 
+
     .section-heading {
         font-size: 1.6rem;
     }
+
 
     .product-text,
     .gallery-header p,
@@ -1196,14 +1369,18 @@ position: relative;
         font-size: var(--body-size);
     }
 
+
     .product-img {
         height: 220px;
+
         margin: 18px 0;
     }
+
 
     .slide-caption p {
         font-size: var(--body-size);
     }
+
 
     .gallery-header {
         min-height: 24svh;
@@ -1211,11 +1388,13 @@ position: relative;
         padding: 8svh 6vw 4svh;
     }
 
+
     .gallery {
         min-height: 76svh;
 
         padding: 0 6vw 8svh;
     }
+
 
     .gallery-track {
         grid-template-columns: 1fr;
@@ -1225,20 +1404,25 @@ position: relative;
         justify-items: center;
     }
 
+
     .gallery-track .slide {
         width: 100%;
+
         max-width: 700px;
 
         min-height: 440px;
     }
 
+
     .gallery-track img {
         height: 240px;
     }
 
+
     .redbox {
         min-height: 68svh;
     }
+
 
     .contact {
         justify-content: center;
@@ -1248,6 +1432,7 @@ position: relative;
         padding: 7svh 6vw 5svh;
     }
 
+
     .contact-details {
         flex: 0 1 auto;
 
@@ -1256,19 +1441,23 @@ position: relative;
         text-align: center;
     }
 
+
     .email-form {
         width: min(520px, 100%);
 
         padding: 32px;
     }
 
+
     .quick-product-heading {
         font-size: 1.9rem;
     }
 
+
     .quick-product-headings {
         gap: 22px;
     }
+
 
     .quick-product-summary {
         width: fit-content;
@@ -1276,107 +1465,339 @@ position: relative;
         max-width: calc(100vw - 40px);
 
         font-size: 1.15rem;
+
         line-height: 1.5;
     }
 
+
     .links .sum-button {
         width: 280px;
+
         height: 90px;
     }
+
 }
 
-/* ================================
+
+/* =========================================================
    MOBILE
-   ================================ */
+   ========================================================= */
 
 @media (max-width: 767px) {
 
-    /* ----------------
-       MOBILE NAV
-       ---------------- */
+
+    /* =====================================================
+       MOBILE TOP NAV
+       ===================================================== */
+
+    .mobile-top-nav {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        z-index: 11000;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 64px;
+
+        padding: 4px 12px;
+
+        background: rgba(0, 0, 0, 0.78);
+
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+    }
+
+
+    .mobile-top-logo {
+        display: flex;
+
+        align-items: center;
+
+        height: 100%;
+    }
+
+
+    .mobile-top-logo img {
+        display: block;
+
+        width: auto;
+        height: 52px;
+    }
+
+
+    /* =====================================================
+       HAMBURGER
+       ===================================================== */
+
+    .hamburger-button {
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 52px;
+        height: 52px;
+
+        padding: 8px;
+
+        border: none;
+
+        border-radius: 8px;
+
+        background: transparent;
+
+        cursor: pointer;
+    }
+
+
+    .hamburger-button span {
+        display: block;
+
+        width: 30px;
+        height: 3px;
+
+        margin: 4px 0;
+
+        border-radius: 3px;
+
+        background-color: white;
+
+        transition:
+            transform 0.25s ease,
+            opacity 0.25s ease;
+    }
+
+
+    .hamburger-button.is-open span:nth-child(1) {
+        transform: translateY(11px) rotate(45deg);
+    }
+
+
+    .hamburger-button.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    .hamburger-button.is-open span:nth-child(3) {
+        transform: translateY(-11px) rotate(-45deg);
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+       ===================================================== */
+
+    .mobile-menu {
+        position: fixed;
+
+        top: 64px;
+        left: 0;
+
+        z-index: 10999;
+
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        padding: 12px 16px 20px;
+
+        background: rgba(0, 0, 0, 0.96);
+
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        transform: translateY(-120%);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transition:
+            transform 0.3s ease,
+            opacity 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+
+    .mobile-menu.is-open {
+        transform: translateY(0);
+
+        opacity: 1;
+
+        visibility: visible;
+    }
+
+
+    .mobile-menu a {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 56px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+        color: white;
+
+        font-family: 'Montserrat', sans-serif;
+
+        font-size: 1rem;
+        font-weight: 700;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.05em;
+
+        transition:
+            color 0.2s ease,
+            background-color 0.2s ease;
+    }
+
+
+    .mobile-menu a:hover,
+    .mobile-menu a:focus-visible {
+        color: var(--gold);
+
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+
+    .mobile-menu a:last-child {
+        margin-top: 8px;
+
+        border: none;
+
+        border-radius: 8px;
+
+        background-color: rgb(205, 20, 20);
+    }
+
+
+    .mobile-menu a:last-child:hover {
+        color: white;
+
+        background-color: rgb(240, 30, 30);
+    }
+
+
+    /* =====================================================
+       EXISTING BOTTOM NAV
+       ===================================================== */
 
     .Nav {
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    z-index: 10000;
+        position: fixed;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        top: auto;
+        bottom: 0;
+        left: 0;
 
-    width: 100%;
-    height: 72px;
+        z-index: 10000;
 
-    padding: 6px 10px;
+        display: flex;
 
-    background-color: rgba(0, 0, 0, 0.8);
-}
+        align-items: center;
+        justify-content: space-between;
 
-.logo-button {
-    margin-left: 0;
-}
+        width: 100%;
+        height: 72px;
 
-.nav-logo {
-    width: auto;
-    height: 58px;
-}
+        padding: 6px 10px;
 
-.nav-actions {
-    display: flex;
-    align-items: center;
+        background-color: rgba(0, 0, 0, 0.85);
+    }
 
-    width: 100%;
-    margin-left: 15px;
-    margin-right: 0;
-}
 
-/* Hide Why Choose Us */
-.nav-choice-button {
-    display: none;
-}
+    .logo-button {
+        margin-left: 0;
+    }
 
-/* Large Get a Quote button */
-.contact-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    width: 100%;
-    height: 58px;
+    .nav-logo {
+        width: auto;
+        height: 58px;
+    }
 
-    padding: 0 20px;
 
-    border-radius: 10px;
+    .nav-actions {
+        display: flex;
 
-    background-color: rgb(205, 20, 20);
+        align-items: center;
 
-    white-space: nowrap;
-}
+        width: 100%;
 
-.contact-button #contacts {
-    display: block;
+        margin-left: 15px;
+        margin-right: 0;
+    }
 
-    font-size: 1.5rem;
-    font-weight: 800;
 
-    line-height: 1;
-}
+    /* HIDE WHY CHOOSE US */
 
-/* Remove the icon */
-.contact-button .phone-icon {
-    display: none;
-}
+    .nav-choice-button {
+        display: none;
+    }
 
-.contact-button:hover {
-    background-color: rgb(240, 30, 30);
-    transform: none;
-}
 
-    /* ----------------
+    /* BIG GET A QUOTE BUTTON */
+
+    .contact-button {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 58px;
+
+        padding: 0 20px;
+
+        border-radius: 10px;
+
+        background-color: rgb(205, 20, 20);
+
+        white-space: nowrap;
+    }
+
+
+    .contact-button #contacts {
+        display: block;
+
+        font-size: 1.5rem;
+        font-weight: 800;
+
+        line-height: 1;
+    }
+
+
+    /* REMOVE CONTACT ICON */
+
+    .contact-button .phone-icon {
+        display: none;
+    }
+
+
+    .contact-button:hover {
+        background-color: rgb(240, 30, 30);
+
+        transform: none;
+    }
+
+
+    /* =====================================================
        HERO
-       ---------------- */
+       ===================================================== */
 
     #home {
         position: relative;
@@ -1385,7 +1806,9 @@ position: relative;
         height: 100svh;
 
         display: flex;
+
         flex-direction: column;
+
         align-items: center;
         justify-content: center;
 
@@ -1393,6 +1816,7 @@ position: relative;
 
         overflow: hidden;
     }
+
 
     .hero-video {
         top: 0;
@@ -1404,28 +1828,35 @@ position: relative;
         transform: none;
 
         object-fit: cover;
+
         object-position: center center;
     }
+
 
     #home > div {
         width: 100%;
     }
 
+
     #home .hero-logo {
         position: static;
 
         display: flex;
+
         align-items: center;
         justify-content: center;
 
         width: 100%;
+
         margin: 0;
     }
+
 
     #home .logo-img {
         display: block;
 
         width: min(90vw, 600px);
+
         height: auto;
 
         margin: 0 auto;
@@ -1434,84 +1865,105 @@ position: relative;
     }
 
 
-    /* ----------------
+    /* =====================================================
        PRODUCT SUMMARY
-       ---------------- */
+       ===================================================== */
 
     #home > .product-preview {
-    position: static !important;
+        position: static !important;
 
-    width: calc(100% - 4px);
-    max-width: 700px;
+        width: calc(100% - 4px);
 
-    margin: 15px auto 0;
-    padding: 14px 12px;
+        max-width: 700px;
 
-    box-sizing: border-box;
-    overflow: visible;
+        margin: 15px auto 0;
 
-    border-radius: 12px;
-    background: rgba(0, 0, 0, 0.55);
+        padding: 14px 12px;
 
-    text-align: center;
-}
+        box-sizing: border-box;
+
+        overflow: visible;
+
+        border-radius: 12px;
+
+        background: rgba(0, 0, 0, 0.55);
+
+        text-align: center;
+    }
+
 
     .quick-product-headings {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        display: flex;
 
-    width: 100%;
-    gap: 8px;
-}
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+
+        gap: 8px;
+    }
+
 
     .quick-product-heading {
-    flex: 1 1 auto;
-    min-width: 0;
+        flex: 1 1 auto;
 
-    padding: 0 4px;
+        min-width: 0;
 
-    font-size: 0.9rem;
-    line-height: 1.2;
-    white-space: nowrap;
-    text-align: center;
-}
+        padding: 0 4px;
+
+        font-size: 0.9rem;
+
+        line-height: 1.2;
+
+        white-space: nowrap;
+
+        text-align: center;
+    }
+
+
     .quick-product-heading:hover,
     .quick-product-heading:focus-visible {
         color: var(--gold);
     }
 
+
     .quick-product-heading.is-active {
         color: var(--gold);
+
         font-weight: 800;
     }
 
+
     .quick-product-summary {
         width: 100%;
+
         max-width: 100%;
 
         min-height: 2.8em;
 
         margin: 10px auto 0;
+
         padding: 0;
 
         background: transparent;
 
         font-size: 0.85rem;
+
         line-height: 1.4;
 
         text-align: center;
     }
 
 
-    /* ----------------
+    /* =====================================================
        LEARN MORE
-       ---------------- */
+       ===================================================== */
 
     #home .links {
         position: static;
 
         display: flex;
+
         align-items: center;
         justify-content: center;
 
@@ -1522,83 +1974,121 @@ position: relative;
         transform: none;
     }
 
+
     #home .links .sum-button {
         display: flex;
+
         align-items: center;
         justify-content: center;
 
         width: 220px;
+
         height: 65px;
 
         padding: 12px 20px;
     }
 
+
     #home .links span {
         margin: 0;
+
         padding: 0;
 
         font-size: 1.25rem;
     }
 
 
-    /* ----------------
+    /* =====================================================
        MANUFACTURING
-       ---------------- */
+       ===================================================== */
 
     .manufacturing {
         min-height: 100svh;
+
         padding: 9svh 20px 10svh;
     }
+
 
     .capabilities-content {
         width: 100%;
 
         margin-bottom: 30px;
+
         padding: 24px 18px;
 
         border-radius: 16px;
     }
 
+
     .manufacturing-text {
         margin-bottom: 18px;
     }
 
-    .capabilities-img {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
 
-    gap: 10px;
-    width: 100%;
-}
+    /* ICONS SIDE BY SIDE */
+
+    .capabilities-img {
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: flex-start;
+
+        justify-content: space-between;
+
+        gap: 10px;
+
+        width: 100%;
+    }
+
 
     .capabilities-img > div {
-    width: 33.333%;
-    text-align: center;
-}
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        width: 33.333%;
+
+        text-align: center;
+    }
+
 
     .capabilities-img img {
         width: auto;
+
         height: 48px;
     }
+
+
+    .capabilities-img p {
+        margin: 8px 0 0;
+
+        font-size: 0.9rem;
+
+        text-align: center;
+    }
+
 
     .capabilities-description {
         margin-top: 20px;
 
         font-size: var(--body-size);
+
         line-height: 1.6;
 
         text-align: center;
     }
 
 
-    /* ----------------
+    /* =====================================================
        PRODUCT BOXES
-       ---------------- */
+       ===================================================== */
 
     .prod-info {
         display: grid;
+
         grid-template-columns: 1fr;
 
         justify-items: center;
@@ -1608,8 +2098,10 @@ position: relative;
         width: 100%;
     }
 
+
     .prod-box {
         width: 100%;
+
         max-width: 700px;
 
         min-height: 0;
@@ -1619,26 +2111,33 @@ position: relative;
         border-radius: 18px;
     }
 
+
     .product-header h2 {
         font-size: 1.45rem;
     }
 
+
     .product-img {
         width: 100%;
+
         height: 180px;
 
         margin: 16px 0;
     }
 
+
     .product-text {
         width: 100%;
+
         max-width: 100%;
 
         font-size: 1.1rem;
+
         line-height: 1.6;
 
         text-align: left;
     }
+
 
     .product-text h2,
     .product-text h3 {
@@ -1646,18 +2145,18 @@ position: relative;
     }
 
 
-    /* ----------------
+    /* =====================================================
        SECTION HEADINGS
-       ---------------- */
+       ===================================================== */
 
     .section-heading {
         font-size: 1.45rem;
     }
 
 
-    /* ----------------
+    /* =====================================================
        WHY CHOOSE US
-       ---------------- */
+       ===================================================== */
 
     .gallery-header {
         min-height: 28svh;
@@ -1665,10 +2164,13 @@ position: relative;
         padding: 9svh 20px 4svh;
     }
 
+
     .gallery-header p {
         font-size: 1.1rem;
+
         line-height: 1.6;
     }
+
 
     .gallery {
         min-height: 82svh;
@@ -1676,8 +2178,10 @@ position: relative;
         padding: 0 16px 8svh;
     }
 
+
     .gallery-track {
         display: grid;
+
         grid-template-columns: 1fr;
 
         gap: 20px;
@@ -1687,8 +2191,10 @@ position: relative;
         justify-items: center;
     }
 
+
     .gallery-track .slide {
         width: 100%;
+
         max-width: 700px;
 
         min-height: 0;
@@ -1696,12 +2202,15 @@ position: relative;
         border-radius: 18px;
     }
 
+
     .gallery-track img {
         width: 100%;
+
         height: 220px;
 
         object-fit: cover;
     }
+
 
     .slide-caption {
         width: 100%;
@@ -1713,36 +2222,60 @@ position: relative;
         font-size: 1.1rem;
     }
 
+
     .slide-caption h2 {
         font-size: var(--title-size);
     }
+
 
     .slide-caption p {
         margin-top: 8px;
 
         font-size: var(--body-size);
+
         line-height: 1.6;
     }
 
 
-    /* ----------------
+    /* =====================================================
        CONTACT
-       ---------------- */
+       ===================================================== */
 
     .redbox {
         min-height: 68svh;
     }
 
+
+    .contact-intro {
+        padding: 140px 20px 0;
+    }
+
+
+    .contact-intro h2 {
+        font-size: 1.45rem;
+    }
+
+
+    .contact-intro p {
+        font-size: 1rem;
+
+        line-height: 1.5;
+    }
+
+
     .contact {
         display: flex;
+
         flex-direction: column;
+
         justify-content: center;
         align-items: center;
 
         gap: 30px;
 
-        padding: 6svh 16px 8svh;
+        padding: 30px 16px 8svh;
     }
+
 
     .contact-details {
         flex: 0 1 auto;
@@ -1752,18 +2285,23 @@ position: relative;
         text-align: center;
     }
 
+
     .contact-details h2 {
         font-size: 1.4rem;
     }
 
+
     .contact-details p {
         font-size: 1rem;
+
         line-height: 1.5;
     }
+
 
     .contact-details a {
         font-size: 1rem;
     }
+
 
     .email-form {
         order: -1;
@@ -1775,9 +2313,11 @@ position: relative;
         font-size: 1.1rem;
     }
 
+
     .email-form h2 {
         font-size: 1.45rem;
     }
+
 
     .email-form input,
     .email-form textarea {
@@ -1785,17 +2325,20 @@ position: relative;
     }
 
 
-    /* ----------------
+    /* =====================================================
        FOOTER MESSAGE
-       ---------------- */
+       ===================================================== */
 
     .happy-to-help {
         padding: 24px 16px;
 
         font-size: 1.1rem;
+
         line-height: 1.4;
     }
+
 }
+
 
 /* =========================================================
    MOBILE LANDSCAPE
@@ -1805,26 +2348,32 @@ position: relative;
 
     #home {
         min-height: 640px;
+
         height: auto;
 
         padding-bottom: 80px;
     }
 
+
     #home .hero-logo {
         margin-top: 135px;
     }
+
 
     #home .logo-img {
         width: min(75vw, 520px);
     }
 
+
     #home > .product-preview {
         margin-top: 10px;
     }
 
+
     .quick-product-heading {
         font-size: 0.82rem;
     }
+
 
     .quick-product-summary {
         font-size: 0.75rem;
@@ -1832,28 +2381,51 @@ position: relative;
         margin-top: 7px;
     }
 
+
     #home .links {
         margin-top: 10px;
     }
 
+
     #home .links .sum-button {
         width: 190px;
+
         height: 50px;
     }
+
 
     #home .links span {
         font-size: 1rem;
     }
 
+
     .product-img {
         height: 160px;
     }
+
 
     .Nav {
         height: 56px;
     }
 
+
     .nav-logo {
         height: 48px;
     }
+
+
+    .mobile-top-nav {
+        height: 56px;
+    }
+
+
+    .mobile-top-logo img {
+        height: 46px;
+    }
+
+
+    .mobile-menu {
+        top: 56px;
+    }
+
 }
