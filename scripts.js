@@ -1,4 +1,10 @@
+/* =========================================================
+   TERRA NOVA COMPONENTS
+   MOBILE MENU + PRODUCT PREVIEW
+   ========================================================= */
+
 document.addEventListener("DOMContentLoaded", function () {
+
 
     /* =====================================================
        MOBILE HAMBURGER MENU
@@ -10,123 +16,101 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileMenu =
         document.getElementById("mobile-menu");
 
-    const mobileMenuClose =
-        document.getElementById("mobile-menu-close");
-
     const mobileMenuLinks =
         document.querySelectorAll(".mobile-menu-link");
 
 
-    function openMenu() {
+    if (hamburgerButton && mobileMenu) {
 
-        if (!mobileMenu || !hamburgerButton) {
-            return;
-        }
+        hamburgerButton.addEventListener("click", function () {
 
-        mobileMenu.classList.add("open");
-        hamburgerButton.classList.add("active");
+            const isOpen =
+                mobileMenu.classList.toggle("open");
 
-        hamburgerButton.setAttribute(
-            "aria-expanded",
-            "true"
-        );
+            hamburgerButton.classList.toggle(
+                "active",
+                isOpen
+            );
 
-        document.body.classList.add("menu-open");
-    }
+            hamburgerButton.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
 
+            hamburgerButton.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
 
-    function closeMenu() {
-
-        if (!mobileMenu || !hamburgerButton) {
-            return;
-        }
-
-        mobileMenu.classList.remove("open");
-        hamburgerButton.classList.remove("active");
-
-        hamburgerButton.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        document.body.classList.remove("menu-open");
-    }
+        });
 
 
-    if (hamburgerButton) {
+        /* Close menu when a link is clicked */
 
-        hamburgerButton.addEventListener(
-            "click",
-            function () {
+        mobileMenuLinks.forEach(function (link) {
 
-                if (mobileMenu.classList.contains("open")) {
-                    closeMenu();
-                } else {
-                    openMenu();
-                }
+            link.addEventListener("click", function () {
 
-            }
-        );
+                mobileMenu.classList.remove("open");
 
-    }
+                hamburgerButton.classList.remove("active");
 
+                hamburgerButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-    if (mobileMenuClose) {
+                hamburgerButton.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
 
-        mobileMenuClose.addEventListener(
-            "click",
-            closeMenu
-        );
+            });
 
-    }
+        });
 
 
-    mobileMenuLinks.forEach(function (link) {
+        /* Close menu when clicking outside it */
 
-        link.addEventListener(
-            "click",
-            function () {
-                closeMenu();
-            }
-        );
+        document.addEventListener("click", function (event) {
 
-    });
+            const clickedInsideMenu =
+                mobileMenu.contains(event.target);
 
+            const clickedHamburger =
+                hamburgerButton.contains(event.target);
 
-    /* Close menu when clicking outside the menu content */
+            if (
+                !clickedInsideMenu &&
+                !clickedHamburger &&
+                mobileMenu.classList.contains("open")
+            ) {
 
-    if (mobileMenu) {
+                mobileMenu.classList.remove("open");
 
-        mobileMenu.addEventListener(
-            "click",
-            function (event) {
+                hamburgerButton.classList.remove("active");
 
-                if (event.target === mobileMenu) {
-                    closeMenu();
-                }
+                hamburgerButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                hamburgerButton.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
 
             }
-        );
+
+        });
 
     }
-
-
-    /* Close menu with ESC */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (event.key === "Escape") {
-                closeMenu();
-            }
-
-        }
-    );
 
 
     /* =====================================================
-       HERO PRODUCT TABS
+       QUICK PRODUCT PREVIEW
        ===================================================== */
 
     const productButtons =
@@ -142,108 +126,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
     productButtons.forEach(function (button) {
 
-        button.addEventListener(
-            "click",
-            function () {
+        button.addEventListener("click", function () {
 
-                productButtons.forEach(
-                    function (item) {
-                        item.classList.remove(
-                            "is-active"
-                        );
-                    }
-                );
+            /* Remove active state */
 
-                button.classList.add(
-                    "is-active"
-                );
+            productButtons.forEach(function (item) {
 
-                if (productSummary) {
+                item.classList.remove("is-active");
 
-                    const summary =
-                        button.getAttribute(
-                            "data-summary"
-                        );
-
-                    if (summary) {
-                        productSummary.textContent =
-                            summary;
-                    }
-
-                }
-
-            }
-        );
-
-    });
+            });
 
 
-    /* =====================================================
-       SMOOTH SCROLL
-       ===================================================== */
+            /* Activate clicked button */
 
-    const allAnchorLinks =
-        document.querySelectorAll(
-            'a[href^="#"]'
-        );
+            button.classList.add("is-active");
 
 
-    allAnchorLinks.forEach(function (link) {
+            /* Change description */
 
-        link.addEventListener(
-            "click",
-            function (event) {
+            if (productSummary) {
 
-                const targetId =
-                    link.getAttribute("href");
-
-                if (
-                    !targetId ||
-                    targetId === "#"
-                ) {
-                    return;
-                }
-
-                const target =
-                    document.querySelector(
-                        targetId
+                const summary =
+                    button.getAttribute(
+                        "data-summary"
                     );
 
-                if (!target) {
-                    return;
+                if (summary) {
+
+                    productSummary.textContent =
+                        summary;
+
                 }
 
-                event.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-
             }
-        );
+
+        });
 
     });
 
 
     /* =====================================================
-       PREVENT BODY SCROLL WHEN MENU IS OPEN
+       CLOSE MOBILE MENU WHEN RESIZING TO DESKTOP
        ===================================================== */
 
-    window.addEventListener(
-        "resize",
-        function () {
+    window.addEventListener("resize", function () {
 
-            if (
-                window.innerWidth > 767 &&
-                mobileMenu &&
-                mobileMenu.classList.contains("open")
-            ) {
-                closeMenu();
+        if (window.innerWidth > 767) {
+
+            if (mobileMenu) {
+                mobileMenu.classList.remove("open");
+            }
+
+            if (hamburgerButton) {
+
+                hamburgerButton.classList.remove(
+                    "active"
+                );
+
+                hamburgerButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                hamburgerButton.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
             }
 
         }
-    );
 
+    });
 
 });
