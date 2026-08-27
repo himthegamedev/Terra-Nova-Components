@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Terra Nova Components</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,72 +19,143 @@
 
 <body>
 
-<div>
+<!-- =========================================================
+     DESKTOP NAVIGATION
+     ========================================================= -->
 
-    <div class="indent"></div>
+<nav class="desktop-nav">
 
-    <!-- HERO SECTION -->
-    <div class="partial-background" id="home">
-
-        <video
-            class="hero-video"
-            autoplay
-            muted
-            loop
-            playsinline
-            poster="Images/overheadview.webp"
+    <a href="#home" class="desktop-logo">
+        <img
+            src="Images/tnc-logo-white.png"
+            alt="Terra Nova Components"
         >
-            <source src="videos/drone4.mp4" type="video/mp4">
-        </video>
+    </a>
 
-        <div>
+    <div class="desktop-nav-actions">
 
-            <!-- NAVIGATION -->
-            <div class="Nav">
+        <a href="#gallery-header" class="desktop-nav-link">
+            Why Choose Us?
+        </a>
 
-                <a href="#home" class="logo-button">
-                    <img
-                        src="Images/tnc-logo-white.png"
-                        class="nav-logo"
-                        alt="Terra Nova Components"
-                    >
-                </a>
+        <a href="#contact-page" class="desktop-quote-button">
+            GET A QUOTE
+        </a>
 
-                <div class="nav-actions">
+    </div>
 
-                    <a href="#gallery-header" class="button nav-choice-button">
-                        <span id="productbtn">Why Choose Us?</span>
-                    </a>
+</nav>
 
-                    <a href="#contact-page" class="button contact-button">
-    <span id="contacts">Get a Quote</span>
 
-    <img
-        src="Images/email.png"
-        class="phone-icon"
-        alt="Contact Us"
+<!-- =========================================================
+     MOBILE TOP NAVIGATION
+     ========================================================= -->
+
+<nav class="mobile-top-nav">
+
+    <a href="#home" class="mobile-logo">
+        <img
+            src="Images/tnc-logo-white.png"
+            alt="Terra Nova Components"
+        >
+    </a>
+
+    <button
+        type="button"
+        class="hamburger-button"
+        id="hamburger-button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
     >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</nav>
+
+
+<!-- =========================================================
+     MOBILE MENU
+     ========================================================= -->
+
+<div class="mobile-menu" id="mobile-menu">
+
+    <div class="mobile-menu-inner">
+
+        <button
+            type="button"
+            class="mobile-menu-close"
+            id="mobile-menu-close"
+            aria-label="Close navigation menu"
+        >
+            ×
+        </button>
+
+        <a href="#home" class="mobile-menu-link">
+            Home
+        </a>
+
+        <a href="#manufacturing" class="mobile-menu-link">
+            Capabilities
+        </a>
+
+        <a href="#gallery-header" class="mobile-menu-link">
+            Why Choose Us?
+        </a>
+
+        <a href="#contact-page" class="mobile-menu-link">
+            Contact
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     MOBILE BOTTOM QUOTE BUTTON
+     ========================================================= -->
+
+<a
+    href="#contact-page"
+    class="mobile-bottom-quote"
+>
+    GET A QUOTE
 </a>
 
-                </div>
 
-            </div>
+<!-- =========================================================
+     HERO
+     ========================================================= -->
 
-            <!-- HERO LOGO -->
-            <div class="hero-logo">
+<section class="hero" id="home">
 
-                <img
-                    src="Images/tnc-red-logo3.png"
-                    class="logo-img"
-                    alt="Terra Nova Components"
-                >
+    <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="Images/overheadview.webp"
+    >
+        <source src="videos/drone4.mp4" type="video/mp4">
+    </video>
 
-            </div>
+    <div class="hero-overlay"></div>
 
+    <div class="hero-content">
+
+        <div class="hero-logo">
+            <img
+                src="Images/tnc-red-logo3.png"
+                alt="Terra Nova Components"
+            >
         </div>
 
-        <!-- QUICK PRODUCT PREVIEW -->
-        <div class="product-preview" aria-live="polite">
+        <!-- PRODUCT PREVIEW -->
+
+        <div class="product-preview">
 
             <div class="quick-product-headings">
 
@@ -113,85 +185,95 @@
 
             </div>
 
-            <p class="quick-product-summary supporting-text">
-                Fast, dependable wall framing built for efficient installation.
+            <p class="quick-product-summary">
+                Accelerate construction with our custom-built wall solutions.
             </p>
 
         </div>
 
-        <!-- LEARN MORE BUTTON -->
-        <div class="links">
-
-            <a href="#manufacturing" class="sum-button">
-                <span id="manubtn">Learn More</span>
-            </a>
-
-        </div>
+        <a
+            href="#manufacturing"
+            class="learn-more-button"
+        >
+            LEARN MORE
+        </a>
 
     </div>
 
-</div>
+</section>
 
 
-<!-- SPACE BETWEEN HERO AND PRODUCTS -->
-<div
-    class="section-spacer hero-to-products"
-    aria-hidden="true"
-></div>
+<!-- =========================================================
+     SPACER
+     ========================================================= -->
+
+<div class="hero-spacer"></div>
 
 
-<!-- MANUFACTURING / CAPABILITIES SECTION -->
-<div
+<!-- =========================================================
+     MANUFACTURING / CAPABILITIES
+     ========================================================= -->
+
+<section
     class="manufacturing"
     id="manufacturing"
 >
 
-    <!-- CAPABILITIES BLACK PANEL -->
+    <!-- CAPABILITIES -->
+
     <div class="capabilities-content">
 
-        <!-- SECTION HEADER -->
-        <div class="manufacturing-text">
+        <h2 class="section-heading">
+            Our Capabilities
+        </h2>
 
-            <h2 class="section-heading">
-                Our Capabilities
-            </h2>
-
-        </div>
-
-        <!-- CAPABILITY IMAGES -->
         <div class="capabilities-img">
 
-            <div>
+            <div class="capability-item">
+
                 <img
                     src="Images/residential.png"
                     alt="Residential"
                     loading="lazy"
                 >
-                <p class="supporting-text">Residential</p>
+
+                <p>
+                    Residential
+                </p>
+
             </div>
 
-            <div>
+            <div class="capability-item">
+
                 <img
                     src="Images/farm.png"
                     alt="Agricultural"
                     loading="lazy"
                 >
-                <p class="supporting-text">Agricultural</p>
+
+                <p>
+                    Agricultural
+                </p>
+
             </div>
 
-            <div>
+            <div class="capability-item">
+
                 <img
                     src="Images/commercial.png"
                     alt="Commercial"
                     loading="lazy"
                 >
-                <p class="supporting-text">Commercial</p>
+
+                <p>
+                    Commercial
+                </p>
+
             </div>
 
         </div>
 
-        <!-- CAPABILITIES DESCRIPTION -->
-        <p class="body-text capabilities-description">
+        <p class="capabilities-description">
             High-quality, engineered building components designed for faster,
             more efficient construction.
         </p>
@@ -199,15 +281,17 @@
     </div>
 
 
-    <!-- PRODUCT SYSTEM BOXES -->
+    <!-- PRODUCT BOXES -->
+
     <div class="prod-info">
 
         <!-- WALL SYSTEMS -->
-        <div class="prod-box">
+
+        <article class="prod-box">
 
             <div class="product-header">
 
-                <h2 class="card-heading">
+                <h2>
                     Wall Systems
                 </h2>
 
@@ -225,32 +309,33 @@
 
             <div class="product-text">
 
-                <p class="body-text">
+                <p>
                     Pre-engineered wall systems that reduce framing time,
                     improve job-site efficiency, and deliver consistent
                     structural performance.
                 </p>
 
-                <h3 class="card-subheading">
+                <h3>
                     Wall Panels
                 </h3>
 
-                <p class="body-text">
+                <p>
                     Precision-manufactured panels for accurate fit,
                     consistent quality, and efficient installation.
                 </p>
 
             </div>
 
-        </div>
+        </article>
 
 
-        <!-- TRUSS SYSTEMS -->
-        <div class="prod-box">
+        <!-- ROOF TRUSSES -->
+
+        <article class="prod-box">
 
             <div class="product-header">
 
-                <h2 class="card-heading">
+                <h2>
                     Roof Trusses
                 </h2>
 
@@ -268,49 +353,50 @@
 
             <div class="product-text">
 
-                <p class="body-text">
+                <p>
                     Pre-engineered roof truss systems designed for strength,
                     efficiency, and a precise fit.
                 </p>
 
-                <h3 class="card-subheading">
+                <h3>
                     Residential Trusses
                 </h3>
 
-                <p class="body-text">
+                <p>
                     Custom trusses designed to your architectural dreams
                     and requirements.
                 </p>
 
-                <h3 class="card-subheading">
+                <h3>
                     Agricultural Trusses
                 </h3>
 
-                <p class="body-text">
+                <p>
                     Truss systems for new and existing barns and
                     agricultural buildings.
                 </p>
 
-                <h3 class="card-subheading">
+                <h3>
                     Commercial Trusses
                 </h3>
 
-                <p class="body-text">
+                <p>
                     Engineered truss systems for a wide range of
                     commercial building applications.
                 </p>
 
             </div>
 
-        </div>
+        </article>
 
 
         <!-- FLOOR SYSTEMS -->
-        <div class="prod-box">
+
+        <article class="prod-box">
 
             <div class="product-header">
 
-                <h2 class="card-heading">
+                <h2>
                     Floor Systems
                 </h2>
 
@@ -328,49 +414,52 @@
 
             <div class="product-text">
 
-                <p class="body-text">
+                <p>
                     Engineered floor systems designed for structural
                     performance, flexibility, and faster installation.
                 </p>
 
-                <h3 class="card-subheading">
+                <h3>
                     Floor Cassettes
                 </h3>
 
-                <p class="body-text">
+                <p>
                     Off-site manufactured floor assemblies that improve
                     consistency and accelerate construction.
                 </p>
 
-                <h3 class="card-subheading">
+                <h3>
                     Floor Trusses
                 </h3>
 
-                <p class="body-text">
+                <p>
                     Engineered floor trusses offering design flexibility,
                     dependable performance, and cost-efficient construction.
                 </p>
 
-                <h3 class="card-subheading">
+                <h3>
                     EWP Joists
                 </h3>
 
-                <p class="body-text">
+                <p>
                     Open Web, Triforce Joists or I-Joists — we have all
                     your EWP needs covered.
                 </p>
 
             </div>
 
-        </div>
+        </article>
 
     </div>
 
-</div>
+</section>
 
 
-<!-- WHY CHOOSE US HEADER -->
-<div
+<!-- =========================================================
+     WHY CHOOSE US
+     ========================================================= -->
+
+<section
     class="gallery-header"
     id="gallery-header"
 >
@@ -379,25 +468,24 @@
         Why Choose Us?
     </h2>
 
-    <p class="body-text">
+    <p>
         Family run since 1991.<br>
         We focus on quality, precision, state-of-the-art engineering,
         and unparalleled customer support.
     </p>
 
-</div>
+</section>
 
 
-<!-- WHY CHOOSE US GALLERY -->
-<div
-    class="gallery"
-    id="gallery"
->
+<!-- =========================================================
+     WHY CHOOSE US GALLERY
+     ========================================================= -->
+
+<section class="gallery">
 
     <div class="gallery-track">
 
-        <!-- BUILT BY GREAT PEOPLE -->
-        <div class="slide">
+        <article class="slide">
 
             <img
                 src="Images/delivery.webp"
@@ -407,11 +495,11 @@
 
             <div class="slide-caption">
 
-                <h2 class="card-heading">
+                <h2>
                     Built by Great People
                 </h2>
 
-                <p class="body-text">
+                <p>
                     Our experienced team brings skill, care, and practical
                     know-how to every project, with responsive support from
                     planning through delivery.
@@ -419,11 +507,10 @@
 
             </div>
 
-        </div>
+        </article>
 
 
-        <!-- QUALITY -->
-        <div class="slide">
+        <article class="slide">
 
             <img
                 src="Images/facility.webp"
@@ -433,11 +520,11 @@
 
             <div class="slide-caption">
 
-                <h2 class="card-heading">
+                <h2>
                     Quality You Can Count On
                 </h2>
 
-                <p class="body-text">
+                <p>
                     Built with premium Canadian lumber and carefully inspected
                     materials, every component is manufactured for strength,
                     durability, and consistent quality.
@@ -445,11 +532,10 @@
 
             </div>
 
-        </div>
+        </article>
 
 
-        <!-- ADVANCED TECHNOLOGY -->
-        <div class="slide">
+        <article class="slide">
 
             <img
                 src="Images/superior-components.webp"
@@ -459,11 +545,11 @@
 
             <div class="slide-caption">
 
-                <h2 class="card-heading">
+                <h2>
                     Advanced Technology
                 </h2>
 
-                <p class="body-text">
+                <p>
                     Industry-leading design software and modern manufacturing
                     equipment help us deliver accurate, consistent components
                     built to your specifications.
@@ -471,11 +557,10 @@
 
             </div>
 
-        </div>
+        </article>
 
 
-        <!-- SUPERIOR COMPONENTS -->
-        <div class="slide">
+        <article class="slide">
 
             <img
                 src="Images/overheadview.webp"
@@ -485,11 +570,11 @@
 
             <div class="slide-caption">
 
-                <h2 class="card-heading">
+                <h2>
                     Superior Components
                 </h2>
 
-                <p class="body-text">
+                <p>
                     Our wall panels, roof trusses, and floor systems are
                     engineered for faster installation, dependable performance,
                     and a more efficient build.
@@ -497,69 +582,75 @@
 
             </div>
 
-        </div>
+        </article>
 
     </div>
 
-</div>
+</section>
 
 
-<!-- SPACE BETWEEN GALLERY AND CONTACT -->
-<div
-    class="section-spacer gallery-to-contact"
-    aria-hidden="true"
-></div>
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
 
-
-<!-- CONTACT SECTION -->
-<div id="contact-page">
+<section
+    id="contact-page"
+    class="contact-section"
+>
 
     <div class="redbox">
 
         <div class="contact-intro">
-    <h2>Contact Us</h2>
-    <p>
-        Our experts are ready to listen to your needs, provide tailored
-        recommendations, and deliver high quality components.
-    </p>
-</div>
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <p>
+                Our experts are ready to listen to your needs, provide tailored
+                recommendations, and deliver high quality components.
+            </p>
+
+        </div>
+
 
         <div class="contact">
 
             <!-- COMPANY INFORMATION -->
+
             <div class="contact-details">
 
-                <h2 class="card-heading">
+                <h2>
                     Terra Nova Components
                 </h2>
 
-                <p class="body-text">
+                <p>
                     Since 1991 we have been building high quality,
                     precision-engineered building components.
                 </p>
 
-                <p class="body-text">
+                <p>
                     <strong>Tel:</strong>
                     <a href="tel:+16132567070">
                         (613) 256.7070
                     </a>
                 </p>
 
-                <p class="body-text">
+                <p>
                     <strong>Email:</strong>
                     <a href="mailto:info@terranova.com">
                         info@terranova.com
                     </a>
                 </p>
 
-                <p class="body-text">
+                <p>
                     <strong>Address:</strong><br>
                     123 Poonamalie Road<br>
                     Smiths Falls, ON<br>
                     K7A 5B8
                 </p>
 
-                <p class="supporting-text">
+                <p class="copyright">
                     © 2026 Terra Nova Components.
                     All rights reserved.
                 </p>
@@ -568,6 +659,7 @@
 
 
             <!-- CONTACT FORM -->
+
             <form
                 class="email-form"
                 action="mailto:jackpkent@gmail.com"
@@ -575,11 +667,13 @@
                 enctype="text/plain"
             >
 
-                <h2 class="card-heading">
-                    Contact Us
+                <h2>
+                    Get a Quote
                 </h2>
 
-                <label for="name">Name</label>
+                <label for="name">
+                    Name
+                </label>
 
                 <input
                     type="text"
@@ -589,7 +683,9 @@
                 >
 
 
-                <label for="phone">Contact Number</label>
+                <label for="phone">
+                    Contact Number
+                </label>
 
                 <input
                     type="tel"
@@ -600,7 +696,9 @@
                 >
 
 
-                <label for="email">Email</label>
+                <label for="email">
+                    Email
+                </label>
 
                 <input
                     type="email"
@@ -610,7 +708,9 @@
                 >
 
 
-                <label for="best-time">Best Time to Call</label>
+                <label for="best-time">
+                    Best Time to Call
+                </label>
 
                 <input
                     type="datetime-local"
@@ -621,7 +721,7 @@
 
 
                 <button type="submit">
-                    Send Message
+                    SEND MESSAGE
                 </button>
 
             </form>
@@ -630,10 +730,9 @@
 
     </div>
 
-</div>
+</section>
 
 
-<!-- JAVASCRIPT -->
 <script src="scripts.js" defer></script>
 
 </body>
