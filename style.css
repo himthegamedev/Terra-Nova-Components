@@ -298,7 +298,6 @@ span {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-
 .contact-button:hover {
     background-color: rgb(240, 30, 30);
     transform: scale(1.08);
@@ -355,6 +354,20 @@ span {
     visibility: visible;
 }
 
+/* SHARED SECTION HEADINGS */
+
+.section-heading {
+    margin: 0;
+    color: var(--text-light);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--title-size);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
 /* GALLERY */
 
 .gallery {
@@ -367,10 +380,7 @@ span {
     padding: 36px 20px 24px;
     scroll-margin-top: 20px;
     color: var(--text-light);
-    font-size: var(--title-size);
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
 }
 
 .gallery-track {
@@ -613,16 +623,6 @@ span {
     text-align: center;
 }
 
-.manufacturing-text h2,
-.gallery-header h2 {
-    font-size: var(--title-size);
-}
-
-.capabilities-description,
-.gallery-header p {
-    font-size: var(--body-size);
-    line-height: 1.6;
-}
 .capabilities-img {
     display: flex;
     align-items: flex-start;
@@ -788,7 +788,7 @@ span {
         transform: translateY(40px);
     }
 
-      .gallery-track {
+    .gallery-track {
         display: grid;
         grid-template-columns: repeat(2, 720px);
         grid-auto-rows: 520px;
@@ -889,8 +889,11 @@ span {
     }
 
     .product-header h2,
-    .gallery-header h2,
     .email-form h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-heading {
         font-size: 1.6rem;
     }
 
@@ -1124,8 +1127,11 @@ span {
     }
 
     .product-header h2,
-    .gallery-header h2,
     .email-form h2 {
+        font-size: 1.45rem;
+    }
+
+    .section-heading {
         font-size: 1.45rem;
     }
 
@@ -1222,3 +1228,4 @@ span {
     font-weight: 600;
     text-align: center;
 }
+
