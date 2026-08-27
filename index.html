@@ -1,155 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <title>Terra Nova Components</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+</head>
+
+<body>
+
 <div>
-    <div class="indent"></div>    <div class="partial-background" id="home">
-        <video class="hero-video" autoplay muted loop playsinline poster="Images/overheadview.webp">
+
+    <div class="indent"></div>
+
+    <!-- HERO SECTION -->
+    <div class="partial-background" id="home">
+
+        <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="Images/overheadview.webp"
+        >
             <source src="videos/drone4.mp4" type="video/mp4">
         </video>
+
         <div>
-        <div class="Nav">
-                                <a href="#home" class="logo-button">
-                    <img src="Images/tnc-logo-white.png" class="nav-logo" alt="Terra Nova Components">
-                        </a>
-                                <div class="nav-actions">
-                        <a href="#gallery-header" class="button nav-choice-button">
-                    <span id="productbtn">Why Choose Us?</span>
-                            </a>
-                        <a href="#contact-page" class="button contact-button">
-                    <span id="contacts">Contact Us</span>
-                            </a>
-                                </div>
+
+            <!-- NAVIGATION -->
+            <div class="Nav">
+
+                <a href="#home" class="logo-button">
+                    <img
+                        src="Images/tnc-logo-white.png"
+                        class="nav-logo"
+                        alt="Terra Nova Components"
+                    >
+                </a>
+
+                <div class="nav-actions">
+
+                    <a href="#gallery-header" class="button nav-choice-button">
+                        <span id="productbtn">Why Choose Us?</span>
+                    </a>
+
+                    <a href="#contact-page" class="button contact-button">
+                        <span id="contacts">Contact Us</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- HERO LOGO -->
+            <div class="hero-logo">
+                <img
+                    src="Images/tnc-red-logo3.png"
+                    class="logo-img"
+                    alt="Terra Nova Components"
+                >
+            </div>
 
         </div>
-                <div class="hero-logo">
-                    <img src="Images/tnc-red-logo3.png" class="logo-img" alt="Terra Nova Components">
-                </div>
-                </div>
-                <div class="product-preview" aria-live="polite">
-                    <div class="quick-product-headings">
-                        <button type="button" class="quick-product-heading is-active" data-summary="Accelerate construction with our custom-built wall solutions.">Wall Systems</button>
-                        <button type="button" class="quick-product-heading" data-summary="Engineered trusses for unmatched durability and strength.">Truss Systems</button>
-                        <button type="button" class="quick-product-heading" data-summary="Robust floor cartridges and floor trusses designed for performance and reliability.">Floor Systems</button>
-                    </div>
-                    <p class="quick-product-summary">Fast, dependable wall framing built for efficient installation.</p>
-                </div>
-                <div class="links">
-                    <a href="#manufacturing" class="sum-button">
-                    <span id="manubtn">Learn More</span>
-                    </a>
-                </div>
-    </div> 
-</div>
-        <div class="section-spacer hero-to-products" aria-hidden="true"></div>
-<div class="manufacturing partial-background" id="manufacturing">
-    <div class="manufacturing-text">
-        <h2>Products</h2>
+
+        <!-- QUICK PRODUCT PREVIEW -->
+        <div class="product-preview" aria-live="polite">
+
+            <div class="quick-product-headings">
+
+                <button
+                    type="button"
+                    class="quick-product-heading is-active"
+                    data-summary="Accelerate construction with our custom-built wall solutions."
+                >
+                    Wall Systems
+                </button>
+
+                <button
+                    type="button"
+                    class="quick-product-heading"
+                    data-summary="Engineered trusses for unmatched durability and strength."
+                >
+                    Truss Systems
+                </button>
+
+                <button
+                    type="button"
+                    class="quick-product-heading"
+                    data-summary="Robust floor cartridges and floor trusses designed for performance and reliability."
+                >
+                    Floor Systems
+                </button>
+
+            </div>
+
+            <p class="quick-product-summary">
+                Fast, dependable wall framing built for efficient installation.
+            </p>
+
+        </div>
+
+        <!-- LEARN MORE BUTTON -->
+        <div class="links">
+
+            <a href="#manufacturing" class="sum-button">
+                <span id="manubtn">Learn More</span>
+            </a>
+
+        </div>
+
     </div>
-    <div class='prod-info'>
-        <div class="prod-box">
-            <div class="product-header">
-                <h2>Wall systems</h2>
-            </div>
-            <div class="product-text">
-                <p>
-                    Our precision-manufactured wall panels provide accurate fit, consistent quality, and efficient installation while reducing framing time and improving job-site efficiency.
-                </p>
-            </div>
+
+</div>
+
+
+<!-- SPACE BETWEEN HERO AND PRODUCTS -->
+<div
+    class="section-spacer hero-to-products"
+    aria-hidden="true"
+></div>
+
+
+<!-- MANUFACTURING / CAPABILITIES SECTION -->
+<div
+    class="manufacturing"
+    id="manufacturing"
+>
+
+    <!-- CAPABILITIES BLACK PANEL -->
+    <div class="capabilities-content">
+
+        <!-- SECTION HEADER -->
+        <div class="manufacturing-text">
+            <h2>Our Capabilities</h2>
         </div>
-        <div class="prod-box">
-            <div class="product-header">
-                <h2>Truss Systems</h2>
+
+        <!-- CAPABILITY IMAGES -->
+        <div class="capabilities-img">
+
+            <div>
+                <img
+                    src="Images/residential.png"
+                    alt="Residential"
+                    loading="lazy"
+                >
+                <p>Residential</p>
             </div>
-            <div class="product-text">
-                <p>
-                    Our engineered roof truss systems are designed for strength, efficiency, and a precise fit, with custom solutions for residential, agricultural, and commercial applications.
-                </p>
+
+            <div>
+                <img
+                    src="Images/farm.png"
+                    alt="Agricultural"
+                    loading="lazy"
+                >
+                <p>Agricultural</p>
             </div>
+
+            <div>
+                <img
+                    src="Images/commercial.png"
+                    alt="Commercial"
+                    loading="lazy"
+                >
+                <p>Commercial</p>
+            </div>
+
         </div>
+
+        <!-- CAPABILITIES DESCRIPTION -->
+        <p class="capabilities-description">
+            High-quality, engineered building components designed for faster,
+            more efficient construction.
+        </p>
+
+    </div>
+
+
+    <!-- PRODUCT SYSTEM BOXES -->
+    <div class="prod-info">
+
+        <!-- WALL SYSTEMS -->
         <div class="prod-box">
+
+            <div class="product-header">
+                <h2>Wall Systems</h2>
+            </div>
+
+            <div class="product-img">
+                <img
+                    src="Images/wall-systems.webp"
+                    alt="Wall Systems"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-text">
+
+                <p>
+                    Pre-engineered wall systems that reduce framing time,
+                    improve job-site efficiency, and deliver consistent
+                    structural performance.
+                </p>
+
+                <h3>Wall Panels</h3>
+
+                <p>
+                    Precision-manufactured panels for accurate fit,
+                    consistent quality, and efficient installation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRUSS SYSTEMS -->
+        <div class="prod-box">
+
+            <div class="product-header">
+                <h2>Roof Trusses</h2>
+            </div>
+
+            <div class="product-img">
+                <img
+                    src="Images/truss-systems.webp"
+                    alt="Roof Trusses"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="product-text">
+
+                <p>
+                    Pre-engineered roof truss systems designed for strength,
+                    efficiency, and a precise fit.
+                </p>
+
+                <h3>Residential Trusses</h3>
+
+                <p>
+                    Custom trusses designed to your architectural dreams
+                    and requirements.
+                </p>
+
+                <h3>Agricultural Trusses</h3>
+
+                <p>
+                    Truss systems for new and existing barns and
+                    agricultural buildings.
+                </p>
+
+                <h3>Commercial Trusses</h3>
+
+                <p>
+                    Engineered truss systems for a wide range of
+                    commercial building applications.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FLOOR SYSTEMS -->
+        <div class="prod-box">
+
             <div class="product-header">
                 <h2>Floor Systems</h2>
             </div>
-            <div class="product-text">
-                <p>
-                    Our engineered floor systems, including floor cassettes, floor trusses, and EWP joists, provide structural performance, design flexibility, and faster, cost-efficient installation.
-                </p>
+
+            <div class="product-img">
+                <img
+                    src="Images/floor-systems.webp"
+                    alt="Floor Systems"
+                    loading="lazy"
+                >
             </div>
+
+            <div class="product-text">
+
+                <p>
+                    Engineered floor systems designed for structural
+                    performance, flexibility, and faster installation.
+                </p>
+
+                <h3>Floor Cassettes</h3>
+
+                <p>
+                    Off-site manufactured floor assemblies that improve
+                    consistency and accelerate construction.
+                </p>
+
+                <h3>Floor Trusses</h3>
+
+                <p>
+                    Engineered floor trusses offering design flexibility,
+                    dependable performance, and cost-efficient construction.
+                </p>
+
+                <h3>EWP Joists</h3>
+
+                <p>
+                    Open Web, Triforce Joists or I-Joists — we have all
+                    your EWP needs covered.
+                </p>
+
+            </div>
+
         </div>
+
     </div>
+
 </div>
-        <div class="gallery-header" id="gallery-header">
-            <h2>Why Choose us?</h2>
-            <p>Industry-leading precision, state-of-the-art engineering, and unparalleled customer support.</p>
-        </div>
-        <div class="gallery" id="gallery">
+
+
+<!-- WHY CHOOSE US HEADER -->
+<div
+    class="gallery-header"
+    id="gallery-header"
+>
+
+    <h2>Why Choose Us?</h2>
+
+    <p>
+        Family run since 1991.<br>
+We focus on quality, precision, state-of-the-art engineering, and unparalleled customer support.
+    </p>
+
+</div>
+
+
+<!-- WHY CHOOSE US GALLERY -->
+<div
+    class="gallery"
+    id="gallery"
+>
+
     <div class="gallery-track">
-<div class="slide">
-    <img src="Images/delivery.webp" alt="built by great people" loading="lazy">
-    <div class="slide-caption">
-        <h2>Built by Great People</h2>
-        <p>Our experienced team brings skill, care, and practical know-how to every project, with responsive support from planning through delivery.</p>
-    </div>
-</div>
-<div class="slide">
-    <img src="Images/facility.webp" alt="Quality You can Count on" loading="lazy">
-    <div class="slide-caption">
-        <h2>Quality You can Count on</h2>
-        <p>Built with premium Canadian lumber and carefully inspected materials, every component is manufactured for strength, durability, and consistent quality.</p>
-    </div>
-</div>
-<div class="slide">
-    <img src="Images/superior-components.webp" alt="Advanced Technology" loading="lazy">
-    <div class="slide-caption">
-        <h2>Advanced Technology</h2>
-        <p>Industry-leading design software and modern manufacturing equipment help us deliver accurate, consistent components built to your specifications.</p>
+
+        <!-- BUILT BY GREAT PEOPLE -->
+        <div class="slide">
+
+            <img
+                src="Images/delivery.webp"
+                alt="Built by great people"
+                loading="lazy"
+            >
+
+            <div class="slide-caption">
+
+                <h2>Built by Great People</h2>
+
+                <p>
+                    Our experienced team brings skill, care, and practical
+                    know-how to every project, with responsive support from
+                    planning through delivery.
+                </p>
+
+            </div>
+
         </div>
-</div>
-<div class="slide">
-    <img src="Images/overheadview.webp" alt="Superior Components" loading="lazy">
-    <div class="slide-caption">
-        <h2>Superior Components</h2>
-            <p>Our wall panels, roof trusses, and floor systems are engineered for faster installation, dependable performance, and a more efficient build.</p>
-        </div>
-</div>
-    </div>
 
 
+        <!-- QUALITY -->
+        <div class="slide">
+
+            <img
+                src="Images/facility.webp"
+                alt="Quality You can Count on"
+                loading="lazy"
+            >
+
+            <div class="slide-caption">
+
+                <h2>Quality You Can Count On</h2>
+
+                <p>
+                    Built with premium Canadian lumber and carefully inspected
+                    materials, every component is manufactured for strength,
+                    durability, and consistent quality.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADVANCED TECHNOLOGY -->
+        <div class="slide">
+
+            <img
+                src="Images/superior-components.webp"
+                alt="Advanced Technology"
+                loading="lazy"
+            >
+
+            <div class="slide-caption">
+
+                <h2>Advanced Technology</h2>
+
+                <p>
+                    Industry-leading design software and modern manufacturing
+                    equipment help us deliver accurate, consistent components
+                    built to your specifications.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUPERIOR COMPONENTS -->
+        <div class="slide">
+
+            <img
+                src="Images/overheadview.webp"
+                alt="Superior Components"
+                loading="lazy"
+            >
+
+            <div class="slide-caption">
+
+                <h2>Superior Components</h2>
+
+                <p>
+                    Our wall panels, roof trusses, and floor systems are
+                    engineered for faster installation, dependable performance,
+                    and a more efficient build.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
-    <div class="section-spacer gallery-to-contact" aria-hidden="true"></div>
-    <div id="contact-page">
+
+
+<!-- SPACE BETWEEN GALLERY AND CONTACT -->
+<div
+    class="section-spacer gallery-to-contact"
+    aria-hidden="true"
+></div>
+
+
+<!-- CONTACT SECTION -->
+ <p class="happy-to-help">
+    Happy to help — just contact us!
+</p>
+<div id="contact-page">
+
     <div class="redbox">
+
         <div class="contact">
-        <div class="contact-details">
-            <h2>Ashley</h2>
-            <a href="mailto:Ashley@terranovtruss.com">Ashley@terranovtruss.com</a>
+
+            <!-- COMPANY INFORMATION -->
+            <div class="contact-details">
+
+                <h2>TerraNova Components</h2>
+
+                <p>
+                    Since 1991 we have been building high quality,
+                    precision-engineered building components.
+                </p>
+
+                <p>
+                    <strong>Tel:</strong>
+                    <a href="tel:+16132567070">
+                        (613) 256.7070
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:info@terranova.com">
+                        info@terranova.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Address:</strong><br>
+                    123 Poonamalie Road<br>
+                    Smiths Falls, ON<br>
+                    K7A 5B8
+                </p>
+                    
+                <p>
+                    © 2026 Terra Nova Components.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <form
+                class="email-form"
+                action="mailto:jackpkent@gmail.com"
+                method="post"
+                enctype="text/plain"
+            >
+
+                <h2>Contact Us</h2>
+
+                <label for="name">Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                >
+
+
+                <label for="phone">Contact Number</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    autocomplete="tel"
+                    required
+                >
+
+
+                <label for="email">Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+
+
+                <label for="best-time">Best Time to Call</label>
+
+                <input
+                    type="datetime-local"
+                    id="best-time"
+                    name="best-time"
+                    required
+                >
+
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
         </div>
-        <form class="email-form" action="mailto:Ashley@terranovtruss.com" method="post" enctype="text/plain">
-            <h2>Contact Us</h2>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="phone">Contact Number</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="best-time">Best Time to Call</label>
-            <input type="datetime-local" id="best-time" name="best-time" required>
-            <button type="submit">Send Message</button>
-        </form>
+
     </div>
-    </div>
-    </div>
-    <div class="videos">
-        
-    </div>
-    <script src="scripts.js" defer></script>
-    </body>
+
+</div>
+
+
+
+<!-- JAVASCRIPT -->
+<script src="scripts.js" defer></script>
+
+</body>
 </html>
