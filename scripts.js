@@ -135,7 +135,5 @@
 
     window.addEventListener('scroll', updateLogoFade, { passive: true });
 
-    highlight('#contacts', 'highlight');
-    highlight('#manubtn', 'highlight');
     highlight('#productbtn', 'highlight');
 })();
