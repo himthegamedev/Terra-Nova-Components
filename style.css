@@ -913,7 +913,9 @@ img {
 
 
 .locations-grid {
-    display: grid;
+    display: flex;
+
+    justify-content: center;
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
@@ -921,10 +923,16 @@ img {
     gap: 30px;
 
     width: 100%;
+
+    flex-wrap: wrap;
 }
 
 
 .location-card {
+    width: 100%;
+
+    max-width: 500px;
+
     padding: 30px;
 
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -2433,7 +2441,8 @@ img {
    ========================================================= */
 
 .prod-box,
-.slide {
+.slide,
+.location-card {
     opacity: 0;
 
     transform: translateY(50px);
@@ -2447,7 +2456,8 @@ img {
 /* Activated by JavaScript */
 
 .prod-box.show,
-.slide.show {
+.slide.show,
+.location-card.show {
     opacity: 1;
 
     transform: translateY(0);
@@ -2489,7 +2499,8 @@ img {
 @media (prefers-reduced-motion: reduce) {
 
     .prod-box,
-    .slide {
+    .slide,
+    .location-card {
 
         opacity: 1;
 

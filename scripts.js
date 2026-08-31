@@ -1,4 +1,3 @@
-
 (function () {
 
     /* =========================================================
@@ -556,6 +555,7 @@
 
 })();
 
+
 /* =========================================================
    SCROLL-IN BOX ANIMATION
    ========================================================= */
@@ -595,5 +595,10 @@ function scrollReveal(selector) {
         observer.observe(element);
     });
 }
+
+
 scrollReveal('.prod-box');
+
 scrollReveal('.slide');
+
+scrollReveal('.location-card');
