@@ -497,7 +497,7 @@ img {
 
     margin: 10px auto 0;
 
-    font-size: 1rem;
+    font-size: 1.3rem;
 
     line-height: 1.4;
 
@@ -762,7 +762,7 @@ img {
 
     width: 100%;
 
-    max-width: 340px;
+    max-width: 360px;
 
     padding: 36px 28px;
 
@@ -2219,3 +2219,68 @@ img {
 
 }
 
+/* =========================================================
+   SCROLL-IN BOX ANIMATION
+   ========================================================= */
+
+.prod-box,
+.slide {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+/* Activated by JavaScript */
+.prod-box.show,
+.slide.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger the product boxes */
+.prod-box:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.prod-box:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+/* Stagger the gallery boxes */
+.slide:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.slide:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.slide:nth-child(4) {
+    transition-delay: 0.45s;
+}
+
+/* Accessibility: don't animate for users who
+   have requested reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .prod-box,
+    .slide {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+.canada {
+    color: rgb(205, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+.canada img {
+    width: 30px;
+    height: auto;
+}
