@@ -4,7 +4,7 @@
 
 :root {
 
-    --bg-dark: #000000;
+    --bg-dark: #111111;
 
     /* Same black used by mobile sticky navigation */
     --nav-bg: rgba(20, 20, 20, 0.96);
@@ -47,7 +47,7 @@ html {
 
     padding: 0;
 
-    background: #000;
+    background: var(--bg-dark);
 }
 
 
@@ -56,7 +56,7 @@ body {
 
     padding: 0;
 
-    background: #000;
+    background: var(--bg-dark);
 
     color: var(--text-light);
 
@@ -643,7 +643,7 @@ img {
 
     padding: 50px 30px 70px;
 
-    background: #000;
+    background: var(--bg-dark);
 }
 
 
@@ -877,7 +877,7 @@ img {
 
     padding: 70px 30px;
 
-    background: #000;
+    background: var(--bg-dark);
 
     scroll-margin-top: 80px;
 }
@@ -966,7 +966,7 @@ img {
 .gallery-header {
     padding: 50px 20px 30px;
 
-    background: #000;
+    background: var(--bg-dark);
 
     text-align: center;
 
@@ -992,7 +992,7 @@ img {
 
     padding: 0 30px 70px;
 
-    background: #000;
+    background: var(--bg-dark);
 }
 
 
@@ -1071,7 +1071,7 @@ img {
    ========================================================= */
 
 .contact-page {
-    background: #000;
+    background: var(--bg-dark);
 }
 
 
