@@ -799,7 +799,7 @@ img {
 }
 
 
-.product-header h2 {
+.product-header h3 {
     margin: 0;
 
     font-size: 1.5rem;
@@ -837,7 +837,9 @@ img {
 }
 
 
-.product-text h3 {
+.product-text h4 {
+    margin: 1em 0;
+
     text-align: center;
 }
 
@@ -1097,7 +1099,7 @@ img {
 }
 
 
-.slide-caption h2 {
+.slide-caption h3 {
     margin: 0;
 
     font-size: var(--title-size);
@@ -2042,7 +2044,7 @@ img {
     }
 
 
-    .product-header h2 {
+    .product-header h3 {
 
         font-size: 1.4rem;
 
@@ -2073,7 +2075,7 @@ img {
     }
 
 
-    .product-text h3 {
+    .product-text h4 {
 
         margin-top: 24px;
 
@@ -2243,7 +2245,7 @@ img {
     }
 
 
-    .slide-caption h2 {
+    .slide-caption h3 {
 
         font-size: 1.4rem;
 
