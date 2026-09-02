@@ -511,62 +511,6 @@
 
 
     /* =========================================================
-       CAPABILITIES MORE TOGGLE
-       ========================================================= */
-
-    function capabilitiesMoreToggle() {
-
-        const button =
-            document.querySelector(
-                '#capabilities-more-button'
-            );
-
-        const content =
-            document.querySelector(
-                '#capabilities-more-info'
-            );
-
-        const extraInfo =
-            content
-                ? content.querySelectorAll(
-                    '.capabilities-extra-info'
-                )
-                : [];
-
-        if (
-            !button ||
-            !content ||
-            extraInfo.length === 0
-        ) return;
-
-        button.addEventListener(
-            'click',
-            () => {
-
-                const isExpanded =
-                    button.getAttribute(
-                        'aria-expanded'
-                    ) === 'true';
-
-                extraInfo.forEach((paragraph) => {
-                    paragraph.hidden = isExpanded;
-                });
-
-                button.setAttribute(
-                    'aria-expanded',
-                    isExpanded ? 'false' : 'true'
-                );
-
-                button.textContent =
-                    isExpanded ? 'MORE' : 'LESS';
-
-            }
-        );
-
-    }
-
-
-    /* =========================================================
        INITIALIZE EVERYTHING
        ========================================================= */
 
@@ -583,8 +527,6 @@
     cycleProductPreview(
         '.product-preview'
     );
-
-    capabilitiesMoreToggle();
 
     mobileNavigation();
 
