@@ -85,6 +85,15 @@ h6 {
 }
 
 
+h1 {
+    margin-right: 0;
+
+    margin-left: 0;
+
+    text-align: center;
+}
+
+
 button,
 img,
 span {
@@ -159,7 +168,7 @@ img {
 
     width: auto;
 
-    height: 62px;
+    height: 58px;
 
     object-fit: contain;
 }
@@ -732,6 +741,88 @@ img {
     margin: 24px auto 0;
 
     text-align: center;
+}
+
+
+.capabilities-more-button {
+    min-width: 120px;
+
+    margin-top: 26px;
+
+    padding: 11px 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: var(--text-light);
+
+    cursor: pointer;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.capabilities-more-button:hover,
+.capabilities-more-button:focus-visible {
+    background: var(--text-light);
+
+    color: var(--bg-dark);
+}
+
+
+.capabilities-more-info {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+    width: 100%;
+
+    margin-top: 28px;
+}
+
+
+.capabilities-info-column {
+    padding: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 8px;
+
+    text-align: left;
+}
+
+
+.mobile-capability-label {
+    display: none;
+}
+
+
+.capabilities-info-column p {
+    margin: 0 0 18px;
+
+    font-size: 0.88rem;
+
+    line-height: 1.55;
+}
+
+
+.product-info-space {
+    min-height: 48px;
 }
 
 
@@ -1483,7 +1574,7 @@ img {
          */
 
         background:
-            rgba(20, 20, 20, 0.96) !important;
+            rgba(20, 20, 20, 0.25) !important;
 
         box-shadow:
             0 4px 12px
@@ -1511,7 +1602,7 @@ img {
 
         width: auto;
 
-        height: 58px;
+        height: 45px;
 
         object-fit: contain;
 
@@ -2010,6 +2101,50 @@ img {
         font-size: 0.95rem;
 
         line-height: 1.5;
+
+    }
+
+
+    .capabilities-more-info {
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        margin-top: 24px;
+
+    }
+
+
+    .capabilities-info-column p {
+
+        margin-bottom: 14px;
+
+        font-size: 0.78rem;
+
+    }
+
+
+    .capabilities-info-column {
+
+        padding: 8px;
+
+    }
+
+
+    .mobile-capability-label {
+
+        display: block;
+
+        margin: 0 0 10px;
+
+        color: var(--text-light);
+
+        font-size: 1rem;
+
+        text-align: center;
+
+        text-transform: uppercase;
 
     }
 
@@ -2519,6 +2654,15 @@ img {
         display: none !important;
 
     }
+        .nav-logo {
+
+        width: auto;
+
+        height: 58px;
+
+        object-fit: contain;
+
+    }
 
 }
 
@@ -2527,6 +2671,7 @@ img {
    SCROLL-IN BOX ANIMATION
    ========================================================= */
 
+.capabilities-content,
 .prod-box,
 .slide,
 .location-card {
@@ -2542,6 +2687,7 @@ img {
 
 /* Activated by JavaScript */
 
+.capabilities-content.show,
 .prod-box.show,
 .slide.show,
 .location-card.show {
