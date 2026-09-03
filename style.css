@@ -68,6 +68,11 @@ body {
 }
 
 
+p {
+    font-size: var(--body-size) !important;
+}
+
+
 body,
 button,
 input {
@@ -774,7 +779,7 @@ img {
 .capabilities-info-column p {
     margin: 0 0 18px;
 
-    font-size: 0.88rem;
+    font-size: var(--body-size);
 
     line-height: 1.55;
 }
@@ -2077,8 +2082,6 @@ img {
     .capabilities-info-column p {
 
         margin-bottom: 14px;
-
-        font-size: 0.78rem;
 
     }
 
