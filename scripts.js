@@ -604,3 +604,170 @@ scrollReveal('.capabilities-content');
 scrollReveal('.slide');
 
 scrollReveal('.location-card');
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
+
+function contactForm() {
+
+    const form =
+        document.querySelector('.email-form');
+
+    const modal =
+        document.querySelector('#form-success-modal');
+
+    const modalClose =
+        document.querySelector('#form-success-close');
+
+    const modalButton =
+        document.querySelector('#form-success-button');
+
+    if (!form || !modal) return;
+
+
+    const submitButton =
+        form.querySelector('button[type="submit"]');
+
+
+    function openModal() {
+
+        modal.hidden = false;
+
+        document.body.style.overflow = 'hidden';
+
+        modalButton?.focus();
+
+    }
+
+
+    function closeModal() {
+
+        modal.hidden = true;
+
+        document.body.style.overflow = '';
+
+    }
+
+
+    form.addEventListener(
+        'submit',
+        async function (event) {
+
+            event.preventDefault();
+
+
+            const originalButtonText =
+                submitButton.textContent;
+
+
+            submitButton.disabled = true;
+
+            submitButton.textContent =
+                'Sending...';
+
+
+            try {
+
+                const formData =
+                    new FormData(form);
+
+
+                const response =
+                    await fetch(
+                        form.action,
+                        {
+                            method: 'POST',
+                            body: formData
+                        }
+                    );
+
+
+                const result =
+                    await response.json();
+
+
+                if (!response.ok || !result.success) {
+
+                    throw new Error(
+                        result.message ||
+                        'Unable to send your request.'
+                    );
+
+                }
+
+
+                // Clear all successfully submitted fields
+                form.reset();
+
+
+                // Show success overlay
+                openModal();
+
+
+            } catch (error) {
+
+                console.error(
+                    'Contact form error:',
+                    error
+                );
+
+
+                alert(
+                    'Sorry, we could not send your request. Please try again.'
+                );
+
+            } finally {
+
+                submitButton.disabled = false;
+
+                submitButton.textContent =
+                    originalButtonText;
+
+            }
+
+        }
+    );
+
+
+    modalClose?.addEventListener(
+        'click',
+        closeModal
+    );
+
+
+    modalButton?.addEventListener(
+        'click',
+        closeModal
+    );
+
+
+    modal.addEventListener(
+        'click',
+        function (event) {
+
+            if (event.target === modal) {
+                closeModal();
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        'keydown',
+        function (event) {
+
+            if (
+                event.key === 'Escape' &&
+                !modal.hidden
+            ) {
+
+                closeModal();
+
+            }
+
+        }
+    );
+
+}
+

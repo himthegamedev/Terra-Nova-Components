@@ -1025,9 +1025,8 @@
 
             <form
                 class="email-form"
-                action="mailto:jackpkent@gmail.com"
+                action="contact.php"
                 method="post"
-                enctype="text/plain"
             >
 
                 <h3 class="card-heading">
@@ -1175,7 +1174,44 @@
     </a>
 
 </div>
+<div
+    class="form-success-modal"
+    id="form-success-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="form-success-title"
+    hidden
+>
+    <div class="form-success-card">
 
+        <button
+            class="form-success-close"
+            id="form-success-close"
+            type="button"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+        <h2 id="form-success-title">
+            Thank You
+        </h2>
+
+        <p>
+            Thank you for reaching out.
+            We look forward to speaking with you.
+        </p>
+
+        <button
+            class="form-success-button"
+            id="form-success-button"
+            type="button"
+        >
+            Close
+        </button>
+
+    </div>
+</div>
 </body>
 
 </html>

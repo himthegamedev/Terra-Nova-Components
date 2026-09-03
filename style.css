@@ -2717,3 +2717,67 @@ img {
     }
 
 }
+.form-success-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background: rgba(0, 0, 0, 0.65);
+}
+
+
+.form-success-modal[hidden] {
+    display: none;
+}
+
+
+.form-success-card {
+    position: relative;
+
+    width: min(100%, 520px);
+
+    padding: 48px 40px 40px;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+
+.form-success-card h2 {
+    margin: 0 0 16px;
+}
+
+
+.form-success-card p {
+    margin: 0 0 28px;
+
+    line-height: 1.6;
+}
+
+
+.form-success-close {
+    position: absolute;
+
+    top: 12px;
+    right: 16px;
+
+    border: 0;
+    background: transparent;
+
+    font-size: 32px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+.form-success-button {
+    cursor: pointer;
+}
