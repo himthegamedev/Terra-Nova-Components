@@ -2744,9 +2744,13 @@ img {
 
     padding: 48px 40px 40px;
 
-    background: #ffffff;
+    background: var(--bg-dark);
 
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -2770,6 +2774,7 @@ img {
 
     border: 0;
     background: transparent;
+    color: rgba(255, 255, 255, 0.75);
 
     font-size: 32px;
     line-height: 1;
@@ -2779,5 +2784,26 @@ img {
 
 
 .form-success-button {
+    padding: 10px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+    background: transparent;
+    color: #ffffff;
+    font: inherit;
     cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.form-success-button:hover,
+.form-success-button:focus-visible {
+    background: #ffffff;
+    color: #1f2933;
+}
+.success-logo{
+    width:125px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
 }

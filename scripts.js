@@ -771,3 +771,4 @@ function contactForm() {
 
 }
 
+document.addEventListener('DOMContentLoaded', () => { contactForm(); });
