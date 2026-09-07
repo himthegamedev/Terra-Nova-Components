@@ -668,7 +668,7 @@ img {
 
     flex-direction: column;
 
-    width: min(850px, 100%);
+    width: min(1200px, 100%);
 
     margin: 0 auto 40px;
 
@@ -966,6 +966,18 @@ img {
     margin: 20px auto 35px;
 
     line-height: 1.6;
+}
+
+
+.list-items {
+    text-align: left;
+}
+
+
+.list-items ul {
+    margin: 0;
+
+    padding-left: 1.5rem;
 }
 
 
@@ -2806,4 +2818,25 @@ img {
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
+}
+li{
+    justify-content: left;
+}
+.apply-now{
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 999px;
+    padding: 10px 24px;
+}
+.apply-now:hover{
+    background: #ffffff;
+    color: #1f2933;
+}
+.list-item{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.careers-copy{
+    justify-content: left;
 }
