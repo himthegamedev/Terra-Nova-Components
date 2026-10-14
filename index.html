@@ -1217,17 +1217,17 @@
                     name="best-time"
                     required
                 >
-                <label for="blueprint">
-        Blueprint Drawings
-    </label>
+                <label for="files">
+                    Upload Drawings:
+                </label>
 
-
-    <input
-        type="file"
-        id="blueprint"
-        name="blueprint"
-        accept=".pdf,.dwg,.dxf,.dws,.dwt,.jpg,.jpeg,.png"
-    >
+                <input
+                    type="file"
+                    id="files"
+                    name="files[]"
+                    accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf"
+                    multiple
+        >
  <p class="file-help">
         PDF, CAD drawing, JPG or PNG. Maximum file size: 10 MB.
     </p>
