@@ -1156,6 +1156,7 @@
                 class="email-form"
                 action="contact.php"
                 method="post"
+                enctype="multipart/form-data"
             >
 
                 <h3 class="card-heading">
@@ -1216,7 +1217,20 @@
                     name="best-time"
                     required
                 >
+                <label for="blueprint">
+        Blueprint Drawings
+    </label>
 
+
+    <input
+        type="file"
+        id="blueprint"
+        name="blueprint"
+        accept=".pdf,.dwg,.dxf,.dws,.dwt,.jpg,.jpeg,.png"
+    >
+ <p class="file-help">
+        PDF, CAD drawing, JPG or PNG. Maximum file size: 10 MB.
+    </p>
 
                 <button type="submit">
                     Send Message
