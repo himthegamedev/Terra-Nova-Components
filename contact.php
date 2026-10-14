@@ -104,6 +104,110 @@ if (!empty($errors)) {
 
 
 // --------------------------------------------------
+// Validate uploaded attachments
+// --------------------------------------------------
+
+$attachments = [];
+$totalAttachmentBytes = 0;
+$maxAttachmentBytes = 20 * 1024 * 1024;
+$maxTotalAttachmentBytes = 25 * 1024 * 1024;
+
+if (isset($_FILES['files'])) {
+
+    $uploadedFiles = $_FILES['files'];
+
+    if (
+        !is_array($uploadedFiles['name'] ?? null) ||
+        !is_array($uploadedFiles['tmp_name'] ?? null) ||
+        !is_array($uploadedFiles['error'] ?? null) ||
+        !is_array($uploadedFiles['size'] ?? null)
+    ) {
+        http_response_code(400);
+
+        echo json_encode([
+            'success' => false,
+            'message' => 'The uploaded files could not be processed.'
+        ]);
+
+        exit;
+    }
+
+    foreach ($uploadedFiles['error'] as $index => $uploadError) {
+
+        if ($uploadError === UPLOAD_ERR_NO_FILE) {
+            continue;
+        }
+
+        if ($uploadError !== UPLOAD_ERR_OK) {
+            http_response_code(400);
+
+            echo json_encode([
+                'success' => false,
+                'message' => 'A file could not be uploaded. Please try again.'
+            ]);
+
+            exit;
+        }
+
+        $temporaryPath = $uploadedFiles['tmp_name'][$index] ?? '';
+        $fileSize = (int) ($uploadedFiles['size'][$index] ?? 0);
+
+        if (
+            $temporaryPath === '' ||
+            !is_uploaded_file($temporaryPath) ||
+            $fileSize <= 0
+        ) {
+            http_response_code(400);
+
+            echo json_encode([
+                'success' => false,
+                'message' => 'An uploaded file is invalid.'
+            ]);
+
+            exit;
+        }
+
+        if ($fileSize > $maxAttachmentBytes) {
+            http_response_code(400);
+
+            echo json_encode([
+                'success' => false,
+                'message' => 'Each file must be 20 MB or smaller.'
+            ]);
+
+            exit;
+        }
+
+        $totalAttachmentBytes += $fileSize;
+
+        if ($totalAttachmentBytes > $maxTotalAttachmentBytes) {
+            http_response_code(400);
+
+            echo json_encode([
+                'success' => false,
+                'message' => 'The combined file size must be 25 MB or smaller.'
+            ]);
+
+            exit;
+        }
+
+        $originalName = (string) ($uploadedFiles['name'][$index] ?? '');
+        $safeFilename = basename(str_replace('\\', '/', $originalName));
+        $safeFilename = preg_replace('/[\x00-\x1F\x7F]/', '', $safeFilename);
+
+        if (!is_string($safeFilename) || $safeFilename === '') {
+            $safeFilename = 'attachment';
+        }
+
+        $attachments[] = [
+            'path' => $temporaryPath,
+            'name' => $safeFilename
+        ];
+    }
+}
+
+
+// --------------------------------------------------
 // Limit input lengths
 // --------------------------------------------------
 
@@ -202,6 +306,17 @@ try {
         $email,
         $name
     );
+
+    // ----------------------------------------------
+    // Attach uploaded files
+    // ----------------------------------------------
+
+    foreach ($attachments as $attachment) {
+        $mail->addAttachment(
+            $attachment['path'],
+            $attachment['name']
+        );
+    }
 
 
     // ----------------------------------------------

@@ -1136,7 +1136,7 @@
 
                     <br>
 
-                    K7A 5B8
+                    K7A 0E8
 
                 </p>
 
@@ -1156,12 +1156,25 @@
                 class="email-form"
                 action="contact.php"
                 method="post"
+                enctype="multipart/form-data"
             >
 
                 <h3 class="card-heading">
                     Contact Us
                 </h3>
 
+                
+                <label for="company-name">
+                    Company Name
+                </label>
+
+
+                <input
+                    type="text"
+                    id="company-name"
+                    name="company-name"
+                    autocomplete="organization"
+                >
 
                 <label for="name">
                     Name
@@ -1215,6 +1228,13 @@
                     id="best-time"
                     name="best-time"
                     required
+                >
+                <label for="files">Upload Drawings:</label>
+                <input
+                    type="file"
+                    id="files"
+                    name="files[]"
+                    multiple
                 >
 
 

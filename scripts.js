@@ -713,7 +713,9 @@ function contactForm() {
 
 
                 alert(
-                    'Sorry, we could not send your request. Please try again.'
+                    error instanceof Error && error.message
+                        ? error.message
+                        : 'Sorry, we could not send your request. Please try again.'
                 );
 
             } finally {
