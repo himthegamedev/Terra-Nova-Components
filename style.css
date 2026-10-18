@@ -1290,6 +1290,25 @@ img {
 }
 
 
+.location-addresses {
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+
+.location-addresses > .body-text {
+    flex: 0 0 50%;
+
+    box-sizing: border-box;
+}
+
+
+.location-addresses strong {
+    font-size: 1.2em;
+}
+
+
 .contact-details h2 {
     margin: 0 0 10px;
 }
