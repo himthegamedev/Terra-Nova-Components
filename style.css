@@ -193,7 +193,7 @@ img {
 
     align-items: center;
 
-    justify-content: center;
+    justify-content: space-between;
 
     height: 50px;
 
@@ -329,6 +329,253 @@ img {
 /* =========================================================
    HERO
    ========================================================= */
+
+.thorndale-hero {
+    min-height: 833px;
+
+    padding: 160px 24px 80px;
+
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.68)),
+        url('Images/overheadview.webp') center / cover no-repeat;
+}
+
+
+.thorndale-hero-content {
+    width: min(1093px, 100%);
+
+    margin: 0 auto;
+}
+
+
+.thorndale-hero-content > h1 {
+    max-width: 1000px;
+
+    margin: 0;
+
+    text-align: left;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(2.2rem, 5vw, 3.1rem);
+
+    line-height: 1.12;
+}
+
+
+.thorndale-hero-intro {
+    max-width: 700px;
+
+    margin: 20px 0 0;
+
+    line-height: 1.8;
+}
+
+
+.thorndale-brand-transition {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 32px;
+
+    width: min(900px, 100%);
+
+    min-height: 250px;
+
+    margin-top: 40px;
+
+    padding: 28px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+
+.thorndale-former-brands {
+    display: flex;
+
+    flex: 1;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+.thorndale-brand {
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 16px;
+
+    min-width: 0;
+
+    margin: 0;
+
+    text-align: center;
+}
+
+
+.thorndale-brand img {
+    display: block;
+
+    width: min(210px, 100%);
+
+    height: 132px;
+
+    object-fit: contain;
+}
+
+
+.thorndale-brand figcaption {
+    font-size: 0.9rem;
+}
+
+
+.thorndale-brand-plus {
+    font-size: 1.75rem;
+}
+
+
+.thorndale-brand-arrow {
+    flex: 0 0 44px;
+
+    width: 44px;
+
+    height: 24px;
+}
+
+
+.thorndale-new-brand img {
+    width: min(260px, 100%);
+
+    height: 156px;
+
+    padding: 12px 20px;
+
+    background: white;
+}
+
+
+.thorndale-hero-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    margin-top: 36px;
+}
+
+
+.thorndale-hero-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 15px 30px;
+
+    background: rgb(205, 20, 20);
+
+    color: white;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.thorndale-hero-button:hover,
+.thorndale-hero-button:focus-visible {
+    background: rgb(240, 30, 30);
+}
+
+
+.thorndale-hero-link {
+    color: white;
+
+    text-underline-offset: 5px;
+}
+
+
+.thorndale-hero-link span {
+    display: inline;
+
+    margin-left: 8px;
+}
+
+
+.thorndale-faq {
+    min-height: 100vh;
+
+    padding: 150px 24px 80px;
+
+    background: #111;
+}
+
+
+.thorndale-faq-content {
+    width: min(900px, 100%);
+
+    margin: 0 auto;
+}
+
+
+.thorndale-faq-content > h2 {
+    margin: 0 0 32px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    text-align: center;
+}
+
+
+.thorndale-faq-item {
+    padding: 24px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.thorndale-faq-item h3 {
+    margin: 0 0 10px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.25rem;
+}
+
+
+.thorndale-faq-item p {
+    margin: 0;
+
+    line-height: 1.6;
+}
+
+
+.thorndale-faq-item a {
+    color: var(--text-light);
+
+    text-decoration: underline;
+}
+
 
 .partial-background {
     position: relative;
@@ -925,6 +1172,27 @@ img {
 }
 
 
+.installation-services {
+    padding: 24px 20px 40px;
+
+    text-align: center;
+}
+
+
+.installation-services h2 {
+    margin: 0 0 12px;
+}
+
+
+.installation-services p {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    line-height: 1.6;
+}
+
+
 /* =========================================================
    LOCATIONS
    ========================================================= */
@@ -1267,13 +1535,15 @@ img {
 
     z-index: 2;
 
-    display: flex;
+    display: grid;
 
-    align-items: center;
+    align-items: start;
 
-    justify-content: space-between;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 60px;
+    column-gap: 60px;
+
+    row-gap: 20px;
 
     width: 100%;
 
@@ -1282,7 +1552,7 @@ img {
 
 
 .contact-details {
-    flex: 1;
+    max-width: 100%;
 
     color: white;
 
@@ -1290,10 +1560,54 @@ img {
 }
 
 
+.contact-info-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    max-width: 100%;
+
+    color: white;
+
+    text-align: left;
+}
+
+
+.contact-copyright {
+    grid-column: 1;
+
+    margin: 0;
+
+    text-align: left;
+}
+
+
+.contact-information {
+    min-width: 0;
+}
+
+
+.contact-logo {
+    display: block;
+
+    width: min(220px, 100%);
+
+    height: auto;
+
+    margin: 0 0 16px;
+}
+
+
 .location-addresses {
     display: flex;
 
     flex-wrap: wrap;
+
+    align-content: flex-start;
 }
 
 
@@ -1316,6 +1630,49 @@ img {
 
 .contact-details a {
     color: white;
+}
+
+
+.contact-cta {
+    display: flex;
+
+    flex: 0 0 auto;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 170px;
+
+    height: 50px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: #000;
+
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.contact-cta:hover,
+.contact-cta:focus-visible {
+    background: #333;
+
+    transform: scale(1.05);
 }
 
 
@@ -1462,7 +1819,7 @@ img {
 
 
     .contact {
-        flex-direction: column;
+        grid-template-columns: 1fr;
 
         align-items: center;
 
@@ -1473,6 +1830,26 @@ img {
     .contact-details {
         width: min(600px, 100%);
 
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+    .contact-info-column {
+        width: min(600px, 100%);
+
+        max-width: 100%;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .contact-copyright {
+        grid-column: 1;
+
+        justify-self: center;
+
         text-align: center;
     }
 
@@ -1481,6 +1858,10 @@ img {
         width: min(600px, 100%);
     }
 
+
+    .contact-cta {
+        align-self: center;
+    }
 
     .locations-grid {
         grid-template-columns:
@@ -1728,7 +2109,7 @@ img {
 
         align-items: center;
 
-        justify-content: center;
+        justify-content: space-between;
 
         width: 100vw !important;
 
@@ -1737,7 +2118,9 @@ img {
 
         margin: 0 !important;
 
-        padding: 10px !important;
+        gap: 8px;
+
+        padding: 8px !important;
 
         /*
          * EXACT SAME BLACK AS THE TOP
@@ -1762,7 +2145,7 @@ img {
        MOBILE GET A QUOTE BUTTON
        ----------------------------------------------------- */
 
-    #mobile-quote-button {
+    #mobile-quote-bar .mobile-sticky-link {
 
         display: flex !important;
 
@@ -1770,7 +2153,9 @@ img {
 
         justify-content: center !important;
 
-        width: 100% !important;
+        flex: 1 1 0;
+
+        min-width: 0;
 
         height: 64px !important;
 
@@ -1782,24 +2167,23 @@ img {
 
         border-radius: 10px !important;
 
-        background:
-            rgb(205, 20, 20) !important;
+        background: #292929;
 
         color: #ffffff !important;
 
         font-family: 'Montserrat', sans-serif !important;
 
-        font-size: 1.2rem !important;
+        font-size: 0.72rem !important;
 
         font-weight: 800 !important;
 
-        line-height: 1 !important;
+        line-height: 1.2 !important;
 
         text-align: center !important;
 
         text-decoration: none !important;
 
-        letter-spacing: 0.03em;
+        letter-spacing: 0.01em;
 
         cursor: pointer !important;
 
@@ -1810,10 +2194,21 @@ img {
     }
 
 
-    #mobile-quote-button:hover {
+    #mobile-quote-button {
 
         background:
-            rgb(240, 30, 30) !important;
+            rgb(205, 20, 20) !important;
+
+    }
+
+    #mobile-quote-bar .mobile-sticky-link:not(#mobile-quote-button):hover {
+        background: #444;
+    }
+
+
+    #mobile-quote-button:hover {
+
+        background: rgb(240, 30, 30) !important;
 
     }
 
@@ -2437,13 +2832,13 @@ img {
 
     .contact {
 
-        display: flex;
+        display: grid;
 
         align-items: center;
 
         justify-content: center;
 
-        flex-direction: column;
+        grid-template-columns: 1fr;
 
         gap: 30px;
 
@@ -2455,6 +2850,31 @@ img {
     .contact-details {
 
         width: 100%;
+
+        max-width: 100%;
+
+        text-align: center;
+
+    }
+
+
+    .contact-info-column {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        align-items: center;
+
+        text-align: center;
+
+    }
+
+    .contact-copyright {
+
+        grid-column: 1;
+
+        justify-self: center;
 
         text-align: center;
 
@@ -2858,4 +3278,67 @@ li{
 }
 .careers-copy{
     justify-content: left;
+}
+
+
+@media (max-width: 760px) {
+    .thorndale-hero {
+        min-height: 0;
+
+        padding: 120px 20px 64px;
+    }
+
+
+    .thorndale-brand-transition {
+        flex-direction: column;
+
+        gap: 18px;
+
+        min-height: 0;
+
+        margin-top: 28px;
+
+        padding: 24px 0;
+    }
+
+
+    .thorndale-former-brands {
+        width: 100%;
+
+        gap: 12px;
+    }
+
+
+    .thorndale-brand img {
+        height: 100px;
+    }
+
+
+    .thorndale-brand-plus {
+        flex: 0 0 auto;
+    }
+
+
+    .thorndale-brand-arrow {
+        transform: rotate(90deg);
+    }
+
+
+    .thorndale-new-brand img {
+        height: 120px;
+    }
+
+
+    .thorndale-hero-actions {
+        flex-wrap: wrap;
+
+        gap: 20px;
+    }
+
+
+    .thorndale-faq {
+        min-height: 0;
+
+        padding: 64px 20px;
+    }
 }

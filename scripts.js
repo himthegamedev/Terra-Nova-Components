@@ -396,13 +396,17 @@
         const navLogo =
             document.querySelector('.nav-logo');
 
+        if (!largeLogo) {
+            if (navLogo) {
+                navLogo.style.opacity = '1';
+            }
 
-        if (largeLogo) {
-
-            largeLogo.style.opacity =
-                1 - progress;
-
+            return;
         }
+
+
+        largeLogo.style.opacity =
+            1 - progress;
 
 
         if (navLogo) {
