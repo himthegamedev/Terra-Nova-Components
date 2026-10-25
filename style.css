@@ -1562,6 +1562,25 @@ img {
 }
 
 
+.footer-quote-card {
+    width: fit-content;
+    max-width: 100%;
+    margin-bottom: 16px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 16px;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+
+.footer-quote-card h3 {
+    margin: 0 0 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+
 .location-addresses {
     display: flex;
 
@@ -1770,9 +1789,15 @@ img {
     body {
 
         /* Reserve space for the fixed bottom navigation. */
+
         padding-bottom:
             var(--mobile-quote-height) !important;
 
+    }
+
+
+    body.quote-page {
+        padding-bottom: 0 !important;
     }
 
 

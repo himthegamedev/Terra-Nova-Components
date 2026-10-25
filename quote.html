@@ -24,7 +24,7 @@
 </head>
 
 <body class="quote-page">
-    <header class="Nav">
+    <header class="Nav" id="top">
         <a
             href="index.html#home"
             class="logo-button"
@@ -63,13 +63,13 @@
                 Locations
             </a>
             <a
-                href="index.html#contact-page"
+                href="#contact-page"
                 class="desktop-nav-link"
             >
                 Contact Us
             </a>
             <a
-                href="quote.html"
+                href="#top"
                 class="desktop-quote-button"
             >
                 GET A QUOTE
@@ -98,16 +98,16 @@
         inert
     >
         <a
-            href="index.html#manufacturing"
-            class="mobile-menu-link"
-        >
-            Products &amp; Services
-        </a>
-        <a
             href="index.html#home"
             class="mobile-menu-link"
         >
             HOME
+        </a>
+        <a
+            href="index.html#manufacturing"
+            class="mobile-menu-link"
+        >
+            CAPABILITIES
         </a>
         <a
             href="index.html#products"
@@ -134,7 +134,7 @@
             NOW HIRING!
         </a>
         <a
-            href="quote.html"
+            href="#contact-page"
             class="mobile-menu-link"
         >
             CONTACT US
@@ -504,121 +504,93 @@
 </div>
 </div>
 </main>
-<footer
+<!-- Company contact details and facility addresses. -->
+<section
     id="contact-page"
     class="contact-page"
 >
-
     <div class="redbox">
-
-
-        <!-- Company contact links and facility directory. -->
         <div class="contact-intro">
-
-            <h2>
-                Contact Us
-            </h2>
-
-            <div class="footer-brand">
-                    <img
-                        src="Images/Terra-Nova-Logo-White-Transparent.png"
-                        class="footer-logo"
-                        alt="Terra Nova Components"
-                        width="171"
-                        height="94"
-                        loading="lazy"
-                    >
-                </div>
-
-
+            <h2>Contact Us</h2>
             <p>
-                Since 1991 we have been building high quality, precision-engineered building components.
+                Our experts are ready to listen to your needs, provide
+                tailored recommendations, and deliver high quality
+                components.
             </p>
-            <p class="footer-team-link"><a href="team.html">Meet the Team</a></p>
-            <div class="footer-contact-actions">
-                <p class="body-text"><strong>General inquiries:</strong> <a href="mailto:info@terranovatruss.com">info@terranovatruss.com</a></p>
-                <p class="body-text"><a href="careers.html"><strong>Work with Us - View Current Openings</strong></a></p>
-                <a class="footer-quote-button" href="quote.html">Get a Quote</a>
-            </div>
-
         </div>
 
+        <div class="contact">
+            <div
+                class="contact-details location-addresses"
+                id="facility-locations"
+            >
+                <p class="body-text">
+                    <strong>Kingston Facility</strong>
+                    <br>2602 Perth Road
+                    <br>Glenburnie, ON
+                    <br>K0H 1S0
+                </p>
+                <p class="body-text">
+                    <strong>
+                        <a href="thorndale.html">Thorndale Facility</a>
+                    </strong>
+                    <br>16783 Thorndale Road
+                    <br>Thorndale, ON
+                    <br>N0M 2P0
+                </p>
+                <p class="body-text">
+                    <strong>Brockville Facility</strong>
+                    <br>3009 County Road 29
+                    <br>Brockville, ON
+                    <br>K6V 5T7
+                </p>
+                <p class="body-text">
+                    <strong>Smith Falls Facility</strong>
+                    <br>123 Poonamalie Road
+                    <br>Smiths Falls, ON
+                    <br>K7A 5B8
+                </p>
+            </div>
 
-
-        <div class="contact homepage-footer-details">
-
-            <div class="contact-details">
-
-                <div class="footer-locations" id="facility-locations" aria-label="Our locations">
-                    <section class="footer-location">
-                        <h3 class="card-heading">Kingston</h3>
+            <div class="contact-info-column">
+                <div class="contact-information">
+                    <img
+                        src="Images/logo2.png"
+                        class="contact-logo"
+                        alt="Terra Nova Components"
+                    >
+                    <div class="footer-quote-card">
+                        <h3>Get a Quote</h3>
                         <p class="body-text">
-                            2602 Perth Road<br>
-                            Glenburnie, ON <br>
-                            K0H 1S0
-                        </p>
-                        <p class="body-text"><a href="https://goo.gl/maps/9WG1nfvCQ7fbisFT8">View directions to Kingston</a></p>
-                        <p class="body-text">
-                            Kingston: <a href="tel:+16135465850">613-546-5850</a><br>
-                            Ottawa: <a href="tel:+16138134549">613-813-4549</a><br>
-                            Oshawa: <a href="tel:+12893162039">289-316-2039</a>
-                        </p>
-                    </section>
-
-                    <section class="footer-location">
-                        <h3 class="card-heading"><a href="thorndale.html">Thorndale - London</a></h3>
-                        <p class="body-text">
-                            16783 Thorndale Road<br>
-                            Thorndale, ON<br>
-                            N0M 2P0
-                        </p>
-                        <p class="body-text"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=16783+Thorndale+Road+Thorndale+ON+N0M+2P0">View directions to Thorndale</a></p>
-                        <p class="body-text">Thorndale: <a href="tel:+15194611180">519-461-1180</a></p>
-                    </section>
-
-                    <section class="footer-location">
-                        <h3 class="card-heading">Brockville</h3>
-                        <p class="body-text">
-                            3009 County Road 29<br>
-                            Brockville, ON <br>
-                            K6V 5T7
-                        </p>
-                        <p class="body-text"><a href="https://goo.gl/maps/1K5VJktgvz524HxZ8">View directions to Brockville</a></p>
-                        <p class="body-text">Brockville: <a href="tel:+16133422388">613-342-2388</a></p>
-                    </section>
-
-                    <section class="footer-location">
-                        <h3 class="card-heading">Smith Falls - Ottawa</h3>
-                        <p class="body-text">
-                            123 Poonamalie Road<br>
-                            Smiths Falls, ON<br>
-                            K7A 0E8
+                            Since 1991 we have been building high quality,
+                            precision-engineered building components.
                         </p>
                         <p class="body-text">
-                            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=123+Poonamalie+Road+Smiths+Falls+ON+K7A+0E8">
-                                View directions to Smith Falls
+                            <strong>Tel:</strong>
+                            <a href="tel:+16132567070">(613) 256.7070</a>
+                        </p>
+                        <p class="body-text">
+                            <strong>Email:</strong>
+                            <a href="mailto:info@terranovatruss.com">
+                                info@terranovatruss.com
                             </a>
                         </p>
-                        <p class="body-text">
-                            Smith Falls:
-                            <a href="tel:+16132567070">613-256-7070</a><br>
-                            Ottawa:
-                            <a href="tel:+16138134549">613-813-4549</a>
-                        </p>
-                    </section>
+                        <a
+                            class="contact-cta"
+                            href="#top"
+                        >
+                            GET A QUOTE
+                        </a>
+                    </div>
                 </div>
-
-                <p class="supporting-text">
-                    © 2026 Terra Nova Components.
-                    All rights reserved.
-                </p>
-
             </div>
 
+            <p class="supporting-text contact-copyright">
+                © 2026 Terra Nova Components.
+                All rights reserved.
+            </p>
         </div>
-
     </div>
-
-</footer>
+</section>
 </body>
 </html>
