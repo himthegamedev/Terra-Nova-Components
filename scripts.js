@@ -1,8 +1,6 @@
 (function () {
 
-    /* =========================================================
-       HOVER HIGHLIGHT
-       ========================================================= */
+    /* Adds and removes the hover state from interactive elements. */
 
     function highlight(selector, highlightClass) {
 
@@ -23,9 +21,7 @@
     }
 
 
-    /* =========================================================
-       STICKY NAVIGATION
-       ========================================================= */
+    /* Adds the sticky navigation class after the page is scrolled. */
 
     function stickyNav(
         selector,
@@ -57,9 +53,7 @@
     }
 
 
-    /* =========================================================
-       MOBILE NAVIGATION
-       ========================================================= */
+    /* Controls the small-screen menu and fixed quote bar. */
 
     function mobileNavigation() {
 
@@ -79,10 +73,6 @@
                 '.mobile-quote-bar'
             );
 
-
-        /* -----------------------------------------------
-           HAMBURGER MENU
-           ----------------------------------------------- */
 
         if (hamburger && mobileMenu) {
 
@@ -120,10 +110,6 @@
             );
 
 
-            /* -------------------------------------------
-               CLOSE MENU WHEN LINK IS CLICKED
-               ------------------------------------------- */
-
             menuLinks.forEach((link) => {
 
                 link.addEventListener(
@@ -153,10 +139,6 @@
 
             });
 
-
-            /* -------------------------------------------
-               CLOSE MENU WHEN CLICKING OUTSIDE
-               ------------------------------------------- */
 
             document.addEventListener(
                 'click',
@@ -206,10 +188,6 @@
         }
 
 
-        /* -----------------------------------------------
-           MOBILE BOTTOM QUOTE BAR
-           ----------------------------------------------- */
-
         if (mobileQuoteBar) {
 
             function updateMobileQuoteBar() {
@@ -242,9 +220,7 @@
     }
 
 
-    /* =========================================================
-       SIDE-SCROLL GALLERY
-       ========================================================= */
+    /* Moves the gallery track and resets its automatic slide timer. */
 
     function sideScrollGallery(
         selector,
@@ -363,24 +339,9 @@
     }
 
 
-    /* =========================================================
-       LOGO CROSSFADE
-       ========================================================= */
+    /* Crossfades the large hero logo into the navigation logo on scroll. */
 
     function updateLogoFade() {
-
-        /*
-         * The large hero logo fades OUT.
-         * The navigation logo fades IN.
-         *
-         * 0px:
-         * Large logo = 100%
-         * Nav logo   = 0%
-         *
-         * 400px:
-         * Large logo = 0%
-         * Nav logo   = 100%
-         */
 
         const fadeDistance = 400;
 
@@ -419,9 +380,7 @@
     }
 
 
-    /* =========================================================
-       PRODUCT PREVIEW
-       ========================================================= */
+    /* Rotates the featured product title and its matching summary. */
 
     function cycleProductPreview(
         selector,
@@ -514,9 +473,7 @@
     }
 
 
-    /* =========================================================
-       INITIALIZE EVERYTHING
-       ========================================================= */
+    /* Initialize shared interactions used by the home page. */
 
     stickyNav(
         '.Nav',
@@ -537,20 +494,12 @@
     updateLogoFade();
 
 
-    /* =========================================================
-       SCROLL EVENTS
-       ========================================================= */
-
     window.addEventListener(
         'scroll',
         updateLogoFade,
         { passive: true }
     );
 
-
-    /* =========================================================
-       HIGHLIGHTS
-       ========================================================= */
 
     highlight(
         '#productbtn',
@@ -560,9 +509,7 @@
 })();
 
 
-/* =========================================================
-   SCROLL-IN BOX ANIMATION
-   ========================================================= */
+/* Reveals cards when they enter the viewport. */
 
 function scrollReveal(selector) {
 
@@ -608,171 +555,3 @@ scrollReveal('.capabilities-content');
 scrollReveal('.slide');
 
 scrollReveal('.location-card');
-/* =========================================================
-   CONTACT FORM
-   ========================================================= */
-
-function contactForm() {
-
-    const form =
-        document.querySelector('.email-form');
-
-    const modal =
-        document.querySelector('#form-success-modal');
-
-    const modalClose =
-        document.querySelector('#form-success-close');
-
-    const modalButton =
-        document.querySelector('#form-success-button');
-
-    if (!form || !modal) return;
-
-
-    const submitButton =
-        form.querySelector('button[type="submit"]');
-
-
-    function openModal() {
-
-        modal.hidden = false;
-
-        document.body.style.overflow = 'hidden';
-
-        modalButton?.focus();
-
-    }
-
-
-    function closeModal() {
-
-        modal.hidden = true;
-
-        document.body.style.overflow = '';
-
-    }
-
-
-    form.addEventListener(
-        'submit',
-        async function (event) {
-
-            event.preventDefault();
-
-
-            const originalButtonText =
-                submitButton.textContent;
-
-
-            submitButton.disabled = true;
-
-            submitButton.textContent =
-                'Sending...';
-
-
-            try {
-
-                const formData =
-                    new FormData(form);
-
-
-                const response =
-                    await fetch(
-                        form.action,
-                        {
-                            method: 'POST',
-                            body: formData
-                        }
-                    );
-
-
-                const result =
-                    await response.json();
-
-
-                if (!response.ok || !result.success) {
-
-                    throw new Error(
-                        result.message ||
-                        'Unable to send your request.'
-                    );
-
-                }
-
-
-                // Clear all successfully submitted fields
-                form.reset();
-
-
-                // Show success overlay
-                openModal();
-
-
-            } catch (error) {
-
-                console.error(
-                    'Contact form error:',
-                    error
-                );
-
-
-                alert(
-                    'Sorry, we could not send your request. Please try again.'
-                );
-
-            } finally {
-
-                submitButton.disabled = false;
-
-                submitButton.textContent =
-                    originalButtonText;
-
-            }
-
-        }
-    );
-
-
-    modalClose?.addEventListener(
-        'click',
-        closeModal
-    );
-
-
-    modalButton?.addEventListener(
-        'click',
-        closeModal
-    );
-
-
-    modal.addEventListener(
-        'click',
-        function (event) {
-
-            if (event.target === modal) {
-                closeModal();
-            }
-
-        }
-    );
-
-
-    document.addEventListener(
-        'keydown',
-        function (event) {
-
-            if (
-                event.key === 'Escape' &&
-                !modal.hidden
-            ) {
-
-                closeModal();
-
-            }
-
-        }
-    );
-
-}
-
-document.addEventListener('DOMContentLoaded', () => { contactForm(); });

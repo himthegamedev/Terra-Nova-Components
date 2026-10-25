@@ -1,12 +1,10 @@
-/* =========================================================
-   ROOT VARIABLES
-   ========================================================= */
+/* Shared design tokens used across the site. */
 
 :root {
 
     --bg-dark: #111111;
 
-    /* Same black used by mobile sticky navigation */
+    /* Keep the desktop sticky header consistent with the mobile navigation. */
     --nav-bg: rgba(20, 20, 20, 0.96);
 
     --panel-red: rgb(134, 5, 5);
@@ -31,9 +29,7 @@
 }
 
 
-/* =========================================================
-   RESET
-   ========================================================= */
+/* Establish consistent box sizing and smooth in-page navigation. */
 
 * {
     box-sizing: border-box;
@@ -123,9 +119,7 @@ img {
 }
 
 
-/* =========================================================
-   DESKTOP NAVIGATION
-   ========================================================= */
+/* Desktop header layout, navigation links, and quote action. */
 
 .Nav {
     position: fixed;
@@ -248,9 +242,7 @@ img {
 }
 
 
-/* =========================================================
-   HAMBURGER
-   ========================================================= */
+/* Hamburger icon shown when the desktop navigation is hidden. */
 
 .hamburger-button {
     display: none;
@@ -307,28 +299,21 @@ img {
 }
 
 
-/* =========================================================
-   MOBILE MENU
-   ========================================================= */
+/* Collapsible navigation links for small screens. */
 
 .mobile-menu {
     display: none;
 }
 
 
-/* =========================================================
-   MOBILE BOTTOM QUOTE BAR
-   DEFAULT = HIDDEN
-   ========================================================= */
+/* Hidden by default; the mobile breakpoint displays the fixed action bar. */
 
 #mobile-quote-bar {
     display: none;
 }
 
 
-/* =========================================================
-   HERO
-   ========================================================= */
+/* Full-screen hero video and its overlay content. */
 
 .thorndale-hero {
     min-height: 833px;
@@ -642,9 +627,7 @@ img {
 }
 
 
-/* =========================================================
-   HERO LOGO
-   ========================================================= */
+/* Hero logo fade and its transition into the header logo. */
 
 .hero-logo {
     display: flex;
@@ -670,9 +653,7 @@ img {
 }
 
 
-/* =========================================================
-   PRODUCT PREVIEW
-   ========================================================= */
+/* Rotating product headings and their summary text. */
 
 .product-preview {
     display: flex;
@@ -765,9 +746,7 @@ img {
 }
 
 
-/* =========================================================
-   LEARN MORE
-   ========================================================= */
+/* Secondary call-to-action below the product preview. */
 
 .links {
     display: flex;
@@ -816,9 +795,7 @@ img {
 }
 
 
-/* =========================================================
-   GENERAL TEXT
-   ========================================================= */
+/* Shared typography for body copy and supporting text. */
 
 .section-heading {
     margin: 0;
@@ -873,9 +850,7 @@ img {
 }
 
 
-/* =========================================================
-   SPACERS
-   ========================================================= */
+/* Decorative spacing between major home-page sections. */
 
 .section-spacer {
     width: 100%;
@@ -887,9 +862,7 @@ img {
 }
 
 
-/* =========================================================
-   MANUFACTURING
-   ========================================================= */
+/* Manufacturing section layout and service descriptions. */
 
 .manufacturing {
     display: flex;
@@ -937,9 +910,7 @@ img {
 }
 
 
-/* =========================================================
-   CAPABILITIES ICONS
-   ========================================================= */
+/* Icons used to summarize manufacturing capabilities. */
 
 .capabilities-img {
     display: grid;
@@ -1037,9 +1008,7 @@ img {
 }
 
 
-/* =========================================================
-   PRODUCTS
-   ========================================================= */
+/* Product cards for wall, roof, and floor systems. */
 
 .prod-info {
     display: flex;
@@ -1146,9 +1115,7 @@ img {
 }
 
 
-/* =========================================================
-   CANADA
-   ========================================================= */
+/* Canada graphic used in the service-area presentation. */
 
 .canada {
     color: rgb(205, 20, 20);
@@ -1193,9 +1160,7 @@ img {
 }
 
 
-/* =========================================================
-   LOCATIONS
-   ========================================================= */
+/* Facility section introduction, card grid, and address link. */
 
 .locations {
     width: 100%;
@@ -1256,9 +1221,7 @@ img {
 }
 
 
-/* =========================================================
-   LOCATION BOXES
-   ========================================================= */
+/* Card sizing and hover treatment for facility photos. */
 
 .locations-grid {
     display: grid;
@@ -1301,9 +1264,7 @@ img {
 }
 
 
-/* =========================================================
-   LOCATION IMAGES
-   ========================================================= */
+/* Crop facility images to a consistent card size. */
 
 .location-image {
     width: 100%;
@@ -1333,9 +1294,7 @@ img {
 }
 
 
-/* =========================================================
-   LOCATION TITLE
-   ========================================================= */
+/* Facility names displayed inside location cards. */
 
 .location-card h3 {
     margin: 0;
@@ -1350,9 +1309,7 @@ img {
 }
 
 
-/* =========================================================
-   WHY CHOOSE US
-   ========================================================= */
+/* Introductory copy above the company gallery. */
 
 .gallery-header {
     padding: 50px 20px 30px;
@@ -1374,9 +1331,7 @@ img {
 }
 
 
-/* =========================================================
-   GALLERY
-   ========================================================= */
+/* Horizontal company photo gallery and its controls. */
 
 .gallery {
     width: 100%;
@@ -1457,9 +1412,7 @@ img {
 }
 
 
-/* =========================================================
-   CONTACT
-   ========================================================= */
+/* Contact details, facility addresses, and quote actions. */
 
 .contact-page {
     background: var(--bg-dark);
@@ -1683,89 +1636,7 @@ img {
 }
 
 
-.email-form {
-    display: flex;
-
-    flex-direction: column;
-
-    width: min(600px, 100%);
-
-    gap: 12px;
-
-    padding: 40px;
-
-    border: 1px solid rgba(255, 255, 255, 0.35);
-
-    border-radius: 12px;
-
-    background: rgba(0, 0, 0, 0.55);
-
-    color: white;
-}
-
-
-.email-form h2 {
-    margin: 0 0 8px;
-}
-
-
-.email-form label {
-    font-family: 'Montserrat', sans-serif;
-
-    font-weight: 600;
-}
-
-
-.email-form input {
-    width: 100%;
-
-    min-height: 44px;
-
-    padding: 10px;
-
-    border: 1px solid rgba(255, 255, 255, 0.45);
-
-    border-radius: 6px;
-
-    background: white;
-
-    color: black;
-
-    font: inherit;
-}
-
-
-.email-form button {
-    align-self: flex-start;
-
-    margin-top: 8px;
-
-    padding: 12px 22px;
-
-    border: 0;
-
-    border-radius: 6px;
-
-    background: rgba(0, 0, 0, 0.55);
-
-    color: white;
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-weight: 700;
-
-    cursor: pointer;
-}
-
-
-.email-form button:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
+/* Layout adjustments for tablet-sized screens. */
 
 @media (max-width: 1024px) {
 
@@ -1861,11 +1732,6 @@ img {
     }
 
 
-    .email-form {
-        width: min(600px, 100%);
-    }
-
-
     .contact-cta {
         align-self: center;
     }
@@ -1885,16 +1751,12 @@ img {
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* Mobile header, menu, fixed actions, and stacked page layouts. */
 
 @media screen and (max-width: 767px) {
 
 
-    /* -----------------------------------------------------
-       MOBILE VARIABLES
-       ----------------------------------------------------- */
+    /* Set compact heights for fixed mobile navigation controls. */
 
     :root {
 
@@ -1905,27 +1767,16 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       BODY
-       ----------------------------------------------------- */
-
     body {
 
-        /*
-         * Prevent the fixed bottom navigation
-         * from covering the final content.
-         */
-
+        /* Reserve space for the fixed bottom navigation. */
         padding-bottom:
             var(--mobile-quote-height) !important;
 
     }
 
 
-    /* -----------------------------------------------------
-       TOP MOBILE NAVIGATION
-       ----------------------------------------------------- */
-
+    /* Keep the main navigation fixed above the page content. */
     .Nav {
 
         position: fixed !important;
@@ -1951,11 +1802,7 @@ img {
 
         padding: 0 14px;
 
-        /*
-         * THIS IS THE NORMAL MOBILE NAV
-         * BACKGROUND.
-         */
-
+        /* Use a translucent background over the hero content. */
         background:
             rgba(20, 20, 20, 0.25) !important;
 
@@ -2008,10 +1855,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       MOBILE MENU
-       ----------------------------------------------------- */
-
+    /* Position the expandable menu directly below the fixed header. */
     .mobile-menu {
 
         position: fixed;
@@ -2096,10 +1940,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       MOBILE STICKY GET A QUOTE BAR
-       ----------------------------------------------------- */
-
+    /* Keep the quick links visible at the bottom of small screens. */
     #mobile-quote-bar {
 
         position: fixed !important;
@@ -2129,11 +1970,7 @@ img {
 
         padding: 8px !important;
 
-        /*
-         * EXACT SAME BLACK AS THE TOP
-         * MOBILE NAVIGATION.
-         */
-
+        /* Match the bottom bar to the mobile header background. */
         background:
             rgba(20, 20, 20, 0.96) !important;
 
@@ -2148,10 +1985,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       MOBILE GET A QUOTE BUTTON
-       ----------------------------------------------------- */
-
+    /* Give each mobile action a clear, equal-width tap target. */
     #mobile-quote-bar .mobile-sticky-link {
 
         display: flex !important;
@@ -2230,10 +2064,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       HERO
-       ----------------------------------------------------- */
-
+    /* Fit the hero video and its content to a narrow viewport. */
     .partial-background {
 
         width: 100%;
@@ -2295,10 +2126,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       PRODUCT PREVIEW
-       ----------------------------------------------------- */
-
+    /* Stack product preview controls on small screens. */
     .product-preview {
 
         width:
@@ -2357,10 +2185,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       LEARN MORE
-       ----------------------------------------------------- */
-
+    /* Keep the secondary call-to-action centered on mobile. */
     .links {
 
         margin-top: 16px;
@@ -2379,10 +2204,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       SPACER
-       ----------------------------------------------------- */
-
+    /* Reduce decorative spacing on small screens. */
     .hero-to-products {
 
         height: 50px;
@@ -2390,10 +2212,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       MANUFACTURING
-       ----------------------------------------------------- */
-
+    /* Stack manufacturing content for narrow layouts. */
     .manufacturing {
 
         width: 100%;
@@ -2425,10 +2244,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       CAPABILITY ICONS
-       ----------------------------------------------------- */
-
+    /* Reflow capability icons into a mobile-friendly grid. */
     .capabilities-img {
 
         display: grid !important;
@@ -2543,10 +2359,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       PRODUCTS
-       ----------------------------------------------------- */
-
+    /* Stack product cards and their descriptions on mobile. */
     .prod-info {
 
         display: grid;
@@ -2611,10 +2424,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       CANADA
-       ----------------------------------------------------- */
-
+    /* Scale the service-area graphic to fit the viewport. */
     .canada {
 
         font-size: 1rem;
@@ -2631,10 +2441,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       LOCATIONS
-       ----------------------------------------------------- */
-
+    /* Keep location cards readable in a single-column layout. */
     .locations {
 
         padding: 50px 16px;
@@ -2696,10 +2503,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       SECTION HEADINGS
-       ----------------------------------------------------- */
-
+    /* Scale section headings for small screens. */
     .section-heading {
 
         font-size: 1.4rem;
@@ -2709,10 +2513,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       WHY CHOOSE US
-       ----------------------------------------------------- */
-
+    /* Keep the company introduction legible on mobile. */
     .gallery-header {
 
         padding: 55px 20px 25px;
@@ -2790,10 +2591,7 @@ img {
     }
 
 
-    /* -----------------------------------------------------
-       CONTACT
-       ----------------------------------------------------- */
-
+    /* Stack contact details and actions on small screens. */
     .redbox {
 
         min-height: auto;
@@ -2904,36 +2702,10 @@ img {
     }
 
 
-    .email-form {
-
-        order: -1;
-
-        width: 100%;
-
-        padding: 26px 20px;
-
-    }
-
-
-    .email-form h2 {
-
-        font-size: 1.4rem;
-
-    }
-
-
-    .email-form input {
-
-        min-height: 46px;
-
-    }
-
 }
 
 
-/* =========================================================
-   MOBILE LANDSCAPE
-   ========================================================= */
+/* Adjust navigation and hero content for mobile landscape screens. */
 
 @media screen and (max-width: 767px)
     and (orientation: landscape) {
@@ -3061,10 +2833,7 @@ img {
 }
 
 
-/* =========================================================
-   DESKTOP SAFETY RULE
-   MAKE ABSOLUTELY SURE THE MOBILE BAR IS HIDDEN
-   ========================================================= */
+/* Ensure the fixed mobile quote bar stays hidden on desktop. */
 
 @media screen and (min-width: 768px) {
 
@@ -3073,7 +2842,7 @@ img {
         display: none !important;
 
     }
-        .nav-logo {
+    .nav-logo {
 
         width: auto;
 
@@ -3086,9 +2855,7 @@ img {
 }
 
 
-/* =========================================================
-   SCROLL-IN BOX ANIMATION
-   ========================================================= */
+/* Reveal cards as they enter view and stagger the animation across each grid. */
 
 .capabilities-content,
 .prod-box,
@@ -3104,8 +2871,6 @@ img {
 }
 
 
-/* Activated by JavaScript */
-
 .capabilities-content.show,
 .prod-box.show,
 .slide.show,
@@ -3116,8 +2881,6 @@ img {
 }
 
 
-/* Stagger the product boxes */
-
 .prod-box:nth-child(2) {
     transition-delay: 0.15s;
 }
@@ -3127,8 +2890,6 @@ img {
     transition-delay: 0.3s;
 }
 
-
-/* Stagger the gallery boxes */
 
 .slide:nth-child(2) {
     transition-delay: 0.15s;
@@ -3145,8 +2906,6 @@ img {
 }
 
 
-/* Stagger the location boxes */
-
 .location-card:nth-child(2) {
     transition-delay: 0.15s;
 }
@@ -3156,9 +2915,6 @@ img {
     transition-delay: 0.3s;
 }
 
-
-/* Accessibility: don't animate for users who
-   have requested reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -3174,96 +2930,6 @@ img {
 
     }
 
-}
-.form-success-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 24px;
-
-    background: rgba(0, 0, 0, 0.65);
-}
-
-
-.form-success-modal[hidden] {
-    display: none;
-}
-
-
-.form-success-card {
-    position: relative;
-
-    width: min(100%, 520px);
-
-    padding: 48px 40px 40px;
-
-    background: var(--bg-dark);
-
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.form-success-card h2 {
-    margin: 0 0 16px;
-}
-
-
-.form-success-card p {
-    margin: 0 0 28px;
-
-    line-height: 1.6;
-}
-
-
-.form-success-close {
-    position: absolute;
-
-    top: 12px;
-    right: 16px;
-
-    border: 0;
-    background: transparent;
-    color: rgba(255, 255, 255, 0.75);
-
-    font-size: 32px;
-    line-height: 1;
-
-    cursor: pointer;
-}
-
-
-.form-success-button {
-    padding: 10px 24px;
-    border: 1px solid rgba(255, 255, 255, 0.85);
-    border-radius: 999px;
-    background: transparent;
-    color: #ffffff;
-    font: inherit;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.form-success-button:hover,
-.form-success-button:focus-visible {
-    background: #ffffff;
-    color: #1f2933;
-}
-.success-logo{
-    width:125px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 20px;
 }
 li{
     justify-content: left;

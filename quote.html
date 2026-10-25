@@ -1,146 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-<meta name="description" content="Ontario wall panels, roof trusses, floor systems and complete framing packages for residential, agricultural and commercial construction. Terra Nova Components serves Ottawa, Kingston, London, Toronto, the GTA and beyond.">
-<title>Get a Quote | Terra Nova Components</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
->
-<link
-    rel="stylesheet"
-    href="style.css"
->
-<link rel="stylesheet" href="quote.css">
-<script src="quote.js" defer>
-</script>
-</head>
-<body class="quote-page">
-<header class="Nav">
-<a
-        href="index.html#home"
-        class="logo-button"
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
     >
-<img
-            src="Images/logo3.png"
-            class="nav-logo"
-            alt="Terra Nova Components"
+    <meta
+        name="description"
+        content="Ontario wall panels, roof trusses, floor systems and complete framing packages for residential, agricultural and commercial construction. Terra Nova Components serves Ottawa, Kingston, London, Toronto, the GTA and beyond."
+    >
+    <title>Get a Quote | Terra Nova Components</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quote.css">
+    <script src="quote.js" defer></script>
+</head>
+
+<body class="quote-page">
+    <header class="Nav">
+        <a
+            href="index.html#home"
+            class="logo-button"
         >
-</a>
-<!-- DESKTOP NAVIGATION -->
-<div class="desktop-nav-actions">
-        
-        <a href="index.html#manufacturing" class="desktop-nav-link">Products &amp; Services</a>
-<a
+            <img
+                src="Images/logo3.png"
+                class="nav-logo"
+                alt="Terra Nova Components"
+            >
+        </a>
+
+        <!-- Desktop links return visitors to matching home-page sections. -->
+        <div class="desktop-nav-actions">
+            <a
+                href="index.html#manufacturing"
+                class="desktop-nav-link"
+            >
+                Products &amp; Services
+            </a>
+            <a
+                href="index.html#gallery-header"
+                class="desktop-nav-link"
+            >
+                Why Choose Us?
+            </a>
+            <a
+                href="index.html#careers"
+                class="desktop-nav-link"
+            >
+                Now Hiring!
+            </a>
+            <a
+                href="index.html#locations"
+                class="desktop-nav-link"
+            >
+                Locations
+            </a>
+            <a
+                href="index.html#contact-page"
+                class="desktop-nav-link"
+            >
+                Contact Us
+            </a>
+            <a
+                href="quote.html"
+                class="desktop-quote-button"
+            >
+                GET A QUOTE
+            </a>
+        </div>
+
+        <!-- Opens the mobile menu when desktop links are hidden. -->
+        <button
+            class="hamburger-button"
+            id="hamburger-button"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Mobile links use the same destinations as the desktop navigation. -->
+    <nav
+        class="mobile-menu"
+        id="mobile-menu"
+        hidden
+        inert
+    >
+        <a
+            href="index.html#manufacturing"
+            class="mobile-menu-link"
+        >
+            Products &amp; Services
+        </a>
+        <a
+            href="index.html#home"
+            class="mobile-menu-link"
+        >
+            HOME
+        </a>
+        <a
+            href="index.html#products"
+            class="mobile-menu-link"
+        >
+            PRODUCTS
+        </a>
+        <a
             href="index.html#gallery-header"
-            class="desktop-nav-link"
+            class="mobile-menu-link"
         >
-            Why Choose Us?
+            WHY CHOOSE US
         </a>
-<a
-            href="index.html#careers"
-            class="desktop-nav-link"
-        >
-            Now Hiring!
-        </a>
-<!-- LOCATIONS -->
-<a
+        <a
             href="index.html#locations"
-            class="desktop-nav-link"
+            class="mobile-menu-link"
         >
-            Locations
+            LOCATIONS
         </a>
-<a href="index.html#contact-page" class="desktop-nav-link">Contact Us</a>
+        <a
+            href="index.html#careers"
+            class="mobile-menu-link"
+        >
+            NOW HIRING!
+        </a>
         <a
             href="quote.html"
-            class="desktop-quote-button"
+            class="mobile-menu-link"
         >
-            GET A QUOTE
+            CONTACT US
         </a>
-</div>
-<!-- MOBILE HAMBURGER -->
-<button
-        class="hamburger-button"
-        id="hamburger-button"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-    >
-<span>
-</span>
-<span>
-</span>
-<span>
-</span>
-</button>
-</header>
-<!-- =====================================================
-     MOBILE MENU
-     ===================================================== -->
-<nav
-    class="mobile-menu"
-    id="mobile-menu" hidden inert
->
-    
-    <a href="index.html#manufacturing" class="mobile-menu-link">Products &amp; Services</a>
-<a
-        href="index.html#home"
-        class="mobile-menu-link"
-    >
-        HOME
-    </a>
-<a
-        href="index.html#products"
-        class="mobile-menu-link"
-    >
-        PRODUCTS
-    </a>
-<a
-        href="index.html#gallery-header"
-        class="mobile-menu-link"
-    >
-        WHY CHOOSE US
-    </a>
-<!-- LOCATIONS -->
-<a
-        href="index.html#locations"
-        class="mobile-menu-link"
-    >
-        LOCATIONS
-    </a>
-<a
-        href="index.html#careers"
-        class="mobile-menu-link"
-    >
-        NOW HIRING!
-    </a>
-<a
-        href="quote.html"
-        class="mobile-menu-link"
-    >
-        CONTACT US
-    </a>
-</nav>
-<main class="quote-main">
-<div id="tn-quote" >
-<div class="sheet">
-<header>
-<img class="review-brand-logo" src="Images/logo.png" alt="Terra Nova Components">
-<h1>Get a Quote</h1>
-<p>Tell us what you need. Share the project drawing, add details you know; our expert team can help with the rest.</p>
-</header>
-<p id="form-error" role="alert" hidden>
-</p>
-<form novalidate>
-<div id="quote-entry">
-<section data-panel="0">
+    </nav>
+
+    <!-- Multi-step quote form and request review. -->
+    <main class="quote-main">
+<div id="tn-quote">
+    <div class="sheet">
+        <header>
+            <img
+                class="review-brand-logo"
+                src="Images/logo.png"
+                alt="Terra Nova Components"
+            >
+            <h1>Get a Quote</h1>
+            <p>
+                Tell us what you need. Share the project drawing, add
+                details you know; our expert team can help with the rest.
+            </p>
+        </header>
+        <p id="form-error" role="alert" hidden></p>
+        <form novalidate>
+            <div id="quote-entry">
+                <section data-panel="0">
 <h2>Your contact details</h2>
 <div class="grid">
 <label>Name *<input name="Full name" required autocomplete="name">
@@ -492,8 +512,7 @@
     <div class="redbox">
 
 
-        <!-- CONTACT INTRO -->
-
+        <!-- Company contact links and facility directory. -->
         <div class="contact-intro">
 
             <h2>
@@ -509,9 +528,6 @@
                         height="94"
                         loading="lazy"
                     >
-               <!-- <h3 class="card-heading">
-                    Terra Nova Components
-                </h3> -->
                 </div>
 
 
@@ -529,12 +545,7 @@
 
 
 
-        <!-- CONTACT CONTENT -->
-
         <div class="contact homepage-footer-details">
-
-
-            <!-- COMPANY INFORMATION -->
 
             <div class="contact-details">
 
@@ -542,7 +553,6 @@
                     <section class="footer-location">
                         <h3 class="card-heading">Kingston</h3>
                         <p class="body-text">
-                            <!-- PO Box 178<br> — retained pending client confirmation. -->
                             2602 Perth Road<br>
                             Glenburnie, ON <br>
                             K0H 1S0
@@ -558,7 +568,6 @@
                     <section class="footer-location">
                         <h3 class="card-heading"><a href="thorndale.html">Thorndale - London</a></h3>
                         <p class="body-text">
-                            <!-- PO Box 69<br> — retained pending client confirmation. -->
                             16783 Thorndale Road<br>
                             Thorndale, ON<br>
                             N0M 2P0
@@ -570,7 +579,6 @@
                     <section class="footer-location">
                         <h3 class="card-heading">Brockville</h3>
                         <p class="body-text">
-                            <!-- PO Box 73<br> — retained pending client confirmation. -->
                             3009 County Road 29<br>
                             Brockville, ON <br>
                             K6V 5T7
@@ -580,25 +588,23 @@
                     </section>
 
                     <section class="footer-location">
-                <h3 class="card-heading">Smith Falls - Ottawa</h3>
-
-                <p class="body-text">
-
-                    123 Poonamalie Road
-
-                    <br>
-
-                    Smiths Falls, ON
-
-                    <br>
-
-                    K7A 0E8
-
-                </p>
-
-                <p class="body-text"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=123+Poonamalie+Road+Smiths+Falls+ON+K7A+0E8">View directions to Smith Falls</a></p>
-                <p class="body-text">Smith Falls: <a href="tel:+16132567070">613-256-7070</a></p>
-                 Ottawa: <a href="tel:+16138134549">613-813-4549</a><br>
+                        <h3 class="card-heading">Smith Falls - Ottawa</h3>
+                        <p class="body-text">
+                            123 Poonamalie Road<br>
+                            Smiths Falls, ON<br>
+                            K7A 0E8
+                        </p>
+                        <p class="body-text">
+                            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=123+Poonamalie+Road+Smiths+Falls+ON+K7A+0E8">
+                                View directions to Smith Falls
+                            </a>
+                        </p>
+                        <p class="body-text">
+                            Smith Falls:
+                            <a href="tel:+16132567070">613-256-7070</a><br>
+                            Ottawa:
+                            <a href="tel:+16138134549">613-813-4549</a>
+                        </p>
                     </section>
                 </div>
 
