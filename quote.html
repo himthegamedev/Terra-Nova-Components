@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+<meta name="description" content="Ontario wall panels, roof trusses, floor systems and complete framing packages for residential, agricultural and commercial construction. Terra Nova Components serves Ottawa, Kingston, London, Toronto, the GTA and beyond.">
+<title>Get a Quote | Terra Nova Components</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+<link
+    rel="stylesheet"
+    href="style.css"
+>
+<link rel="stylesheet" href="quote.css">
+<script src="quote.js" defer>
+</script>
+</head>
+<body class="quote-page">
+<header class="Nav">
+<a
+        href="index.html#home"
+        class="logo-button"
+    >
+<img
+            src="Images/logo3.png"
+            class="nav-logo"
+            alt="Terra Nova Components"
+        >
+</a>
+<!-- DESKTOP NAVIGATION -->
+<div class="desktop-nav-actions">
+        
+        <a href="index.html#manufacturing" class="desktop-nav-link">Products &amp; Services</a>
+<a
+            href="index.html#gallery-header"
+            class="desktop-nav-link"
+        >
+            Why Choose Us?
+        </a>
+<a
+            href="index.html#careers"
+            class="desktop-nav-link"
+        >
+            Now Hiring!
+        </a>
+<!-- LOCATIONS -->
+<a
+            href="index.html#locations"
+            class="desktop-nav-link"
+        >
+            Locations
+        </a>
+<a href="index.html#contact-page" class="desktop-nav-link">Contact Us</a>
+        <a
+            href="quote.html"
+            class="desktop-quote-button"
+        >
+            GET A QUOTE
+        </a>
+</div>
+<!-- MOBILE HAMBURGER -->
+<button
+        class="hamburger-button"
+        id="hamburger-button"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+    >
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</button>
+</header>
+<!-- =====================================================
+     MOBILE MENU
+     ===================================================== -->
+<nav
+    class="mobile-menu"
+    id="mobile-menu" hidden inert
+>
+    
+    <a href="index.html#manufacturing" class="mobile-menu-link">Products &amp; Services</a>
+<a
+        href="index.html#home"
+        class="mobile-menu-link"
+    >
+        HOME
+    </a>
+<a
+        href="index.html#products"
+        class="mobile-menu-link"
+    >
+        PRODUCTS
+    </a>
+<a
+        href="index.html#gallery-header"
+        class="mobile-menu-link"
+    >
+        WHY CHOOSE US
+    </a>
+<!-- LOCATIONS -->
+<a
+        href="index.html#locations"
+        class="mobile-menu-link"
+    >
+        LOCATIONS
+    </a>
+<a
+        href="index.html#careers"
+        class="mobile-menu-link"
+    >
+        NOW HIRING!
+    </a>
+<a
+        href="quote.html"
+        class="mobile-menu-link"
+    >
+        CONTACT US
+    </a>
+</nav>
+<main class="quote-main">
+<div id="tn-quote" >
+<div class="sheet">
+<header>
+<img class="review-brand-logo" src="Images/logo.png" alt="Terra Nova Components">
+<h1>Get a Quote</h1>
+<p>Tell us what you need. Share the project drawing, add details you know; our expert team can help with the rest.</p>
+</header>
+<p id="form-error" role="alert" hidden>
+</p>
+<form novalidate>
+<div id="quote-entry">
+<section data-panel="0">
+<h2>Your contact details</h2>
+<div class="grid">
+<label>Name *<input name="Full name" required autocomplete="name">
+</label>
+<label>Company name (optional)<input name="Company" autocomplete="organization">
+</label>
+<label>Email *<input name="Email" required type="email" inputmode="email" autocapitalize="none" autocomplete="email">
+</label>
+<label>Contact number *<input name="Phone" required type="tel" inputmode="tel" autocomplete="tel">
+</label>
+<label>Best time to call (optional)<input name="Call time" type="datetime-local">
+</label>
+</div>
+<h2>What would you like quoted?</h2>
+<fieldset class="building-use">
+<legend>Building Type:</legend>
+<div class="choices">
+<label class="choice">
+<input type="radio" name="Building use" value="Residential">
+<img class="product-choice-icon" src="Images/residential.png" alt="" aria-hidden="true">Residential</label>
+<label class="choice">
+<input type="radio" name="Building use" value="Commercial">
+<img class="product-choice-icon" src="Images/commercial.png" alt="" aria-hidden="true">Commercial</label>
+<label class="choice">
+<input type="radio" name="Building use" value="Agricultural">
+<img class="product-choice-icon" src="Images/farm.png" alt="" aria-hidden="true">Agricultural</label>
+<label class="choice">
+<input type="radio" name="Building use" value="Other">Other</label>
+</div>
+</fieldset>
+<h3>Products:</h3>
+<p>Select one or more products.</p>
+<div class="choices">
+<div class="product-choice-area">
+<label class="choice">
+<input type="checkbox" name="product" value="Roof Trusses">
+<img class="product-choice-icon" src="Images/roof-system-icon.png" alt="" aria-hidden="true">Roof Trusses</label>
+<div class="product-detail-action" data-product-action="Roof Trusses" hidden>
+<button type="button" class="product-detail-toggle" data-product-toggle="Roof Trusses" aria-expanded="false" aria-controls="roof-details">Add Roof Truss details</button>
+</div>
+<fieldset class="inline-product-details" id="roof-details" data-product="Roof Trusses" hidden disabled>
+<legend class="visually-hidden">Roof Trusses details</legend>
+<p class="measurement-guidance">Unsure about a measurement? Leave it blank and add a note or drawing. We’ll confirm specifications with you.</p>
+<div class="grid">
+<label>Roof width / span (ft)<input name="Roof width" type="number" min="0" placeholder="e.g. 32">
+</label>
+<label>Roof length (ft)<input name="Roof length" type="number" min="0">
+</label>
+<div class="measure-field">
+<div>
+<label>Roof pitch<select name="Roof pitch" data-custom="custom-pitch">
+<option>3/12</option>
+<option>4/12</option>
+<option>5/12</option>
+<option>6/12</option>
+<option>7/12</option>
+<option>8/12</option>
+<option>9/12</option>
+<option>10/12</option>
+<option>11/12</option>
+<option>12/12</option>
+<option>Custom</option>
+</select>
+<small>Rise in inches for every 12 inches of run.</small>
+</label>
+<label id="custom-pitch" hidden>Custom roof pitch (rise / 12)<input name="Custom roof pitch" placeholder="e.g. 2.5/12" disabled>
+</label>
+</div>
+<div class="field-help">
+<button class="diagram-thumbnail" type="button" aria-expanded="false" aria-controls="measurement-diagram-1">
+<img src="Images/pitch.png" alt="Roof pitch = rise / run">
+<span>Expand diagram</span>
+</button>
+<figure id="measurement-diagram-1" hidden>
+<img src="Images/pitch.png" alt="Roof pitch = rise / run">
+<figcaption>Roof pitch = rise / run</figcaption>
+<p>For example, 4/12 means the roof rises 4 inches for every 12 inches of horizontal run.</p>
+</figure>
+</div>
+</div>
+<div class="measure-field">
+<div>
+<label>Overhang length (in)<select name="Overhang" data-custom="custom-overhang">
+<option>No Overhang</option>
+<option>12 in</option>
+<option>16 in</option>
+<option>24 in</option>
+<option>Custom</option>
+</select>
+</label>
+<label id="custom-overhang" hidden>Custom overhang length (in)<input name="Custom overhang" placeholder="e.g. 18" disabled>
+</label>
+</div>
+<div class="field-help">
+<button class="diagram-thumbnail" type="button" aria-expanded="false" aria-controls="measurement-diagram-2">
+<img src="Images/overhang.png" alt="Measure horizontally from the outside wall to the roof edge.">
+<span>Expand diagram</span>
+</button>
+<figure id="measurement-diagram-2" hidden>
+<img src="Images/overhang.png" alt="Measure horizontally from the outside wall to the roof edge.">
+<figcaption>Measure horizontally from the outside wall to the roof edge.</figcaption>
+<p>Enter the horizontal projection in inches, rather than the length along the sloped roof.</p>
+</figure>
+</div>
+</div>
+<div class="measure-field">
+<div>
+<label>Heel height (in)<input name="Heel height" type="text" placeholder="Enter heel height in inches">
+<small>Height at the outside wall support.</small>
+</label>
+</div>
+<div class="field-help">
+<button class="diagram-thumbnail" type="button" aria-expanded="false" aria-controls="measurement-diagram-3">
+<img src="Images/heel.png" alt="Measure vertically at the outside wall support.">
+<span>Expand diagram</span>
+</button>
+<figure id="measurement-diagram-3" hidden>
+<img src="Images/heel.png" alt="Measure vertically at the outside wall support.">
+<figcaption>Measure vertically at the outside wall support.</figcaption>
+<p>Use the heel dimension shown on your truss drawings. If you do not know it, enter “not sure” and we will confirm it.</p>
+</figure>
+</div>
+</div>
+</div>
+<div class="full">
+<h3>Additional options (optional)</h3>
+<div class="checks">
+<label>
+<input type="checkbox" name="Gable Ends">Gable Ends</label>
+<label>
+<input type="checkbox" name="Dropped Gables">Dropped Gables</label>
+<label>
+<input type="checkbox" name="Ladders">Ladders</label>
+<label>
+<input type="checkbox" name="Hip End Style">Hip End Style</label>
+<label>
+<input type="checkbox" name="4 ft Spacing">4′ Spacing</label>
+<label>
+<input type="checkbox" name="5 ft Spacing">5′ Spacing</label>
+<label>
+<input type="checkbox" name="Cantilever" data-reveal="cantilever-details">Cantilever</label>
+</div>
+<label id="cantilever-details" hidden>Cantilever details<input name="Cantilever details" placeholder="Location and projection / dimensions" disabled>
+</label>
+</div>
+<div class="grid">
+<label>Do you require beams?<select name="Roof beams">
+<option value="" selected>Select an option</option>
+<option>Yes</option>
+<option>No</option>
+<option>Not sure — please advise</option>
+</select>
+</label>
+</div>
+<label>Roof notes (optional)<textarea name="Roof notes" rows="2">
+</textarea>
+</label>
+</fieldset>
+</div>
+<div class="wall-choice">
+<label class="choice">
+<input type="checkbox" name="product" value="Wall Panels" aria-controls="wall-scope-options" aria-expanded="false">
+<img class="product-choice-icon" src="Images/wall-system-icon.png" alt="" aria-hidden="true">Wall Panels</label>
+<div id="wall-scope-options" class="checks" role="group" aria-label="Wall panel types" hidden>
+<label>
+<input type="checkbox" name="Exterior Walls" checked disabled>Exterior Walls</label>
+<label>
+<input type="checkbox" name="Interior Walls" checked disabled>Interior Walls</label>
+</div>
+<div class="product-detail-action" data-product-action="Wall Panels" hidden>
+<button type="button" class="product-detail-toggle" data-product-toggle="Wall Panels" aria-expanded="false" aria-controls="walls-details">Add Wall Panel details</button>
+</div>
+<fieldset class="inline-product-details" id="walls-details" data-product="Wall Panels" hidden disabled>
+<legend class="visually-hidden">Wall Panels details</legend>
+<p class="measurement-guidance">Unsure about a measurement? Leave it blank and add a note or drawing. We’ll confirm specifications with you.</p>
+<div class="grid">
+<label>Number of storeys<input name="Storeys" type="number" min="1">
+</label>
+<label>Wall height<input name="Wall height" placeholder="e.g. 9 ft">
+</label>
+<label>Wall framing thickness<input name="Wall thickness" placeholder="e.g. 2 × 6, or not sure">
+</label>
+</div>
+<label>Openings / special wall requirements (optional)<textarea name="Wall notes" rows="2" placeholder="Window and door openings, different wall heights, or refer to drawings">
+</textarea>
+</label>
+</fieldset>
+</div>
+<div class="product-choice-area">
+<label class="choice">
+<input type="checkbox" name="product" value="EWP/Floors">
+<img class="product-choice-icon" src="Images/floor-system-icon.png" alt="" aria-hidden="true">EWP/Floors</label>
+<div class="product-detail-action" data-product-action="EWP/Floors" hidden>
+<button type="button" class="product-detail-toggle" data-product-toggle="EWP/Floors" aria-expanded="false" aria-controls="floors-details">Add EWP/Floor details</button>
+</div>
+<fieldset class="inline-product-details" id="floors-details" data-product="EWP/Floors" hidden disabled>
+<legend class="visually-hidden">EWP/Floors details</legend>
+<p class="measurement-guidance">Unsure about a measurement? Leave it blank and add a note or drawing. We’ll confirm specifications with you.</p>
+<div class="grid">
+<fieldset class="floor-system full">
+<legend>System type</legend>
+<div class="choices">
+<label class="choice">
+<input type="radio" name="Floor type" value="Nordic (I-Joists)">
+<img class="floor-type-icon" src="Images/i-joist.png" alt="" aria-hidden="true">
+<span>Nordic<br>
+<span>(I-Joists)</span>
+</span>
+</label>
+<label class="choice">
+<input type="radio" name="Floor type" value="LVL (Laminated Beam)">
+<img class="floor-type-icon" src="Images/laminated-beam.png" alt="" aria-hidden="true">
+<span>LVL<br>
+<span>(Laminated Beam)</span>
+</span>
+</label>
+<label class="choice">
+<input type="radio" name="Floor type" value="Tri-Floor (Open Web Trusses)">
+<img class="floor-type-icon" src="Images/open-web-truss.png" alt="" aria-hidden="true">
+<span>Tri-Floor<br>
+<span>(Open Web Trusses)</span>
+</span>
+</label>
+<label class="choice">
+<input type="radio" name="Floor type" value="Floor Cartridges">
+<img class="floor-type-icon" src="Images/floor-cartridge.png" alt="" aria-hidden="true">
+<span>Floor Cartridges</span>
+</label>
+<label class="choice">
+<input type="radio" name="Floor type" value="Other">
+<span>Other</span>
+</label>
+</div>
+</fieldset>
+<label class="full">Depth details<input name="Depth details" placeholder="e.g. 11⅞ in joists; or please advise">
+<small>Include the floor / joist depth, beam depth if applicable, and any maximum depth or clearance limits.</small>
+</label>
+<label>Approximate span (ft)<input name="Floor span" type="number" min="0">
+</label>
+<label>Floor area (sq ft)<input name="Floor area" type="number" min="0">
+</label>
+</div>
+<label>Locations / different depths (optional)<textarea name="Floor notes" rows="2" placeholder="e.g. Main floor 11⅞ in; upper floor 14 in. See drawings for beam locations.">
+</textarea>
+</label>
+</fieldset>
+</div>
+</div>
+<div class="note" id="selection" aria-live="polite">
+</div>
+<h2 id="drawing-upload-heading">Attach project drawings (optional)</h2>
+<div class="upload" id="drawing-drop-zone" role="group" aria-labelledby="drawing-upload-heading">
+<p>Drag and drop your drawings here, or choose files.</p>
+<button type="button" id="choose-drawings">Choose files</button>
+<input id="drawing-files" type="file" multiple accept=".pdf,.png,.jpg,.jpeg" aria-label="Attach project drawings">
+<small>PDF, JPG or PNG. Add multiple files for all selected products.</small>
+</div>
+<div id="upload-status" class="upload-status" role="status" aria-live="polite">
+</div>
+<ul id="drawing-attachments" class="attachment-list" aria-label="Attached drawings">
+</ul>
+</section>
+<div class="additional-details-header">
+<h2>
+<button type="button" id="toggle-details" aria-expanded="false" aria-controls="additional-details">Add More Project &amp; Jobsite Details (optional) <span aria-hidden="true">+</span>
+</button>
+</h2>
+</div>
+<fieldset id="additional-details" hidden disabled>
+<legend class="visually-hidden">Optional building use and jobsite details</legend>
+<section data-panel="1">
+<h2>Your project &amp; jobsite details</h2>
+<p>Tell us more about your project and the jobsite.</p>
+<label>
+<span class="project-notes-heading">Additional project notes (optional)</span>
+<textarea name="Project notes" rows="2">
+</textarea>
+</label>
+</section>
+<section data-panel="2">
+<h3>Jobsite details</h3>
+<p>These details apply to all selected products.</p>
+<div class="grid">
+<label>Approximate construction start<input name="Construction start" type="date">
+<small>Leave blank if the date is not yet known.</small>
+</label>
+<label class="full">Project / site street address<input name="Site address" placeholder="Street address">
+</label>
+<label>City<input name="City">
+</label>
+<label>Province<select name="Province">
+<option>Ontario</option>
+<option>Quebec</option>
+<option>Other</option>
+</select>
+</label>
+<label>Lot number (optional)<input name="Lot number">
+</label>
+</div>
+<label>Site access or delivery notes (optional)<textarea name="Site notes" rows="2">
+</textarea>
+</label>
+</section>
+</fieldset>
+<div id="quote-services" class="grid">
+<label>Delivery needed?<select name="Delivery">
+<option selected>Yes</option>
+<option>No — pickup</option>
+<option>Not sure yet</option>
+</select>
+</label>
+<div class="checks">
+<label>
+<input type="checkbox" name="Inquire about Installation">Inquire about Installation</label>
+</div>
+</div>
+<footer>
+<button type="button" id="review-request" class="primary">Review & submit</button>
+
+</footer>
+</div>
+<section data-panel="3" id="quote-review" hidden>
+<img class="review-brand-logo" src="Images/terra-nova-components-logo-transparent.png" alt="Terra Nova Components">
+<h1 tabindex="-1">Review your request</h1>
+<p>Check your contact information, selected products, drawings and jobsite details before submitting.</p>
+<div id="review">
+</div>
+<p class="review-demo-note">This is a prototype for feedback. Submitting will show a demo confirmation; no request will be sent.</p>
+<dialog id="confirmation" aria-labelledby="confirmation-title" aria-describedby="confirmation-copy">
+<div class="confirmation-content">
+<img class="review-brand-logo" src="Images/terra-nova-components-logo-transparent.png" alt="Terra Nova Components">
+<h2 id="confirmation-title">Thank You!</h2>
+<p id="confirmation-copy">Your request for quote has been submitted. Our team of experts will review your project information and will be in contact with you.</p>
+<p>We look forward to working with you.</p>
+<button type="button" id="close-confirmation" autofocus>Close</button>
+</div>
+</dialog>
+<button type="submit" class="primary" id="submit-quote">Submit Request for Quote</button>
+</section>
+</form>
+</div>
+</div>
+</main>
+<footer
+    id="contact-page"
+    class="contact-page"
+>
+
+    <div class="redbox">
+
+
+        <!-- CONTACT INTRO -->
+
+        <div class="contact-intro">
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <div class="footer-brand">
+                    <img
+                        src="Images/Terra-Nova-Logo-White-Transparent.png"
+                        class="footer-logo"
+                        alt="Terra Nova Components"
+                        width="171"
+                        height="94"
+                        loading="lazy"
+                    >
+               <!-- <h3 class="card-heading">
+                    Terra Nova Components
+                </h3> -->
+                </div>
+
+
+            <p>
+                Since 1991 we have been building high quality, precision-engineered building components.
+            </p>
+            <p class="footer-team-link"><a href="team.html">Meet the Team</a></p>
+            <div class="footer-contact-actions">
+                <p class="body-text"><strong>General inquiries:</strong> <a href="mailto:info@terranovatruss.com">info@terranovatruss.com</a></p>
+                <p class="body-text"><a href="careers.html"><strong>Work with Us - View Current Openings</strong></a></p>
+                <a class="footer-quote-button" href="quote.html">Get a Quote</a>
+            </div>
+
+        </div>
+
+
+
+        <!-- CONTACT CONTENT -->
+
+        <div class="contact homepage-footer-details">
+
+
+            <!-- COMPANY INFORMATION -->
+
+            <div class="contact-details">
+
+                <div class="footer-locations" id="facility-locations" aria-label="Our locations">
+                    <section class="footer-location">
+                        <h3 class="card-heading">Kingston</h3>
+                        <p class="body-text">
+                            <!-- PO Box 178<br> — retained pending client confirmation. -->
+                            2602 Perth Road<br>
+                            Glenburnie, ON <br>
+                            K0H 1S0
+                        </p>
+                        <p class="body-text"><a href="https://goo.gl/maps/9WG1nfvCQ7fbisFT8">View directions to Kingston</a></p>
+                        <p class="body-text">
+                            Kingston: <a href="tel:+16135465850">613-546-5850</a><br>
+                            Ottawa: <a href="tel:+16138134549">613-813-4549</a><br>
+                            Oshawa: <a href="tel:+12893162039">289-316-2039</a>
+                        </p>
+                    </section>
+
+                    <section class="footer-location">
+                        <h3 class="card-heading"><a href="thorndale.html">Thorndale - London</a></h3>
+                        <p class="body-text">
+                            <!-- PO Box 69<br> — retained pending client confirmation. -->
+                            16783 Thorndale Road<br>
+                            Thorndale, ON<br>
+                            N0M 2P0
+                        </p>
+                        <p class="body-text"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=16783+Thorndale+Road+Thorndale+ON+N0M+2P0">View directions to Thorndale</a></p>
+                        <p class="body-text">Thorndale: <a href="tel:+15194611180">519-461-1180</a></p>
+                    </section>
+
+                    <section class="footer-location">
+                        <h3 class="card-heading">Brockville</h3>
+                        <p class="body-text">
+                            <!-- PO Box 73<br> — retained pending client confirmation. -->
+                            3009 County Road 29<br>
+                            Brockville, ON <br>
+                            K6V 5T7
+                        </p>
+                        <p class="body-text"><a href="https://goo.gl/maps/1K5VJktgvz524HxZ8">View directions to Brockville</a></p>
+                        <p class="body-text">Brockville: <a href="tel:+16133422388">613-342-2388</a></p>
+                    </section>
+
+                    <section class="footer-location">
+                <h3 class="card-heading">Smith Falls - Ottawa</h3>
+
+                <p class="body-text">
+
+                    123 Poonamalie Road
+
+                    <br>
+
+                    Smiths Falls, ON
+
+                    <br>
+
+                    K7A 0E8
+
+                </p>
+
+                <p class="body-text"><a href="https://www.google.com/maps/dir/?api=1&amp;destination=123+Poonamalie+Road+Smiths+Falls+ON+K7A+0E8">View directions to Smith Falls</a></p>
+                <p class="body-text">Smith Falls: <a href="tel:+16132567070">613-256-7070</a></p>
+                 Ottawa: <a href="tel:+16138134549">613-813-4549</a><br>
+                    </section>
+                </div>
+
+                <p class="supporting-text">
+                    © 2026 Terra Nova Components.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+</body>
+</html>

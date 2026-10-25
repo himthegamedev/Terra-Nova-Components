@@ -1237,6 +1237,13 @@ img {
 }
 
 
+.locations-facility-link {
+    display: inline-block;
+
+    margin-top: 24px;
+}
+
+
 .list-items {
     text-align: left;
 }

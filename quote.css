@@ -1,0 +1,1203 @@
+/* Quote form: layout, controls, review, confirmation, and responsive states.
+ * Shared site typography/navigation remain in style.css. */
+
+#tn-quote {
+  color: var(--ink);
+  font: 15px/1.5 Arial,sans-serif;
+}
+
+#tn-quote * {
+  box-sizing: border-box;
+}
+
+#tn-quote .sheet {
+  border: 1px solid var(--line);
+  margin: auto;
+}
+
+#tn-quote header {
+  border-bottom: 2px solid var(--ink);
+}
+
+#tn-quote p {
+  margin: 5px 0 18px;
+  color: var(--sub);
+}
+
+#tn-quote button {
+  font: inherit;
+  border: 1px solid var(--line);
+}
+
+#tn-quote button[aria-current=step],
+#tn-quote .primary {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+#tn-quote .choices {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+#tn-quote .choice {
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+}
+
+#tn-quote .choice:has(input:checked) {
+  border: 2px solid var(--ink);
+  background: var(--soft);
+}
+
+#tn-quote input:not([type=checkbox]):not([type=radio]):not([type=file]),
+#tn-quote select,
+#tn-quote textarea {
+  width: 100%;
+  min-width: 0;
+  font: inherit;
+  margin-top: 5px;
+}
+
+#tn-quote input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--ink);
+  flex-shrink: 0;
+}
+
+#tn-quote label {
+  display: block;
+}
+
+#tn-quote .grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 18px 0;
+}
+
+#tn-quote .full {
+  grid-column: 1/-1;
+}
+
+#tn-quote small {
+  color: var(--sub);
+  display: block;
+  margin-top: 5px;
+}
+
+#tn-quote details {
+  border-bottom: 1px solid var(--line);
+  padding: 17px 0;
+}
+
+#tn-quote summary {
+  font-weight: bold;
+  min-height: 28px;
+}
+
+#tn-quote .checks {
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+
+#tn-quote .checks label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+#tn-quote .note {
+  background: var(--soft);
+  padding: 12px;
+  margin: 15px 0;
+}
+
+#tn-quote footer {
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
+  padding-top: 18px;
+  gap: 12px;
+  align-items: center;
+}
+
+#tn-quote [hidden] {
+  display: none!important;
+}
+
+#tn-quote .upload {
+  border: 1px dashed var(--line);
+  margin: 18px 0;
+}
+
+@media(max-width:520px) {
+  #tn-quote {
+    padding: 4px;
+  }
+
+  #tn-quote .sheet {
+    padding: 18px;
+  }
+
+  #tn-quote .choices,
+  #tn-quote .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#tn-quote .field-help {
+  padding: 8px 0 0;
+  border: 0;
+}
+
+#tn-quote .measure-field {
+  grid-column: 1/-1;
+  display: grid;
+  row-gap: 10px;
+}
+
+#tn-quote .measure-field .field-help {
+  padding: 0;
+}
+
+#tn-quote .measure-field .field-help figure {
+  margin-top: 12px;
+}
+
+#tn-quote .measure-field label {
+  padding-top: 7px;
+}
+
+@media(max-width:520px) {
+  #tn-quote .measure-field {
+    grid-template-columns: 1fr;
+  }
+
+  #tn-quote .measure-field .field-help {
+    margin-top: 10px;
+  }
+}
+
+#tn-quote .field-help figure {
+  margin: 10px 0;
+  padding: 12px;
+  background: #fff;
+  color: #222;
+  border: 1px solid var(--line);
+}
+
+#tn-quote .field-help img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#tn-quote .field-help figcaption {
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+#tn-quote .field-help p {
+  color: #444;
+  margin: 8px 0 0;
+  font-size: 13px;
+}
+
+body.quote-page {
+  background: var(--bg-dark);
+  --quote-accent: var(--panel-red);
+}
+
+#tn-quote [data-panel] {
+  overflow-x: clip;
+}
+
+#tn-quote .field-enter {
+  animation: quote-field-enter 800ms cubic-bezier(.22,.61,.36,1) both;
+  animation-delay: var(--field-delay,0ms);
+}
+
+@keyframes quote-field-enter {
+  from {
+    opacity: .2;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  #tn-quote .field-enter {
+    animation: none;
+  }
+
+  #tn-quote,
+  #tn-quote * {
+    scroll-behavior: auto;
+  }
+}
+
+.quote-main {
+  padding: 145px 20px 65px;
+}
+
+#tn-quote {
+  scroll-margin-top: 100px;
+  --paper: #fff;
+  --ink: #242424;
+  --line: #d0d0d0;
+  --soft: #f3f3f3;
+  --sub: #5c5c5c;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans',sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#tn-quote .sheet {
+  max-width: 760px;
+  padding: 36px;
+  background: var(--paper);
+  border-radius: 12px;
+}
+
+#tn-quote header {
+  border: 0;
+  padding-bottom: 8px;
+}
+
+#tn-quote h1 {
+  font-size: clamp(2rem,5vw,3rem);
+  text-align: left;
+  margin: 0 0 16px;
+  font-weight: 700;
+}
+
+#tn-quote h2 {
+  font-size: 1.35rem;
+  margin: 24px 0 10px;
+}
+
+#tn-quote h3 {
+  margin: 22px 0 12px;
+  font-size: 1.05rem;
+}
+
+#tn-quote p {
+  font-size: 1rem!important;
+}
+
+#tn-quote button,
+#tn-quote summary {
+  cursor: pointer;
+}
+
+#tn-quote button {
+  font-family: inherit;
+  font-size: .9rem;
+  padding: 12px 14px;
+  border-radius: 5px;
+  min-height: 44px;
+}
+
+#tn-quote button {
+  background: var(--quote-accent);
+  color: #fff;
+  border-color: var(--quote-accent);
+}
+
+#tn-quote button:hover {
+  background: #650404;
+  color: #fff;
+  border-color: #650404;
+}
+
+#tn-quote .primary:hover {
+  background: #650404;
+  color: #fff;
+  border-color: #650404;
+}
+
+#tn-quote .primary {
+  background: var(--quote-accent);
+  color: #fff;
+  border-color: var(--quote-accent);
+  font-weight: 700;
+}
+
+#tn-quote button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+#tn-quote input:not([type=checkbox]):not([type=radio]):not([type=file]),
+#tn-quote select,
+#tn-quote textarea {
+  background: #fff;
+  color: #211f1f;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 16px;
+  min-height: 48px;
+  border: 1px solid #c8bbbb;
+  border-radius: 5px;
+}
+
+#tn-quote input::placeholder,
+#tn-quote textarea::placeholder {
+  color: #6d6262;
+}
+
+#tn-quote input[type=checkbox],
+#tn-quote input[type=radio] {
+  accent-color: var(--quote-accent);
+  width: 20px;
+  height: 20px;
+}
+
+#tn-quote .building-use {
+  margin: 24px 0;
+  border: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+#tn-quote .building-use legend {
+  font-family: Montserrat,sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+#tn-quote input[type=radio] {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+#tn-quote .choice {
+  border-radius: 5px;
+  min-height: 80px;
+  padding: 12px;
+  gap: 16px;
+}
+
+#tn-quote .product-choice-icon {
+  width: 76px;
+  height: 54px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(0);
+}
+
+@media(max-width:400px) {
+  #tn-quote .product-choice-icon {
+    width: 56px;
+    height: 44px;
+  }
+
+  #tn-quote .choice {
+    gap: 12px;
+  }
+}
+
+#tn-quote .choice:has(input:checked) {
+  padding: 11px;
+  border-color: var(--quote-accent);
+}
+
+#tn-quote .checks {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+#tn-quote .checks label {
+  min-height: 44px;
+}
+
+#tn-quote .grid {
+  gap: 20px;
+}
+
+#tn-quote .field-help figure {
+  border-radius: 5px;
+  max-width: 450px;
+}
+
+#tn-quote .upload {
+  border-radius: 5px;
+  text-align: center;
+  padding: 28px 20px;
+  transition: background-color 150ms,border-color 150ms;
+}
+
+#tn-quote .upload.is-dragging {
+  background: #fff0ef;
+  border-color: var(--quote-accent);
+  border-style: solid;
+}
+
+#tn-quote .upload p {
+  margin: 8px 0 16px;
+}
+
+#tn-quote .upload #choose-drawings {
+  display: block;
+  margin: 0 auto;
+}
+
+#tn-quote .upload input[type=file] {
+  display: none;
+}
+
+#tn-quote .attachment-list {
+  list-style: none;
+  margin: 12px 0 20px;
+  padding: 0;
+}
+
+#tn-quote .attachment-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px;
+  background: var(--soft);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#tn-quote .attachment-list .file-name {
+  overflow-wrap: anywhere;
+  min-width: 0;
+  font-weight: 700;
+}
+
+#tn-quote .attachment-list .file-name small {
+  font-weight: 400;
+}
+
+#tn-quote .attachment-list button {
+  flex-shrink: 0;
+}
+
+#tn-quote .upload-status {
+  margin: 10px 0;
+  font-size: .9rem;
+}
+
+#tn-quote input[type=file] {
+  display: block;
+  max-width: 100%;
+  font: inherit;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+#tn-quote input[type=file]::file-selector-button {
+  padding: 10px 12px;
+  background: #fff;
+  color: #390400;
+  border: 0;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#tn-quote :focus-visible {
+  outline: 3px solid var(--quote-accent);
+  outline-offset: 3px;
+}
+
+#tn-quote #form-error {
+  color: #fff;
+  background: #850b08;
+  padding: 12px;
+}
+
+#tn-quote .building-use .choices {
+  grid-template-columns: repeat(4,minmax(0,1fr));
+}
+
+#tn-quote .building-use .choice {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-height: 150px;
+  text-align: center;
+  padding: 18px 10px;
+  font-size: .9rem;
+}
+
+#tn-quote .building-use .choice:has(input:checked) {
+  padding: 17px 9px;
+}
+
+#tn-quote .building-use .choice input {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#tn-quote .building-use .product-choice-icon {
+  width: 70px;
+  height: 60px;
+}
+
+@media(max-width:600px) {
+  #tn-quote .building-use .choices {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+#tn-quote .measure-field {
+  grid-template-columns: minmax(0,1fr) 140px;
+  gap: 12px 20px;
+  align-items: center;
+}
+
+#tn-quote .measure-field .field-help {
+  display: contents;
+}
+
+#tn-quote .measure-field .diagram-thumbnail {
+  grid-column: 2;
+  background: #fff;
+  color: #242424;
+  border: 1px solid var(--line);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  font-size: .75rem;
+}
+
+#tn-quote .measure-field .diagram-thumbnail:hover {
+  background: #f3f3f3;
+  color: #242424;
+  border-color: #777;
+}
+
+#tn-quote .diagram-thumbnail img {
+  width: 100%;
+  height: 60px;
+  object-fit: contain;
+}
+
+#tn-quote .measure-field .field-help figure {
+  grid-column: 1/-1;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 0 12px;
+}
+
+@media(max-width:400px) {
+  #tn-quote .measure-field {
+    grid-template-columns: minmax(0,1fr) 100px;
+    gap: 12px;
+  }
+
+  #tn-quote .diagram-thumbnail img {
+    height: 45px;
+  }
+}
+
+#tn-quote .product-heading-icon {
+  width: 70px;
+  height: 50px;
+  object-fit: contain;
+  filter: brightness(0);
+  flex-shrink: 0;
+}
+
+@media(max-width:400px) {
+  #tn-quote .product-heading-icon {
+    width: 54px;
+    height: 42px;
+  }
+}
+
+#tn-quote .floor-system {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+#tn-quote .floor-system legend {
+  font: inherit;
+  padding: 0;
+}
+
+#tn-quote .floor-system .choices {
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  margin: 12px 0 0;
+}
+
+#tn-quote .floor-system .choice {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-height: 170px;
+  text-align: center;
+  padding: 28px 10px 16px;
+  font-size: .85rem;
+  background: #fff;
+}
+
+#tn-quote .floor-system .choice:has(input:checked) {
+  padding: 27px 9px 15px;
+  background: #f3f3f3;
+}
+
+#tn-quote .floor-system input {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#tn-quote .floor-type-icon {
+  width: 100%;
+  height: 85px;
+  object-fit: contain;
+}
+
+@media(max-width:600px) {
+  #tn-quote .floor-system .choices {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+#tn-quote .grid > *,
+#tn-quote .measure-field > *,
+#tn-quote .choice {
+  min-width: 0;
+}
+
+#tn-quote button,
+#tn-quote .choice,
+#tn-quote summary {
+  touch-action: manipulation;
+}
+
+#tn-quote textarea {
+  resize: vertical;
+}
+
+#tn-quote input[type=date],
+#tn-quote input[type=datetime-local] {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media(max-width:600px) {
+  #tn-quote .upload {
+    padding: 20px 14px;
+  }
+
+  #tn-quote .upload #choose-drawings {
+    width: 100%;
+  }
+
+  #tn-quote footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  #tn-quote .attachment-list li {
+    flex-wrap: wrap;
+  }
+
+  #tn-quote .attachment-list .file-name {
+    flex: 1 1 140px;
+  }
+
+  #tn-quote .attachment-list button {
+    min-height: 44px;
+  }
+
+  body.quote-page .mobile-menu.open {
+    max-height: calc(100dvh - var(--mobile-nav-height));
+    overflow-y: auto;
+  }
+}
+
+@media(max-width:480px) {
+  #tn-quote .measure-field {
+    grid-template-columns: minmax(0,1fr);
+    gap: 12px;
+  }
+
+  #tn-quote .measure-field .diagram-thumbnail {
+    grid-column: 1;
+    width: 140px;
+    justify-self: start;
+  }
+
+  #tn-quote .measure-field .field-help figure {
+    grid-column: 1;
+  }
+
+  #tn-quote .diagram-thumbnail img {
+    height: 60px;
+  }
+
+  #tn-quote input[type=date],
+  #tn-quote input[type=datetime-local] {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media(max-width:360px) {
+  .quote-main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #tn-quote .sheet {
+    padding: 16px;
+  }
+
+  #tn-quote .floor-system .choice {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: .8rem;
+  }
+
+  #tn-quote .floor-system .choice:has(input:checked) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+#tn-quote .wall-choice {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+
+#tn-quote .wall-choice:has(input[name=product]:checked) {
+  border: 2px solid var(--quote-accent);
+  background: var(--soft);
+}
+
+#tn-quote .wall-choice > .choice,
+#tn-quote .wall-choice > .choice:has(input:checked) {
+  border: 0;
+  padding: 12px;
+}
+
+#tn-quote .wall-choice:has(input[name=product]:checked) > .choice {
+  padding: 11px;
+}
+
+#tn-quote #wall-scope-options {
+  margin: 0 16px 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+#tn-quote #wall-scope-options label {
+  gap: 10px;
+}
+
+#tn-quote .additional-details-header {
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding-top: 24px;
+}
+
+#tn-quote .additional-details-header h2 {
+  margin: 0 0 12px;
+}
+
+#tn-quote #toggle-details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 1.1rem;
+  padding: 16px 18px;
+}
+
+#tn-quote #additional-details {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+#tn-quote #additional-details section + section {
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding-top: 12px;
+}
+
+#tn-quote footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#tn-quote #quote-review {
+  scroll-margin-top: 100px;
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+#tn-quote #submit-quote {
+  margin-top: 20px;
+}
+
+#tn-quote .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media(max-width:600px) {
+  #tn-quote footer {
+    display: flex;
+  }
+
+  #tn-quote #review-request,
+  #tn-quote #submit-quote {
+    width: 100%;
+  }
+}
+
+#tn-quote .product-choice-area {
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  min-width: 0;
+}
+
+#tn-quote .product-choice-area:has(> .choice input:checked) {
+  border: 2px solid var(--quote-accent);
+  background: var(--soft);
+}
+
+#tn-quote .product-choice-area > .choice,
+#tn-quote .product-choice-area > .choice:has(input:checked) {
+  border: 0;
+  padding: 12px;
+}
+
+#tn-quote .product-choice-area:has(> .choice input:checked) > .choice {
+  padding: 11px;
+}
+
+#tn-quote .product-detail-action {
+  padding: 0 16px 16px;
+}
+
+#tn-quote .product-detail-toggle {
+  white-space: normal;
+  text-align: left;
+}
+
+#tn-quote .inline-product-details {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 0 16px 16px;
+  padding: 12px 0 0;
+  min-width: 0;
+}
+
+@media(max-width:600px) {
+  #tn-quote .product-detail-toggle {
+    width: 100%;
+  }
+}
+
+#tn-quote .product-detail-toggle,
+#tn-quote #toggle-details {
+  background: #363636;
+  color: #fff;
+  border-color: #363636;
+}
+
+#tn-quote .product-detail-toggle:hover,
+#tn-quote #toggle-details:hover {
+  background: #202020;
+  color: #fff;
+  border-color: #202020;
+}
+
+#tn-quote #toggle-details {
+  gap: 16px;
+}
+
+#tn-quote #quote-review {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#tn-quote #quote-review h1 {
+  margin: 20px 0 12px;
+}
+
+#tn-quote .review-group {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+#tn-quote .review-group-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+#tn-quote .review-group-heading h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.15rem;
+  min-width: 0;
+}
+
+#tn-quote .review-product-icon {
+  width: 48px;
+  height: 36px;
+  object-fit: contain;
+  filter: brightness(0);
+  flex-shrink: 0;
+}
+
+#tn-quote .review-edit {
+  background: #fff;
+  color: #363636;
+  border-color: #bbb;
+  min-height: 44px;
+  flex-shrink: 0;
+}
+
+#tn-quote .review-edit:hover {
+  background: #f3f3f3;
+  color: #242424;
+  border-color: #777;
+}
+
+#tn-quote .review-facts {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 16px 24px;
+  margin: 0;
+}
+
+#tn-quote .review-facts > div {
+  min-width: 0;
+}
+
+#tn-quote .review-facts dt {
+  font-size: .85rem;
+  color: var(--sub);
+  margin-bottom: 4px;
+}
+
+#tn-quote .review-facts dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  font-weight: 500;
+}
+
+#tn-quote .review-fact-wide {
+  grid-column: 1/-1;
+}
+
+#tn-quote p.review-empty {
+  margin: 0;
+  color: var(--sub);
+}
+
+#tn-quote .review-demo-note {
+  margin: 24px 0 12px;
+}
+
+@media(max-width:520px) {
+  #tn-quote .review-facts {
+    grid-template-columns: minmax(0,1fr);
+  }
+
+  #tn-quote .review-group-heading h2 {
+    font-size: 1.05rem;
+  }
+
+  #tn-quote .review-group {
+    padding: 20px 0;
+  }
+}
+
+body.quote-page .mobile-menu[hidden] {
+  display: none!important;
+}
+
+#tn-quote .field-error {
+  color: #850b08;
+  font-size: .9rem!important;
+  margin: 6px 0 12px;
+}
+
+#tn-quote [aria-invalid="true"] {
+  outline: 2px solid #850b08;
+  outline-offset: 2px;
+}
+
+#tn-quote .review-brand-logo {
+  display: block;
+  width: 240px;
+  max-width: 75%;
+  height: auto;
+  margin: 0 auto 28px;
+}
+
+#tn-quote #submit-quote {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  margin: 24px auto 0;
+  text-align: center;
+}
+
+#tn-quote #confirmation {
+  background: #fff;
+  color: #242424;
+  border: 0;
+  border-radius: 12px;
+  padding: 0;
+  width: min(480px,calc(100% - 32px));
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+}
+
+#tn-quote #confirmation::backdrop {
+  background: rgba(0,0,0,.65);
+}
+
+#tn-quote .confirmation-content {
+  padding: 32px;
+  text-align: center;
+}
+
+#tn-quote #confirmation h2 {
+  margin: 12px 0;
+}
+
+#tn-quote #confirmation p {
+  color: #5c5c5c;
+  margin: 12px 0 24px;
+}
+
+#tn-quote #close-confirmation {
+  display: block;
+  min-width: 120px;
+  margin: 0 auto;
+}
+
+@media(max-width:480px) {
+  #tn-quote .confirmation-content {
+    padding: 24px;
+  }
+
+  #tn-quote #submit-quote {
+    width: 100%;
+  }
+}
+
+#tn-quote .project-notes-heading {
+  display: block;
+  font-family: Montserrat,sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 22px 0 12px;
+}
+
+#tn-quote .inline-review-editor {
+  padding: 16px;
+  background: var(--soft);
+  border-radius: 5px;
+}
+
+#tn-quote .inline-edit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+#tn-quote .inline-edit-status {
+  color: #850b08;
+  margin: 12px 0;
+}
+
+#tn-quote .inline-review-editor fieldset {
+  min-width: 0;
+}
+
+#tn-quote .review-value-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#tn-quote .review-system-icon {
+  width: 40px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+#tn-quote .review-building-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+#tn-quote .review-value-with-icon span {
+  min-width: 0;
+}
+
+.quote-footer {
+  text-align: center;
+  padding: 24px;
+  font-size: .85rem;
+}
+
+@media(max-width:600px) {
+  .quote-main {
+    padding: 105px 14px 30px;
+  }
+
+  #tn-quote .sheet {
+    padding: 20px;
+  }
+
+  #tn-quote footer {
+    flex-wrap: wrap;
+  }
+}
