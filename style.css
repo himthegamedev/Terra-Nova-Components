@@ -818,6 +818,26 @@ img {
 }
 
 
+.small-section-heading {
+    margin: 22px 0 14px;
+
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
 .card-heading {
     font-family: 'Montserrat', sans-serif;
 
@@ -959,7 +979,7 @@ img {
 .capabilities-description {
     max-width: 700px;
 
-    margin: 24px auto 0;
+    margin: 24px auto 18px;
 
     text-align: center;
 }
@@ -1016,6 +1036,8 @@ img {
     justify-content: center;
 
     width: 100%;
+
+    margin-top: 0;
 
     gap: 36px;
 }
