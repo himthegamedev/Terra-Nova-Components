@@ -166,7 +166,7 @@ img {
 
     width: auto;
 
-    height: 58px;
+    height: 46px;
 
     object-fit: contain;
 }
@@ -449,8 +449,6 @@ img {
     height: 156px;
 
     padding: 12px 20px;
-
-    background: white;
 }
 
 
@@ -1579,7 +1577,7 @@ img {
 
     height: auto;
 
-    margin: 0 0 16px;
+    margin: 0 auto 16px;
 }
 
 
@@ -1888,7 +1886,7 @@ img {
 
         width: auto;
 
-        height: 45px;
+        height: 36px;
 
         object-fit: contain;
 
@@ -2731,6 +2729,14 @@ img {
 
     }
 
+    .contact-cta {
+
+        align-self: center;
+
+        margin-inline: auto;
+
+    }
+
     .contact-copyright {
 
         grid-column: 1;
@@ -2914,7 +2920,7 @@ img {
 
         width: auto;
 
-        height: 58px;
+        height: 46px;
 
         object-fit: contain;
 
