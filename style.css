@@ -63,7 +63,6 @@ body {
     overflow-x: hidden;
 }
 
-
 p {
     font-size: var(--body-size) !important;
 }
@@ -1603,12 +1602,14 @@ img {
 }
 
 
-.location-addresses {
+.contact-details.location-addresses {
     display: flex;
 
     flex-wrap: wrap;
 
     align-content: flex-start;
+
+    text-align: left;
 }
 
 
@@ -1616,6 +1617,14 @@ img {
     flex: 0 0 50%;
 
     box-sizing: border-box;
+}
+
+.location-phone {
+    display: block;
+}
+
+.location-phone + br {
+    display: none;
 }
 
 
@@ -2745,6 +2754,18 @@ img {
         font-size: 0.95rem;
 
         line-height: 1.5;
+
+    }
+
+    .location-addresses > .body-text {
+
+        flex-basis: 100%;
+
+    }
+
+    .location-addresses a[href^="tel:"] {
+
+        display: block;
 
     }
 
